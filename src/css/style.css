@@ -81,7 +81,7 @@ body {
 /*unete - crear cuenta */
 #containerCrearcuenta {
     background-color: white;
-    display: none;
+    
 }
 
 /* Barra superior */
@@ -138,6 +138,15 @@ body {
 /* muro */
 
 #containerMuro {
+	
+}
+.divDisplayNone{
+    display: none;
+}
+.divDisplayBlock{
+    display: block;
+}
+
     /* display: none; */
     padding: 0;
 }
@@ -145,3 +154,4 @@ body {
 #logoWall{
     width: 15%;
 }
+
