@@ -1,5 +1,3 @@
-/*Iniciar sesion Facebook */
-
 /*Barra lateral */
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -8,6 +6,21 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+//Registro de usuarios nuevos
+function registrar(){
+	let email = document.getElementById('email').value;
+	let contrasena = document.getElementById('contrasena').value;
+  	console.log(email);
+  	console.log(contrasena);	
+  	firebase.auth().createUserWithEmailAndPassword(email, contrasena)
+  	.catch(function(error) {
+  // Handle Errors here.
+	  	let errorCode = error.code;
+  		let errorMessage = error.message;
+
+  alert("error");
+});
+  }
 
 //Iniciar seción a traves de correo
 const btnIngresarMail = document.getElementById('btnenviar').addEventListener('click', ()=>{
