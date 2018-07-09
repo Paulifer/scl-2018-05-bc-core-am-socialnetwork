@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 
 </head>
 
 <body>
     <!--Seccion Login -->
-    <div class="container container-inicio" id="login">
+    <div class="container container-inicio divDisplayNone" id="login">
         <div class="row">
             <div class="col-sm logo">
                 <img src="../img/celiaco3.png" alt="logoCelibook" id="logoCelibook">
@@ -70,36 +72,29 @@
     </div>
 
     <!-- Seccion craer cuenta - registrarse -->
-    <div class="container divDisplayNone" id="containerCrearcuenta">
+    <div class="container " id="containerCrearcuenta">
         <div class="row crearCuenta">
             <div class="col-md-6 offset-md-3">
                 <form>
                     <div class="form-group">
                         <label for="validationCustom01"></label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre Completo">
+                        <input type="text" class="form-control" id="registryName" placeholder="Nombre Completo">
                         <div class="valid-feedback"> </div>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electronico">
+                        <input type="email" class="form-control" id="registryEmail" aria-describedby="emailHelp" placeholder="Correo electronico">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nueva contraseña">
-                        <button type="submit" id="btnenviar" class="btn btn-primary">Registrarme</button>
+                        <input type="password" class="form-control" id="registryPassword" placeholder="Nueva contraseña">
+                        <button type="submit" id="btnenviar" class="btn btn-primary" onclick="registryUser()">Registrarme</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-    <!--Seccion de registro de usuarios "FALTA ARREGALR CON BOOTSTRAP"-->
-    <h4>Registro de usuarios</h4>
-    <input id="email" type="email" placeholder="Ingresa Email">
-    <input id="contrasena" type="password" placeholder="Ingresa Contraseña">
-    <button onclick="registrar()">Enviar</button>
-
 
     <!-- Seccion Muro -->
     <div class="container divDisplayNone" id="containerMuro">
