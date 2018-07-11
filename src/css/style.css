@@ -89,6 +89,7 @@ body {
     background-color: #99CE81;
     margin: 0;
     padding: 0;
+    width: 100vw;
 }
 
 /* barra lateral*/
@@ -138,8 +139,9 @@ body {
 /* muro */
 
 #containerMuro {
-    /* display: none; */
+    /* display: none; */ 
     padding: 0;
+
 }
 
 #logoWall{
