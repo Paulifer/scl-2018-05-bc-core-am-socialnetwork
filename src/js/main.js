@@ -110,3 +110,29 @@ firebase.auth().signOut().then(function() {
 });
   }
   observador();
+
+
+
+  //SECCION DE COMENTARIOS EN MURO
+
+  firebase.database().ref('messages')
+  .limitToLast(5) //filtro para no obtener todos los mensajes
+  .once('value')
+  .then((messages)=>{
+    console.log("Mensajes >"+ JSON.stringify(messages));
+  })
+  .catch(()=>{
+
+  });
+
+//Acá comenzamos a escuchar por nuevos mensajes usando el evento
+    //on child_added
+    firebase.database().ref('messages')
+        .limitToLast(5) //muestra solo los ultimos 5 mensajes como historial al recargar la pagina
+        .on('child_added', (newMessage)=>{
+            messageContainer.innerHTML += `
+                <p>${newMessage.val().creatorName} dice:</p>
+                <p>${newMessage.val().text}</p>
+            `;
+        });
+};

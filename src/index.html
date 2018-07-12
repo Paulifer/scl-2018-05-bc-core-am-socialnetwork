@@ -119,14 +119,16 @@
             <span id="burger" onclick="openNav()">&#9776;</span>
         </header>
 
+        <!-- Titulo y Bienvenida a la red social -->
+        <div class="row">
+            <div class="col-sm">
+                <h1 id="welcome">¡Bienvenida/o a Celibook!</h1>
+                <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
+            </div>
+        </div>
         <!-- Carrusel de imagenes -->
         <div class="row carruselFotos">
             <div id="carouselExampleIndicators" class="col-sm carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="../img/sin-gluten.jpg" alt="First slide">
@@ -148,7 +150,20 @@
                 </a>
             </div>
         </div>
+
+        <!-- Contenedor de publicaciones -->
+        <div class="container-fluid">
+            <div>
+                <div id="messageContainer">
+                </div>
+                <input id="messageArea" type="text">
+                <input type="button" id="sendButton" value="SEND" onclick="sendMessage()">
+            </div>
+        </div>
+    </diV>
+
     </div>
+    <!-- fin de MURO -->
 
 
     <!--Link firebase-->

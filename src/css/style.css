@@ -5,7 +5,7 @@ body {
 }
 .login{
     background-color: #99CE81;
-   /* display: none; */ 
+    display: none; 
 }
 
 #logoCelibook{
@@ -91,7 +91,7 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
-    /*display: none;*/
+    display: none;
 }
 .crearCuenta{
     width: 100%;
@@ -189,10 +189,22 @@ body {
     margin-top: 5%;
 }
 
-.divDisplayNone{
-    /* display: none; */
+.divDisplayNone {
+   /* display: none; */
 }
 .divDisplayBlock{
-    display: block;
+    display: block; 
+}
+
+#welcome{
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.2em;
+
+}
+
+#subtitleWelcome{
+    text-align: center;
+    font-size: 0.8em;
 }
 
