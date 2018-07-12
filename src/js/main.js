@@ -6,6 +6,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
 //ocultar login al apretar boton registrar y mostar registro
 const btnRegistry = document.getElementById('registroClick').addEventListener('click', ()=>{
 	document.getElementById('login').classList.add('divDisplayNone');
