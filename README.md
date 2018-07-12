@@ -25,7 +25,7 @@ Para continuar conociendo a nuestros usuarios hicimos un <b>benchmark</b> de las
 
 ![alt text](anexos/benchmarks.png)
 
-También realizamos un formulario dirigido a personas que son celiacas. Para conocer el formulario haz [click aquí.](https://goo.gl/forms/VBogzX7thPG66X622/)
+También realizamos un formulario dirigido a personas que son celiacas. Para conocer el formulario haz [click aquí.](https://goo.gl/forms/mCI9bGpddtSMnHdt2)
 
 Esta recolección de información previa e investigación del tema nos sirvió para luego entrevistar a cuatro personas que podian ser usuarios de nuestra aplicación 3 de ellos celiacos y 1 intolerante al gluten. 
 

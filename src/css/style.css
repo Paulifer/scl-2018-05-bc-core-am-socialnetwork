@@ -3,35 +3,36 @@
 body {
     background-color: white;
 }
-.login{
+
+.login {
     background-color: #99CE81;
     /*display: none;*/ 
 
 }
 
-#logoCelibook{
+#logoCelibook {
     margin-top: 3em;
     width: 35%;
     margin-left: 30%;
 }
 
-#titleLogin{
+#titleLogin {
     color: white;
     font-size: 2em;
     text-align: center;
 }
-.emailForgot{
+
+.emailForgot {
     color: white;
     margin-left: 0%;
 }
 
-.bars{
+.bars {
     width: 90%;
     margin-left: 5%;
     margin-top: 0.5em;
-
-    
 }
+
 .btn-primary {
     margin-top: 1em;
     background-color: #9B369D;
@@ -40,12 +41,21 @@ body {
     width: 100%;
 }
 
-.registro{
+.btn-primary:hover {
+    margin-top: 1em;
+    background-color: #9B369D;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    border-color: #9B369D;
+}
+
+.registro {
     color: white;
     text-align: center;
 }
 
-#registroClick{
+#registroClick {
     color: white;
     cursor: pointer;
 }
@@ -82,7 +92,7 @@ body {
 }
 
 #google:hover {
-    color:#db3236 ;
+    color: #db3236;
     opacity: 0.6;
 }
 
@@ -93,46 +103,48 @@ body {
     padding: 0;
     margin: 0;
 }
-.crearCuenta{
+
+.crearCuenta {
     width: 100%;
 }
-#titleRegister{
+
+#titleRegister {
     text-align: center;
     font-size: 2em;
     color: #99CE81;
 }
 
-.inputRegister{
+.inputRegister {
     width: 80%;
     margin-left: 10%;
 }
 
-.register{
+.register {
     padding-right: 0;
 }
-#logoRegistro{
+
+#logoRegistro {
     margin-top: 5em;
     width: 30%;
     margin-left: 35%;
-
 }
 
 /* BARRA SUPERIOR */
-#barTop{
+
+#barTop {
     background-color: #99CE81;
     margin: 0;
     padding: 0;
 }
 
-#burger{
-    font-size:30px;cursor:pointer;
+#burger {
+    font-size: 30px;
+    cursor: pointer;
     margin-left: 0.5em;
-
 }
 
-
-
 /* MENU LATERAL DESPLEGABLE */
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -150,7 +162,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color:white;
+    color: white;
     display: block;
     transition: 0.3s;
 }
@@ -192,8 +204,10 @@ body {
 .divDisplayNone {
    display: none; 
 }
-.divDisplayBlock{
-    display: block; 
+
+.divDisplayBlock {
+    display: block;
+    /* display: none; */
 }
 
 .titleWelcome{
@@ -204,15 +218,14 @@ body {
     margin-top: 2em;
     text-align: center;
     font-size: 1.2em;
-
 }
 
-#subtitleWelcome{
+#subtitleWelcome {
     text-align: center;
     font-size: 0.8em;
 }
 
-#logoWall{
+#logoWall {
     width: 15%;
 }
 
@@ -244,4 +257,43 @@ body {
     font-size: 1em;
     margin-left: 75%;
     margin-top: 0.5em;
+}
+
+/*Seccion perfil */
+
+#fotoperfilUsuario {
+    margin-top: 3em;
+    width: 35%;
+    margin-left: 30%;
+}
+
+#containerPerfil {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display:none;
+    width: 100%;
+}
+
+.botonesPerfil {
+    text-align: center;
+    width: 100%;
+}
+
+/*Quienes somos */
+
+#containerQuienesSomos {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+#fotoCeliacos {
+    margin-top: 3em;
+    width: 35%;
+    margin-left: 30%;
+    text-align: center;
 }
