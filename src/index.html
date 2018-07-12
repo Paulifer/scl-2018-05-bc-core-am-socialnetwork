@@ -109,7 +109,6 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="">Mi Perfil</a>
-                <a href="">¿Qué es la celiaquía?</a>
                 <a href="">Quienes somos</a>
                 <a href="">Salud Integral</a>
                 <a href="">Alimentacion</a>
@@ -117,12 +116,13 @@
                 <a href="">Noticias</a>
                 <a href="">Preguntas frecuentes</a>
                 <a href="">Home</a>
+                <a href="">Cerrar sesión</a>
             </div>
             <span id="burger" onclick="openNav()">&#9776;</span>
         </header>
 
         <!-- Titulo y Bienvenida a la red social -->
-        <div class="row">
+        <div class="row titleWelcome">
             <div class="col-sm">
                 <h1 id="welcome">¡Bienvenida/o a Celibook!</h1>
                 <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
@@ -157,9 +157,11 @@
         <div class="container-fluid">
             <div>
                 <div id="messageContainer">
+                    <h1 id="titleWall">Comunidad en línea</h1>
+                    <input id="messageArea" type="text" placeholder="  ¿Qué deseas compartir?">
+                    <input type="button" id="sendButton" value="Publicar" onclick="sendMessage()">
                 </div>
-                <input id="messageArea" type="text">
-                <input type="button" id="sendButton" value="SEND" onclick="sendMessage()">
+                
             </div>
         </div>
     </diV>
