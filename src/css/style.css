@@ -6,7 +6,8 @@ body {
 
 .login {
     background-color: #99CE81;
-    display: none;
+    /*display: none;*/ 
+
 }
 
 #logoCelibook {
@@ -101,7 +102,6 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
-    display: none;
 }
 
 .crearCuenta {
@@ -194,15 +194,15 @@ body {
     padding: 0;
 }
 
-.carruselFotos {
-    width: 80%;
+.carruselFotos{
+    width: 100%;
     text-align: center;
-    margin-left: 10%;
+    margin-left: 0;
     margin-top: 5%;
 }
 
 .divDisplayNone {
-    /* display: none; */
+   display: none; 
 }
 
 .divDisplayBlock {
@@ -210,11 +210,11 @@ body {
     /* display: none; */
 }
 
-.divDisplayBlock {
-    display: block;
+.titleWelcome{
+    width: 100%;
 }
 
-#welcome {
+#welcome{
     margin-top: 2em;
     text-align: center;
     font-size: 1.2em;
@@ -227,6 +227,36 @@ body {
 
 #logoWall {
     width: 15%;
+}
+
+#messageContainer{
+    border: #99CE81 1px solid;
+    margin-top: 2em;
+}
+
+#titleWall{
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 1em;
+    font-style: oblique;
+}
+
+#messageArea{
+    width: 80%;
+    height: 3em;
+    border: gray 1px solid;
+    margin-left: 10%;
+    border-radius: 4px;
+}
+
+#sendButton{
+    position: right;
+    color: white;
+    background-color: #9B369D;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-left: 75%;
+    margin-top: 0.5em;
 }
 
 /*Seccion perfil */

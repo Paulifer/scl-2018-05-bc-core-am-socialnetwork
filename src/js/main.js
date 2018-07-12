@@ -30,6 +30,10 @@ function registry(){
 
 //Registro Nuevos Usuarios	
 function registryUser(){
+	containerCrearcuenta.classList.remove('divDisplayBlock');
+	containerCrearcuenta.classList.add('divDisplayNone');
+  	containerMuro.classList.remove('divDisplayNone');
+  	containerMuro.classList.add('divDisplayBlock');
 	let emailRegistry = registryEmail.value;
 	let passwordRegistry = registryPassword.value;
   	console.log(emailRegistry);
@@ -41,6 +45,7 @@ function registryUser(){
   		console.log(errorCode);
   		console.log(errorMessage);
 });
+    containerCrearcuenta.classList.remove('divDisplayBlock');
   	containerCrearcuenta.classList.add('divDisplayNone');
   	containerMuro.classList.remove('divDisplayNone');
   	containerMuro.classList.add('divDisplayBlock');
@@ -48,7 +53,8 @@ function registryUser(){
 
 //Iniciar seción usuario registrado
 function singIn(){
-		login.classList.add('divDisplayBlock');
+
+		login.classList.add('divDisplayNone');
 		containerMuro.classList.remove('divDisplayNone');
 		containerMuro.classList.add('divDisplayBlock');
 	let validarMail = exampleInputEmail1.value;
@@ -88,7 +94,7 @@ function loginFacebook(){
 		console.log("error de firebase"+error.code);
 		console.log("error de firebase, mensaje "+error.message);
 	});
-		login.classList.add('divDisplayBlock');
+		login.classList.add('divDisplayNone');
 		containerMuro.classList.remove('divDisplayNone');
 		containerMuro.classList.add('divDisplayBlock');
 }	
@@ -118,3 +124,44 @@ firebase.auth().signOut().then(function() {
 });
 }
  
+//MURO CON COMENTARIOS
+
+firebase.database().ref('messages')
+  .limitToLast(2) //filtro para no obtener todos los mensajes
+  .once('value')
+  .then((messages)=>{
+    console.log("Mensajes >"+ JSON.stringify(messages));
+  })
+  .catch(()=>{
+
+  });
+
+
+ 
+//Llamando a los mensajes 
+    firebase.database().ref('messages')
+        .limitToLast(5) //muestra solo los ultimos 5 mensajes como historial al recargar la pagina
+        .on('child_added', (newMessage)=>{
+            messageContainer.innerHTML += `
+                <p>${newMessage.val().creatorName} dice:</p>
+                <p>${newMessage.val().text}</p>
+            `;
+        });
+
+ // Firebase Database
+// Usaremos una colección para guardar los mensajes, llamada messages
+function sendMessage(){
+  const currentUser = firebase.auth().currentUser;
+  const messageAreaText = messageArea.value;
+  const displayNames = registryName.value;
+
+  //Para tener una nueva llave en la colección messages
+  const newMessageKey = firebase.database().ref().child('messages').push().key;
+ 
+
+  firebase.database().ref(`messages/${newMessageKey}`).set({
+      creator : currentUser.uid,
+      creatorName : currentUser.displayName,
+      text : messageAreaText
+  });
+}       
