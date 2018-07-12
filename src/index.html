@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    
 
 </head>
 
 <body>
     <!--Seccion Login -->
-    <div class="container container-inicio" id="login">
+    <div class="container-fluid login" >
         <div class="row">
             <div class="col-sm logo">
                 <img src="../img/celiaco3.png" alt="logoCelibook" id="logoCelibook">
@@ -36,7 +37,7 @@
                         <label for="exampleInputPassword1"></label>
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                         <a href="" class="emailForgot">Olvidé mi contraseña</a>
-                        <button type="submit" id="btnenviar" class="btn btn-primary">Iniciar sesión</button>
+                        <button type="button" id="btnenviar" class="btn btn-primary">Iniciar sesión</button>
                     </div>
                 </form>
             </div>
@@ -70,24 +71,28 @@
     </div>
 
     <!-- Seccion craer cuenta - registrarse -->
-    <div class="container divDisplayNone" id="containerCrearcuenta">
+    <div class="container-fluid" id="containerCrearcuenta">
         <div class="row crearCuenta">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3 register">
                 <form>
-                    <div class="form-group">
-                        <label for="validationCustom01"></label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre Completo">
-                        <div class="valid-feedback"> </div>
+                    <div class="col-sm">
+                        <img src="../img/celiaco3 verde.png" id="logoRegistro" alt="logoverde">
+                        <h1 id="titleRegister">Celibook</h1>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group inputRegister">
+                        <label for="validationCustom01"></label>
+                        <input type="text" class="form-control" id="registryName" placeholder="Nombre Completo">
+                        <div class="valid-feedback"></div>
+                    </div>
+                    <div class="form-group inputRegister">
                         <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electronico">
+                        <input type="email" class="form-control" id="registryEmail" aria-describedby="emailHelp" placeholder="Correo electronico">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group inputRegister">
                         <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nueva contraseña">
-                        <button type="submit" id="btnenviar" class="btn btn-primary">Registrarme</button>
+                        <input type="password" class="form-control" id="registryPassword" placeholder="Nueva contraseña">
+                        <button type="button" id="btnenviar" class="btn btn-primary" onclick="registryUser()">Registrarme</button>
                     </div>
                 </form>
             </div>
@@ -95,8 +100,9 @@
     </div>
 
     <!-- Seccion Muro -->
-    <div class="container divDisplayNone" id="containerMuro">
 
+    <!-- Barra superior y menú desplegable -->
+    <div class="container-fluid divDisplayNone" id="containerMuro">
         <header id="barTop">
             <div id="mySidenav" class="sidenav">     
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -110,16 +116,29 @@
                 <a href="">Preguntas frecuentes</a>
                 <a href="">Home</a>
             </div>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
+            <span id="burger" onclick="openNav()">&#9776;</span>
         </header>
 
-
-
+        <!-- Carrusel de imagenes -->
+        <div class="row">
+            
+        </div>
     </div>
 
 
-
+    <!--Link firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
+            authDomain: "redsocial-78423.firebaseapp.com",
+            databaseURL: "https://redsocial-78423.firebaseio.com",
+            projectId: "redsocial-78423",
+            storageBucket: "redsocial-78423.appspot.com",
+            messagingSenderId: "739042868398"
+        };
+    firebase.initializeApp(config);
+    </script>
     <!-- Links bootstrap y js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
