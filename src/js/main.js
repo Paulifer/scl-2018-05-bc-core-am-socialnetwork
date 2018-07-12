@@ -41,6 +41,7 @@ function registryUser(){
   		console.log(errorCode);
   		console.log(errorMessage);
 });
+    containerCrearcuenta.classList.remove('divDisplayBlock');
   	containerCrearcuenta.classList.add('divDisplayNone');
   	containerMuro.classList.remove('divDisplayNone');
   	containerMuro.classList.add('divDisplayBlock');

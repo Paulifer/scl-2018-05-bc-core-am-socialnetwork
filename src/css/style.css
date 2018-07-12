@@ -190,7 +190,7 @@ body {
 }
 
 .divDisplayNone {
-   /* display: none; */
+   display: none; 
 }
 .divDisplayBlock{
     display: block; 
