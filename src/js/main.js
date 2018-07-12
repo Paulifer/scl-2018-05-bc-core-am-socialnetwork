@@ -20,6 +20,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
 //ocultar login al apretar boton registrar y mostar registro
 function registry(){
 	login.classList.add('divDisplayNone');

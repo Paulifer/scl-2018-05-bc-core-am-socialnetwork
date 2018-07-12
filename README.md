@@ -74,6 +74,8 @@ Dentro del menú, incluimos los temas que -según encuestas y entrevistas- eran 
 Estos dos colores son utilizados sobre un fondo blanco, con letras grises oscuras. 
 
 ### Visualización del prototipo
-Para ver el prototipo versión mobile realizado en Figma, haz [click aquí.](https://www.figma.com/proto/0rc4en5mN6XT8Ts4jB6Ejoll/Red-Social-Celiacos?scaling=min-zoom&node-id=124%3A6).
+Para ver el prototipo versión <b>Mobile</b> realizado en Figma, haz [click aquí.](https://www.figma.com/proto/0rc4en5mN6XT8Ts4jB6Ejoll/Red-Social-Celiacos?scaling=min-zoom&node-id=124%3A6)
+
+Para ver el prototipo versión <b>Desktop</b> realizado en Figma, haz [click aquí.](https://www.figma.com/proto/bk6Byx4WAYmqqbj2L9IxyZIx/Red-Social-celiacos-%2F-Version-Desktop?scaling=scale-down&node-id=2%3A1)
 
 
