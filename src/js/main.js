@@ -46,7 +46,7 @@ function registryUser(){
   	containerMuro.classList.add('divDisplayBlock');
   }
 
-//Iniciar seción a traves de correo
+//Iniciar seción usuario registrado
 function singIn(){
 		login.classList.add('divDisplayBlock');
 		containerMuro.classList.remove('divDisplayNone');
@@ -93,3 +93,28 @@ function loginFacebook(){
 		containerMuro.classList.add('divDisplayBlock');
 }	
 
+// Ingressando con google
+function loginGoogle(){
+	const provider = new firebase.auth.GoogleAuthProvider();
+ 	provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+ 	firebase.auth().languageCode = 'pt';
+	provider.setCustomParameters({
+  		'login_hint': 'user@example.com'
+	});
+ 	firebase.auth().signInWithPopup(provider)
+ 	.then((result)=> {
+  	let token = result.credential.accessToken;
+  	let user = result.user;
+ })
+ 	.catch((error)=> {
+ 	console.log("error de firebase"+error.code);
+	console.log("error de firebase, mensaje "+error.message);
+});
+firebase.auth().signInWithRedirect(provider);
+firebase.auth().signOut().then(function() {
+
+}).catch((error)=> {
+  
+});
+}
+ 
