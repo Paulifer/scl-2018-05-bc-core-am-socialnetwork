@@ -165,3 +165,8 @@ function sendMessage(){
       text : messageAreaText
   });
 }       
+
+
+//Manejo del DOM  
+
+//Secciones menu desplegable 
