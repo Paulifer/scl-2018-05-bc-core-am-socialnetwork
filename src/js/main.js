@@ -135,4 +135,3 @@ firebase.auth().signOut().then(function() {
                 <p>${newMessage.val().text}</p>
             `;
         });
-};
