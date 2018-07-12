@@ -183,9 +183,9 @@ body {
 }
 
 .carruselFotos{
-    width: 80%;
+    width: 100%;
     text-align: center;
-    margin-left: 10%;
+    margin-left: 0;
     margin-top: 5%;
 }
 
