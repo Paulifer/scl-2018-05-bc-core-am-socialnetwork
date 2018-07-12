@@ -104,7 +104,7 @@ body {
 
 .inputRegister{
     width: 80%;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .register{
@@ -180,6 +180,13 @@ body {
 
 #containerMuro {
     padding: 0;
+}
+
+.carruselFotos{
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
 .divDisplayNone{
