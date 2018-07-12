@@ -30,6 +30,10 @@ function registry(){
 
 //Registro Nuevos Usuarios	
 function registryUser(){
+	containerCrearcuenta.classList.remove('divDisplayBlock');
+	containerCrearcuenta.classList.add('divDisplayNone');
+  	containerMuro.classList.remove('divDisplayNone');
+  	containerMuro.classList.add('divDisplayBlock');
 	let emailRegistry = registryEmail.value;
 	let passwordRegistry = registryPassword.value;
   	console.log(emailRegistry);
@@ -41,14 +45,13 @@ function registryUser(){
   		console.log(errorCode);
   		console.log(errorMessage);
 });
-  	containerCrearcuenta.classList.add('divDisplayNone');
-  	containerMuro.classList.remove('divDisplayNone');
-  	containerMuro.classList.add('divDisplayBlock');
+  	
   }
 
 //Iniciar seción usuario registrado
 function singIn(){
-		login.classList.add('divDisplayBlock');
+
+		login.classList.add('divDisplayNone');
 		containerMuro.classList.remove('divDisplayNone');
 		containerMuro.classList.add('divDisplayBlock');
 	let validarMail = exampleInputEmail1.value;
@@ -88,7 +91,7 @@ function loginFacebook(){
 		console.log("error de firebase"+error.code);
 		console.log("error de firebase, mensaje "+error.message);
 	});
-		login.classList.add('divDisplayBlock');
+		login.classList.add('divDisplayNone');
 		containerMuro.classList.remove('divDisplayNone');
 		containerMuro.classList.add('divDisplayBlock');
 }	
