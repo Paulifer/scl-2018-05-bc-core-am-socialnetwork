@@ -139,6 +139,8 @@ firebase.database().ref('messages')
 
  
 //Llamando a los mensajes 
+
+
     firebase.database().ref('messages')
         .limitToLast(5) //muestra solo los ultimos 5 mensajes como historial al recargar la pagina
         .on('child_added', (newMessage)=>{
@@ -161,7 +163,7 @@ function sendMessage(){
 
   firebase.database().ref(`messages/${newMessageKey}`).set({
       creator : currentUser.uid,
-      creatorName : currentUser.displayName,
+      creatorName : currentUser.displayName || currentUser.email,
       text : messageAreaText
   });
 }       
