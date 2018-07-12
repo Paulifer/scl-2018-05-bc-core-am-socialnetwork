@@ -82,6 +82,11 @@
                         <h1 id="titleRegister">Celibook</h1>
                     </div>
                     <div class="form-group inputRegister">
+                        <label for="validationCustom01"></label>
+                        <input type="text" class="form-control" id="registryName" placeholder="Nombre Completo">
+                        <div class="valid-feedback"></div>
+                    </div>
+                    <div class="form-group inputRegister">
                         <label for="exampleInputEmail1"></label>
                         <input type="email" class="form-control" id="registryEmail" aria-describedby="emailHelp" placeholder="Correo electronico">
                         <small id="emailHelp" class="form-text text-muted"></small>
@@ -127,7 +132,7 @@
         <div class="row carruselFotos">
             <div id="carouselExampleIndicators" class="col-sm carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">    
+                    <div class="carousel-item active">
                         <img class="d-block w-100" src="../img/sin-gluten.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
@@ -164,6 +169,66 @@
     </div>
     <!-- fin de MURO -->
 
+    <!-- Seccion Perfil-->
+
+<div class="container-fluid" id="containerPerfil">
+        <div class="row">
+          <div class="col-sm fotoUsuario">
+            <img src="../img/perfilpng.png" alt="fotoPergil" id="fotoperfilUsuario">
+            <h2 id="nameUsers"></h2>
+          </div>
+        </div> 
+      
+        <div class="row botonesPerfil">
+          <div class="col-md-6 offset-md-3">
+            <div class="btn-group-vertical">
+              <button type="button" id="intereses" onclick="" class="btn btn-primary">
+                <i class="fas fa-heart"></i> Mis Intereses</button>
+              <button type="button" id="mensaje" onclick="" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Mensaje</button>
+              <button type="button" id="amigos" onclick="" class="btn btn-primary">
+                <i class="fas fa-user-friends"></i> Amigos</button>
+              <button type="button" id="cambiarContraseña" onclick="" class="btn btn-primary">
+                <i class="fas fa-lock"></i> Cambiar Contraseña</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <i class="fas fa-angle-left"></i>
+            <b>Volver</b>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Seccion Quienes Somos-->
+      
+        <div class="container-fluid" id="containerQuienesSomos">
+      
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <h2 id="Quienes somos">¿Quienes somos?</h2>
+              <p>
+                Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
+                datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
+                intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
+                el contenido que encuentren necesario en esta red social 100 % libre de gluten.
+      
+              </p>
+      
+            </div>
+          </div>
+      
+      
+          <div class="row">
+            <div class="col-sm fotoceliacos">
+              <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
+            </div>
+          </div>
+      </div>
+
+      
 
     <!--Link firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>

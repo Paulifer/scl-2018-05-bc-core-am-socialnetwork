@@ -246,3 +246,45 @@ body {
     margin-left: 75%;
     margin-top: 0.5em;
 }
+
+/*Seccion perfil */
+
+#fotoperfilUsuario {
+    margin-top: 3em;
+    width: 35%;
+    margin-left: 30%;
+}
+
+#containerPerfil {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display:none;
+    width: 100%;
+}
+
+.botonesPerfil {
+    text-align: center;
+    width: 100%;
+}
+
+/*Quienes somos */
+
+#containerQuienesSomos {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+#fotoCeliacos {
+    margin-top: 3em;
+    width: 35%;
+    margin-left: 30%;
+    text-align: center;
+}
+
+
+Añadir comentarioContraer 
