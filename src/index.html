@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-10 registro">
                 <p>¿Aún no tienes cuenta?
-                    <button type="button" onclick="registry()">REGISTRATE AQUÍ</button> 
+                    <button type="button" onclick="registry()">REGISTRATE AQUÍ</button>
                 </p>
             </div>
             <div class="col-sm-1">
@@ -65,7 +65,7 @@
 
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <button type="button" id="google" onclick="loginGoogle()"  class="btn btn-primary">
+                <button type="button" id="google" onclick="loginGoogle()" class="btn btn-primary">
                     <i class="fab fa-google-plus-g"></i> Registrarme con Google+</button>
             </div>
         </div>
@@ -121,14 +121,16 @@
             <span id="burger" onclick="openNav()">&#9776;</span>
         </header>
 
+        <!-- Titulo y Bienvenida a la red social -->
+        <div class="row">
+            <div class="col-sm">
+                <h1 id="welcome">¡Bienvenida/o a Celibook!</h1>
+                <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
+            </div>
+        </div>
         <!-- Carrusel de imagenes -->
         <div class="row carruselFotos">
             <div id="carouselExampleIndicators" class="col-sm carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="../img/sin-gluten.jpg" alt="First slide">
@@ -150,59 +152,109 @@
                 </a>
             </div>
         </div>
+
+        <!-- Contenedor de publicaciones -->
+        <div class="container-fluid">
+            <div>
+                <div id="messageContainer">
+                </div>
+                <input id="messageArea" type="text">
+                <input type="button" id="sendButton" value="SEND" onclick="sendMessage()">
+            </div>
+        </div>
+    </diV>
+
     </div>
+    <!-- fin de MURO -->
 
     <!-- Seccion Perfil-->
 
-    <div class="container-fluid" id="containerPerfil"> 
+    <div class="container-fluid" id="containerPerfil">
         <div class="row">
             <div class="col-sm fotoUsuario">
-                <img src="../img/Perfil.png" alt="fotoPergil" id="fotoperfilUsuario">
-                <h2 id="titleLogin">Celibook</h2>
+                <img src="../img/perfilpng.png" alt="fotoPergil" id="fotoperfilUsuario">
+                <h2 id="nameUsers"></h2>
+            </div>
+        </div>
+
+        <div class="row botonesPerfil">
+            <div class="col-md-6 offset-md-3">
+                <div class="btn-group-vertical">
+                    <button type="button" id="intereses" onclick="" class="btn btn-primary">
+                        <i class="fas fa-heart"></i> Mis Intereses</button>
+                    <button type="button" id="mensaje" onclick="" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Mensaje</button>
+                    <button type="button" id="amigos" onclick="" class="btn btn-primary">
+                        <i class="fas fa-user-friends"></i> Amigos</button>
+                    <button type="button" id="cambiarContraseña" onclick="" class="btn btn-primary">
+                        <i class="fas fa-lock"></i> Cambiar Contraseña</button>
+
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <button type="button" id="facebook" onclick="loginFacebook()" class="btn btn-primary">
-                    <i class="fab fa-facebook-f"></i> Mis intereses </button>
+                <i class="fas fa-angle-left"></i>
+                <b>Volver</b>
+
+                </sdiv>
             </div>
+
         </div>
 
+        <!-- Seccion Quienes Somos-->
 
-    </div> 
+        <div class="container-fluid" id="containerQuienesSomos">
 
-    <!-- Seccion Quienes Somos-->
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h2 id="Quienes somos">¿Quienes somos?</h2>
+                    <p>
+                        Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
+                        datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que
+                        vive con esta intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que
+                        se unan para compartir todos el contenido que encuentren necesario en esta red social 100 % libre
+                        de gluten.
 
-    <div class="container-fluid" id="containerQuienesSomos"> 
+                    </p>
+
+                </div>
+            </div>
 
 
+            <div class="row">
 
-    </div> 
+                <div class="col-sm fotoceliacos">
+                    <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
+                        </div>
+            </div>
 
-    <!--Link firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script>
-        var config = {
-            apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
-            authDomain: "redsocial-78423.firebaseapp.com",
-            databaseURL: "https://redsocial-78423.firebaseio.com",
-            projectId: "redsocial-78423",
-            storageBucket: "redsocial-78423.appspot.com",
-            messagingSenderId: "739042868398"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <!-- Links bootstrap y js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/data.js"></script>
+        </div>
+
+        <!--Link firebase-->
+        <script src=" https://www.gstatic.com/firebasejs/5.2.0/firebase.js "></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI ",
+                authDomain: "redsocial-78423.firebaseapp.com ",
+                databaseURL: "https://redsocial-78423.firebaseio.com ",
+                projectId: "redsocial-78423 ",
+                storageBucket: "redsocial-78423.appspot.com ",
+                messagingSenderId: "739042868398 "
+            };
+            firebase.initializeApp(config);
+        </script>
+        <!-- Links bootstrap y js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+            crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+            crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T "
+            crossorigin="anonymous "></script>
+        <script src="https://use.fontawesome.com/7cdd7a07f8.js "></script>
+        <script src="js/main.js "></script>
+        <script src="js/data.js "></script>
 
 
 </body>

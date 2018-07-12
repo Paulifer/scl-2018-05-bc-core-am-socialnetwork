@@ -6,7 +6,7 @@ body {
 
 .login {
     background-color: #99CE81;
-    /* display: none; */
+    display: none;
 }
 
 #logoCelibook {
@@ -38,6 +38,15 @@ body {
     border-radius: 5px;
     color: white;
     width: 100%;
+}
+
+.btn-primary:hover {
+    margin-top: 1em;
+    background-color: #9B369D;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    border-color: #9B369D;
 }
 
 .registro {
@@ -92,7 +101,7 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
-    /*display: none;*/
+    display: none;
 }
 
 .crearCuenta {
@@ -198,6 +207,22 @@ body {
 
 .divDisplayBlock {
     display: block;
+    /* display: none; */
+}
+
+.divDisplayBlock {
+    display: block;
+}
+
+#welcome {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#subtitleWelcome {
+    text-align: center;
+    font-size: 0.8em;
 }
 
 #logoWall {
@@ -210,4 +235,35 @@ body {
     margin-top: 3em;
     width: 35%;
     margin-left: 30%;
+}
+
+#containerPerfil {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display:none;
+    width: 100%;
+}
+
+.botonesPerfil {
+    text-align: center;
+    width: 100%;
+}
+
+/*Quienes somos */
+
+#containerQuienesSomos {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+#fotoCeliacos {
+    margin-top: 3em;
+    width: 35%;
+    margin-left: 30%;
+    text-align: center;
 }
