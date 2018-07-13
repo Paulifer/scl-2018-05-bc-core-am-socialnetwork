@@ -121,10 +121,32 @@ firebase.auth().signOut().then(function() {
 });
 }
 
+
 //MURO CON COMENTARIOS
 
+// Firebase Database
+// Usaremos una colección para guardar los mensajes, llamada messages
+function sendMessage(){
+  const currentUser = firebase.auth().currentUser;
+  const messageAreaText = messageArea.value;
+  const displayName = registryName.value;
+  const heart = document.createElement("i");
+  heart.classList.add('fas', 'fa-heart', 'heart');  
+  
+  //Para tener una nueva llave en la colección messages
+  const newMessageKey = firebase.database().ref().child('messages').push().key;
+
+  
+  firebase.database().ref(`messages/${newMessageKey}`).set({
+      creator : currentUser.uid,
+      creatorName : currentUser.displayName || currentUser.email,
+      text : messageAreaText,
+      icon : heart
+  });
+  }             
+
 firebase.database().ref('messages')
-.limitToLast(2) //filtro para no obtener todos los mensajes
+.limitToLast(5) //filtro para no obtener todos los mensajes
 .once('value')
 .then((messages)=>{
   console.log("Mensajes >"+ JSON.stringify(messages));
@@ -134,31 +156,16 @@ firebase.database().ref('messages')
 });
 
 
+//Llamando a los mensajes  para que aparezcan cada vez que recargue la pagina
 
-//Llamando a los mensajes 
+
   firebase.database().ref('messages')
-      .limitToLast(5) //muestra solo los ultimos 5 mensajes como historial al recargar la pagina
+      .limitToLast(8) //muestra solo los ultimos 8 mensajes como historial al recargar la pagina
       .on('child_added', (newMessage)=>{
           messageContainer.innerHTML += `
-              <p>${newMessage.val().creatorName} dice:</p>
-              <p>${newMessage.val().text}</p>
+              <div style="border:1px solid gray; margin: 7%; border-radius:4px"><p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
+              <p style="margin-left:0.5em;">${newMessage.val().text}</p>
+              </div>
           `;
       });
 
-// Firebase Database
-// Usaremos una colección para guardar los mensajes, llamada messages
-function sendMessage(){
-const currentUser = firebase.auth().currentUser;
-const messageAreaText = messageArea.value;
-const displayNames = registryName.value;
-
-//Para tener una nueva llave en la colección messages
-const newMessageKey = firebase.database().ref().child('messages').push().key;
-
-
-firebase.database().ref(`messages/${newMessageKey}`).set({
-    creator : currentUser.uid,
-    creatorName : currentUser.displayName || currentUser.email,
-    text : messageAreaText
-});
-}             
