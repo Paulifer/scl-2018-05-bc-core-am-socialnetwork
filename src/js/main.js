@@ -29,55 +29,57 @@ function registry(){
 }
 
 //Registro Nuevos Usuarios	
-function registryUser(){
-	containerCrearcuenta.classList.remove('divDisplayBlock');
-	containerCrearcuenta.classList.add('divDisplayNone');
-  	containerMuro.classList.remove('divDisplayNone');
-  	containerMuro.classList.add('divDisplayBlock');
+const btnIniciar = document.getElementById('btnregister').addEventListener('click', ()=>{
+	
 	let emailRegistry = registryEmail.value;
 	let passwordRegistry = registryPassword.value;
+	let nameRegistry = registryName.value;
   	console.log(emailRegistry);
   	console.log(passwordRegistry);
   	firebase.auth().createUserWithEmailAndPassword(emailRegistry, passwordRegistry)
-  	.catch(function(error) {
+  	.then(()=>{
+  			containerCrearcuenta.classList.remove('divDisplayBlock');
+			containerCrearcuenta.classList.add('divDisplayNone');
+  			containerMuro.classList.remove('divDisplayNone');
+  			containerMuro.classList.add('divDisplayBlock');	
+  	})
+  	.catch((error)=> {
 	  	let errorCode = error.code;
   		let errorMessage = error.message;
   		console.log(errorCode);
   		console.log(errorMessage);
 });
-  	
-  }
+ 	
+  })
 
 //Iniciar seción usuario registrado
-function singIn(){
-
-		login.classList.add('divDisplayNone');
-		containerMuro.classList.remove('divDisplayNone');
-		containerMuro.classList.add('divDisplayBlock');
+const btnSingIn= document.getElementById('btnSingIn').addEventListener('click', ()=>{
 	let validarMail = exampleInputEmail1.value;
 	let valiarPassword = exampleInputPassword1.value;
 	if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(validarMail)) {
+			firebase.auth().signInWithEmailAndPassword(validarMail, valiarPassword)
+			.then(()=>{
+				console.log("usuarioExistente");
+				login.classList.add('divDisplayNone');
+				containerMuro.classList.remove('divDisplayNone');
+				containerMuro.classList.add('divDisplayBlock');
+			})
+		.catch(function(error) {
+ 	 		let errorCode = error.code;
+  	 		let errorMessage = error.message;
+  			console.log(errorCode);
+  			console.log(errorMessage);
+		});
 		alert("correcto");
 	}else{
 		alert("incorrecto");
 	}
 		console.log(validarMail);
 		console.log(valiarPassword);
-	firebase.auth().signInWithEmailAndPassword(validarMail, valiarPassword)
-		.then(()=>{
-			console.log("usuarioExistente");
-		})
-		.catch(function(error) {
- 	 		let errorCode = error.code;
-  	 		let errorMessage = error.message;
-  			console.log(errorCode);
-  			console.log(errorMessage);
-	});
-		
- }
+})
 	
 //Ingreso Usuario Facebook
-function loginFacebook(){
+const btnFacebook = document.getElementById('facebook').addEventListener('click', ()=>{
 	const provider = new firebase.auth.FacebookAuthProvider();
 	//provider.addScope(""); hay que pedir permiso a facebook
 	provider.setCustomParameters({
@@ -86,15 +88,16 @@ function loginFacebook(){
 	firebase.auth().signInWithPopup(provider)
 	.then(()=>{
 		console.log("login con facebook");
+		login.classList.add('divDisplayNone');
+		containerMuro.classList.remove('divDisplayNone');
+		containerMuro.classList.add('divDisplayBlock');
 	})
 	.catch((error)=>{
 		console.log("error de firebase"+error.code);
 		console.log("error de firebase, mensaje "+error.message);
 	});
-		login.classList.add('divDisplayNone');
-		containerMuro.classList.remove('divDisplayNone');
-		containerMuro.classList.add('divDisplayBlock');
-}	
+		
+})	
 
 // Ingressando con google
 function loginGoogle(){
