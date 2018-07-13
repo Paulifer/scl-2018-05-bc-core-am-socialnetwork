@@ -52,8 +52,9 @@ body {
 #buttonRegister{
     background-color: #99CE81;
     color: white;
-    font-style: bold;
     border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #facebook {
@@ -77,7 +78,7 @@ body {
 #google {
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 12%;
+    margin-bottom: 50%;
     width: 90%;
     height: 35px;
     border-radius: 4px;
@@ -234,6 +235,7 @@ body {
     font-size: 1.3em;
     margin-top: 1em;
     font-style: oblique;
+    
 }
 
 #messageArea{

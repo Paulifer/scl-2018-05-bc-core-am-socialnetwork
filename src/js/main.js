@@ -130,8 +130,7 @@ function sendMessage(){
   const currentUser = firebase.auth().currentUser;
   const messageAreaText = messageArea.value;
   const displayName = registryName.value;
-  const heart = document.createElement("i");
-  heart.classList.add('fas', 'fa-heart', 'heart');  
+  const heart = heart.classList.add('fas', 'fa-heart', 'heart');  
   
   //Para tener una nueva llave en la colección messages
   const newMessageKey = firebase.database().ref().child('messages').push().key;
@@ -141,7 +140,7 @@ function sendMessage(){
       creator : currentUser.uid,
       creatorName : currentUser.displayName || currentUser.email,
       text : messageAreaText,
-      icon : heart
+      icon : heart,
   });
   }             
 
