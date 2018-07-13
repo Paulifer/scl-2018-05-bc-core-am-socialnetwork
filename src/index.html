@@ -108,13 +108,13 @@
         <header id="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="">Mi Perfil</a>
-                <a href="">Quienes somos</a>
-                <a href="">Salud Integral</a>
-                <a href="">Alimentacion</a>
-                <a href="">Actividades</a>
-                <a href="">Noticias</a>
-                <a href="">Preguntas frecuentes</a>
+                <p id="perfil" href="">Mi Perfil</p>
+                <p id="quienesSomos" href="">Quienes somos</p>
+                <a id="salud" href="">Salud Integral</a>
+                <a id="alimentacion" href="">Alimentacion</a>
+                <a id="actividades" href="">Actividades</a>
+                <a id="noticias" href="">Noticias</a>
+                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
                 <a href="">Home</a>
                 <a href="">Cerrar sesión</a>
             </div>
@@ -172,6 +172,22 @@
     <!-- Seccion Perfil-->
 
     <div class="container-fluid" id="containerPerfil">
+        <header id="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <p id="perfil" href="">Mi Perfil</p>
+                <p id="quienesSomos" href="">Quienes somos</p>
+                <a id="salud" href="">Salud Integral</a>
+                <a id="alimentacion" href="">Alimentacion</a>
+                <a id="actividades" href="">Actividades</a>
+                <a id="noticias" href="">Noticias</a>
+                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
+                <a href="">Home</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+            <span id="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
         <div class="row">
             <div class="col-sm fotoUsuario">
                 <img src="../img/perfilpng.png" alt="fotoPergil" id="fotoperfilUsuario">
@@ -190,7 +206,6 @@
                         <i class="fas fa-user-friends"></i> Amigos</button>
                     <button type="button" id="cambiarContraseña" onclick="" class="btn btn-primary">
                         <i class="fas fa-lock"></i> Cambiar Contraseña</button>
-
                 </div>
             </div>
         </div>
@@ -199,16 +214,28 @@
             <div class="col-md-6 offset-md-3">
                 <i class="fas fa-angle-left"></i>
                 <b>Volver</b>
-
-                </sdiv>
             </div>
-
         </div>
-
     </div>
+
     <!-- Seccion Quienes Somos-->
 
     <div class="container-fluid" id="containerQuienesSomos">
+        <header id="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <p id="perfil" href="">Mi Perfil</p>
+                <p id="quienesSomos" href="">Quienes somos</p>
+                <a id="salud" href="">Salud Integral</a>
+                <a id="alimentacion" href="">Alimentacion</a>
+                <a id="actividades" href="">Actividades</a>
+                <a id="noticias" href="">Noticias</a>
+                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
+                <a href="">Home</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+            <span id="burger" onclick="openNav()">&#9776;</span>
+        </header>
 
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -226,38 +253,37 @@
 
 
         <div class="row">
-
             <div class="col-sm fotoceliacos">
                 <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
             </div>
         </div>
-
     </div>
 
 
+
     <!--Link firebase-->
-    <script src=" https://www.gstatic.com/firebasejs/5.2.0/firebase.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script>
         var config = {
-            apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI ",
-            authDomain: "redsocial-78423.firebaseapp.com ",
-            databaseURL: "https://redsocial-78423.firebaseio.com ",
-            projectId: "redsocial-78423 ",
-            storageBucket: "redsocial-78423.appspot.com ",
-            messagingSenderId: "739042868398 "
+            apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
+            authDomain: "redsocial-78423.firebaseapp.com",
+            databaseURL: "https://redsocial-78423.firebaseio.com",
+            projectId: "redsocial-78423",
+            storageBucket: "redsocial-78423.appspot.com",
+            messagingSenderId: "739042868398"
         };
         firebase.initializeApp(config);
     </script>
     <!-- Links bootstrap y js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
-        crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
-        crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T "
-        crossorigin="anonymous "></script>
-    <script src="https://use.fontawesome.com/7cdd7a07f8.js "></script>
-    <script src="js/main.js "></script>
-    <script src="js/data.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
 
 
 </body>
