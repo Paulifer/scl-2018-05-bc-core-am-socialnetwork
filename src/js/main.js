@@ -130,7 +130,9 @@ function sendMessage(){
   const currentUser = firebase.auth().currentUser;
   const messageAreaText = messageArea.value;
   const displayName = registryName.value;
-  const heart = heart.classList.add('fas', 'fa-heart', 'heart');  
+  const heart =  document.createElement("i");
+  heart.classList.add('fas', 'fa-heart', 'heart'); 
+
   
   //Para tener una nueva llave en la colección messages
   const newMessageKey = firebase.database().ref().child('messages').push().key;
@@ -162,8 +164,9 @@ firebase.database().ref('messages')
       .limitToLast(8) //muestra solo los ultimos 8 mensajes como historial al recargar la pagina
       .on('child_added', (newMessage)=>{
           messageContainer.innerHTML += `
-              <div style="border:1px solid gray; margin: 7%; border-radius:4px"><p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
+              <div style="border:1px solid gray; margin: 7%; border-radius:4px; background-color:white"><p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
               <p style="margin-left:0.5em;">${newMessage.val().text}</p>
+
               </div>
           `;
       });
