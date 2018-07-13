@@ -166,7 +166,6 @@ firebase.database().ref('messages')
           messageContainer.innerHTML += `
               <div style="border:1px solid gray; margin: 7%; border-radius:4px; background-color:white"><p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
               <p style="margin-left:0.5em;">${newMessage.val().text}</p>
-
               </div>
           `;
       });
