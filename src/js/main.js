@@ -29,72 +29,77 @@ containerCrearcuenta.classList.add('divDisplayBlock');
 }
 
 //Registro Nuevos Usuarios	
-function registryUser(){
-containerCrearcuenta.classList.remove('divDisplayBlock');
-containerCrearcuenta.classList.add('divDisplayNone');
-  containerMuro.classList.remove('divDisplayNone');
-  containerMuro.classList.add('divDisplayBlock');
-let emailRegistry = registryEmail.value;
-let passwordRegistry = registryPassword.value;
-  console.log(emailRegistry);
-  console.log(passwordRegistry);
-  firebase.auth().createUserWithEmailAndPassword(emailRegistry, passwordRegistry)
-  .catch(function(error) {
-    let errorCode = error.code;
-    let errorMessage = error.message;
-    console.log(errorCode);
-    console.log(errorMessage);
+
+const btnIniciar = document.getElementById('btnregister').addEventListener('click', ()=>{
+	
+	let emailRegistry = registryEmail.value;
+	let passwordRegistry = registryPassword.value;
+	let nameRegistry = registryName.value;
+  	console.log(emailRegistry);
+  	console.log(passwordRegistry);
+  	firebase.auth().createUserWithEmailAndPassword(emailRegistry, passwordRegistry)
+  	.then(()=>{
+  			containerCrearcuenta.classList.remove('divDisplayBlock');
+			containerCrearcuenta.classList.add('divDisplayNone');
+  			containerMuro.classList.remove('divDisplayNone');
+  			containerMuro.classList.add('divDisplayBlock');	
+  	})
+  	.catch((error)=> {
+	  	let errorCode = error.code;
+  		let errorMessage = error.message;
+  		console.log(errorCode);
+  		console.log(errorMessage);
 });
-  
-}
+ 	
+  })
 
 //Iniciar seción usuario registrado
-function singIn(){
-
-  login.classList.add('divDisplayNone');
-  containerMuro.classList.remove('divDisplayNone');
-  containerMuro.classList.add('divDisplayBlock');
-let validarMail = exampleInputEmail1.value;
-let valiarPassword = exampleInputPassword1.value;
-if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(validarMail)) {
-  alert("correcto");
-}else{
-  alert("incorrecto");
-}
-  console.log(validarMail);
-  console.log(valiarPassword);
-firebase.auth().signInWithEmailAndPassword(validarMail, valiarPassword)
-  .then(()=>{
-    console.log("usuarioExistente");
-  })
-  .catch(function(error) {
-      let errorCode = error.code;
-       let errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-});
-  
-}
-
-//Ingreso Usuario Facebook
-function loginFacebook(){
-const provider = new firebase.auth.FacebookAuthProvider();
-//provider.addScope(""); hay que pedir permiso a facebook
-provider.setCustomParameters({
-  'display' : 'popup'
-});
-firebase.auth().signInWithPopup(provider)
-.then(()=>{
-  console.log("login con facebook");
+const btnSingIn= document.getElementById('btnSingIn').addEventListener('click', ()=>{
+	let validarMail = exampleInputEmail1.value;
+	let valiarPassword = exampleInputPassword1.value;
+	if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(validarMail)) {
+			firebase.auth().signInWithEmailAndPassword(validarMail, valiarPassword)
+			.then(()=>{
+				console.log("usuarioExistente");
+				login.classList.add('divDisplayNone');
+				containerMuro.classList.remove('divDisplayNone');
+				containerMuro.classList.add('divDisplayBlock');
+			})
+		.catch(function(error) {
+ 	 		let errorCode = error.code;
+  	 		let errorMessage = error.message;
+  			console.log(errorCode);
+  			console.log(errorMessage);
+		});
+		alert("correcto");
+	}else{
+		alert("incorrecto");
+	}
+		console.log(validarMail);
+		console.log(valiarPassword);
 })
-.catch((error)=>{
-  console.log("error de firebase"+error.code);
-  console.log("error de firebase, mensaje "+error.message);
-});
-  login.classList.add('divDisplayNone');
-  containerMuro.classList.remove('divDisplayNone');
-  containerMuro.classList.add('divDisplayBlock');
-}	
+	
+//Ingreso Usuario Facebook
+const btnFacebook = document.getElementById('facebook').addEventListener('click', ()=>{
+	const provider = new firebase.auth.FacebookAuthProvider();
+	//provider.addScope(""); hay que pedir permiso a facebook
+	provider.setCustomParameters({
+		'display' : 'popup'
+	});
+	firebase.auth().signInWithPopup(provider)
+	.then(()=>{
+		console.log("login con facebook");
+		login.classList.add('divDisplayNone');
+		containerMuro.classList.remove('divDisplayNone');
+		containerMuro.classList.add('divDisplayBlock');
+	})
+	.catch((error)=>{
+		console.log("error de firebase"+error.code);
+		console.log("error de firebase, mensaje "+error.message);
+	});
+		
+})	
+
 
 // Ingressando con google
 function loginGoogle(){
@@ -142,7 +147,7 @@ function sendMessage(){
       creator : currentUser.uid,
       creatorName : currentUser.displayName || currentUser.email,
       text : messageAreaText,
-      icon : heart,
+      dates : firebase.database.ServerValue.TIMESTAMP,
   });
   }             
 
@@ -163,10 +168,14 @@ firebase.database().ref('messages')
   firebase.database().ref('messages')
       .limitToLast(8) //muestra solo los ultimos 8 mensajes como historial al recargar la pagina
       .on('child_added', (newMessage)=>{
+        let date = new Date();
           messageContainer.innerHTML += `
               <div style="border:1px solid gray; margin: 7%; border-radius:4px; background-color:white"><p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
               <p style="margin-left:0.5em;">${newMessage.val().text}</p>
+              <p style="margin-left:0.5em; color:#99CE81; font-size:0.8em;">${date.getDate(newMessage.val())}/${date.getMonth(newMessage.val())+1} a las ${date.getHours(newMessage.val())}:${date.getMinutes(newMessage.val())}</p>
               </div>
+              
+              
           `;
       });
 
