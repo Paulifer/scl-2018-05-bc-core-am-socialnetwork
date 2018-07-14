@@ -125,7 +125,7 @@ body {
 }
 
 /* BARRA SUPERIOR */
-#barTop{
+.barTop{
     background-color: #99CE81;
     margin: 0;
     padding: 0;
@@ -297,4 +297,5 @@ body {
     margin-left: 30%;
     text-align: center;
 }
+
 

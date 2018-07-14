@@ -105,16 +105,16 @@
 
     <!-- Barra superior y menú desplegable -->
     <div class="container-fluid divDisplayNone" id="containerMuro">
-        <header id="barTop">
+        <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="">Mi Perfil</a>
-                <a href="">Quienes somos</a>
-                <a href="">Salud Integral</a>
-                <a href="">Alimentacion</a>
-                <a href="">Actividades</a>
-                <a href="">Noticias</a>
-                <a href="">Preguntas frecuentes</a>
+                <p id="perfil" href="">Mi Perfil</p>
+                <p id="quienesSomos" href="">Quienes somos</p>
+                <a id="salud" href="">Salud Integral</a>
+                <a id="alimentacion" href="">Alimentacion</a>
+                <a id="actividades" href="">Actividades</a>
+                <a id="noticias" href="">Noticias</a>
+                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
                 <a href="">Home</a>
                 <a href="">Cerrar sesión</a>
             </div>
@@ -172,6 +172,22 @@
     <!-- Seccion Perfil-->
 
     <div class="container-fluid" id="containerPerfil">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <p id="perfil" href="">Mi Perfil</p>
+                <p id="quienesSomos" href="">Quienes somos</p>
+                <a id="salud" href="">Salud Integral</a>
+                <a id="alimentacion" href="">Alimentacion</a>
+                <a id="actividades" href="">Actividades</a>
+                <a id="noticias" href="">Noticias</a>
+                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
+                <a href="">Home</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+            <span id="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
         <div class="row">
             <div class="col-sm fotoUsuario">
                 <img src="../img/perfilpng.png" alt="fotoPergil" id="fotoperfilUsuario">
@@ -205,6 +221,21 @@
     <!-- Seccion Quienes Somos-->
 
     <div class="container-fluid" id="containerQuienesSomos">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <p id="perfil" href="">Mi Perfil</p>
+                <p id="quienesSomos" href="">Quienes somos</p>
+                <a id="salud" href="">Salud Integral</a>
+                <a id="alimentacion" href="">Alimentacion</a>
+                <a id="actividades" href="">Actividades</a>
+                <a id="noticias" href="">Noticias</a>
+                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
+                <a href="">Home</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+            <span id="burger" onclick="openNav()">&#9776;</span>
+        </header>
 
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -244,7 +275,7 @@
         firebase.initializeApp(config);
     </script>
 
-    
+
     <!-- Links bootstrap y js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
