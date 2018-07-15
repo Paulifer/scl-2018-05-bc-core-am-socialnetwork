@@ -125,7 +125,7 @@ body {
 }
 
 /* BARRA SUPERIOR */
-#barTop{
+.barTop{
     background-color: #99CE81;
     margin: 0;
     padding: 0;
@@ -138,8 +138,6 @@ body {
     cursor: pointer;
 
 }
-
-
 
 /* MENU LATERAL DESPLEGABLE */
 .sidenav {

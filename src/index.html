@@ -31,14 +31,14 @@
                 <form>
                     <div class="form-group bars">
                         <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electronico">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo electronico" required="email">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group bars">
                         <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Contraseña" required="password">
                         <a href="" class="emailForgot">Olvidé mi contraseña</a>
-                        <button type="button" id="btnSingIn" onclick="singIn()" class="btn btn-primary">Iniciar sesión</button>
+                        <button type="button" id="btnSingIn"  class="btn btn-primary">Iniciar sesión</button>
                     </div>
                 </form>
             </div>
@@ -58,7 +58,7 @@
 
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <button type="button" id="facebook" onclick="loginFacebook()" class="btn btn-primary">
+                <button type="button" id="facebook" class="btn btn-primary">
                     <i class="fab fa-facebook-f"></i> Registrarme con Facebook</button>
             </div>
         </div>
@@ -94,7 +94,7 @@
                     <div class="form-group inputRegister">
                         <label for="exampleInputPassword1"></label>
                         <input type="password" class="form-control" id="registryPassword" placeholder="Nueva contraseña">
-                        <button type="button" id="btnregister" class="btn btn-primary" onclick="registryUser()">Registrarme</button>
+                        <button type="button" id="btnregister" class="btn btn-primary">Registrarme</button>
                     </div>
                 </form>
             </div>
@@ -105,7 +105,7 @@
 
     <!-- Barra superior y menú desplegable -->
     <div class="container-fluid divDisplayNone" id="containerMuro">
-        <header id="barTop">
+        <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p id="perfil" href="">Mi Perfil</p>
@@ -172,7 +172,7 @@
     <!-- Seccion Perfil-->
 
     <div class="container-fluid" id="containerPerfil">
-        <header id="barTop">
+        <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p id="perfil" href="">Mi Perfil</p>
@@ -221,7 +221,7 @@
     <!-- Seccion Quienes Somos-->
 
     <div class="container-fluid" id="containerQuienesSomos">
-        <header id="barTop">
+        <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p id="perfil" href="">Mi Perfil</p>
@@ -274,6 +274,8 @@
         };
         firebase.initializeApp(config);
     </script>
+
+
     <!-- Links bootstrap y js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
