@@ -193,8 +193,6 @@ firebase.database().ref(`messages/${newMessageKey}`).set({
 window.onload = () => {
   openPerfil();
   openQuienesSomos();
-  openNav();
-  closeNav();
 
   //aqui va nombre de la funcion
 
