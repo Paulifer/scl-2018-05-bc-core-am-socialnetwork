@@ -135,7 +135,7 @@ body {
     padding: 0;
 }
 
-#burger {
+.burger {
     font-size: 30px;
     cursor: pointer;
     margin-left: 0.5em;
