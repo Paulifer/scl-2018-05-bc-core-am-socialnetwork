@@ -3,35 +3,35 @@
 body {
     background-color: white;
 }
-.login{
-    background-color: #99CE81;
-    /*display: none;*/ 
 
+.login {
+    background-color: #99CE81;
+    /*display: none;*/
 }
 
-#logoCelibook{
+#logoCelibook {
     margin-top: 3em;
     width: 35%;
     margin-left: 30%;
 }
 
-#titleLogin{
+#titleLogin {
     color: white;
     font-size: 2em;
     text-align: center;
 }
-.emailForgot{
+
+.emailForgot {
     color: white;
     margin-left: 0%;
 }
 
-.bars{
+.bars {
     width: 90%;
     margin-left: 5%;
     margin-top: 0.5em;
-
-    
 }
+
 .btn-primary {
     margin-top: 1em;
     background-color: #9B369D;
@@ -40,16 +40,17 @@ body {
     width: 100%;
 }
 
-.registro{
+.registro {
     color: white;
     text-align: center;
 }
 
-#registroClick{
+#registroClick {
     color: white;
     cursor: pointer;
 }
-#buttonRegister{
+
+#buttonRegister {
     background-color: #99CE81;
     color: white;
     border: none;
@@ -89,7 +90,7 @@ body {
 }
 
 #google:hover {
-    color:#db3236 ;
+    color: #db3236;
     opacity: 0.6;
 }
 
@@ -100,46 +101,50 @@ body {
     padding: 0;
     margin: 0;
 }
-.crearCuenta{
+
+.crearCuenta {
     width: 100%;
 }
-#titleRegister{
+
+#titleRegister {
     text-align: center;
     font-size: 2em;
     color: #99CE81;
 }
 
-.inputRegister{
+.inputRegister {
     width: 80%;
     margin-left: 10%;
 }
 
-.register{
+.register {
     padding-right: 0;
 }
-#logoRegistro{
+
+#logoRegistro {
     margin-top: 5em;
     width: 30%;
     margin-left: 35%;
-
 }
 
 /* BARRA SUPERIOR */
-.barTop{
+
+.barTop, .barTopperfil, barTopquienesSomos {
     background-color: #99CE81;
     margin: 0;
     padding: 0;
 }
 
-#burger{
-    font-size:30px;cursor:pointer;
+#burger {
+    font-size: 30px;
+    cursor: pointer;
     margin-left: 0.5em;
     color: white;
     cursor: pointer;
-
 }
 
 /* MENU LATERAL DESPLEGABLE */
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -157,7 +162,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color:white;
+    color: white;
     display: block;
     transition: 0.3s;
 }
@@ -189,7 +194,7 @@ body {
     padding: 0;
 }
 
-.carruselFotos{
+.carruselFotos {
     width: 100%;
     text-align: center;
     margin-left: 0;
@@ -197,46 +202,46 @@ body {
 }
 
 .divDisplayNone {
-   display: none; 
-}
-.divDisplayBlock{
-    display: block; 
+    display: none;
 }
 
-.titleWelcome{
+.divDisplayBlock {
+    display: block;
+}
+
+.titleWelcome {
     width: 100%;
 }
 
-#welcome{
+#welcome {
     margin-top: 2em;
     text-align: center;
     font-size: 1.3em;
 }
 
-#subtitleWelcome{
+#subtitleWelcome {
     text-align: center;
     font-size: 0.9em;
 }
 
-#logoWall{
+#logoWall {
     width: 15%;
 }
 
-#messageContainer{
+#messageContainer {
     border: #99CE81 1px solid;
     margin-top: 2em;
     background-color: snow;
 }
 
-#titleWall{
+#titleWall {
     text-align: center;
     font-size: 1.3em;
     margin-top: 1em;
     font-style: oblique;
-    
 }
 
-#messageArea{
+#messageArea {
     width: 80%;
     height: 3em;
     border: gray 1px solid;
@@ -244,8 +249,7 @@ body {
     border-radius: 4px;
 }
 
-
-#sendButton{
+#sendButton {
     position: right;
     color: white;
     background-color: #9B369D;
@@ -269,7 +273,7 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
-    display:none;
+    display: none;
     width: 100%;
 }
 
@@ -296,4 +300,52 @@ body {
     text-align: center;
 }
 
+/*Seccion Salud Integral */
 
+#containerSalud {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+}
+
+/*Seccion Alimentacion */
+
+#containerAlimentacion {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+}
+
+/*Seccion Actividades*/
+
+#containerActividades {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+}
+
+/*Seccion Noticias*/
+
+#containerNoticias {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+}
+
+/*Seccion PreguntasFrecuentes*/
+
+#containerPreguntasFrecuentes {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+}
