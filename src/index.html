@@ -31,14 +31,15 @@
                 <form>
                     <div class="form-group bars">
                         <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo electronico" required="email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo electronico"
+                            required="email">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group bars">
                         <label for="exampleInputPassword1"></label>
                         <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Contraseña" required="password">
                         <a href="" class="emailForgot">Olvidé mi contraseña</a>
-                        <button type="button" id="btnSingIn"  class="btn btn-primary">Iniciar sesión</button>
+                        <button type="button" id="btnSingIn" class="btn btn-primary">Iniciar sesión</button>
                     </div>
                 </form>
             </div>
@@ -108,15 +109,15 @@
         <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <p id="perfil" href="">Mi Perfil</p>
-                <p id="quienesSomos" href="">Quienes somos</p>
-                <a id="salud" href="">Salud Integral</a>
-                <a id="alimentacion" href="">Alimentacion</a>
-                <a id="actividades" href="">Actividades</a>
-                <a id="noticias" href="">Noticias</a>
-                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
-                <a href="">Home</a>
-                <a href="">Cerrar sesión</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
             </div>
             <span class="burger" onclick="openNav()">&#9776;</span>
         </header>
@@ -175,18 +176,19 @@
         <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <p id="perfil" href="">Mi Perfil</p>
-                <p id="quienesSomos" href="">Quienes somos</p>
-                <a id="salud" href="">Salud Integral</a>
-                <a id="alimentacion" href="">Alimentacion</a>
-                <a id="actividades" href="">Actividades</a>
-                <a id="noticias" href="">Noticias</a>
-                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
-                <a href="">Home</a>
-                <a href="">Cerrar sesión</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentación</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
             </div>
             <span class="burger" onclick="openNav()">&#9776;</span>
         </header>
+
 
         <div class="row">
             <div class="col-sm fotoUsuario">
@@ -211,10 +213,13 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <i class="fas fa-angle-left"></i>
-                <b>Volver</b>
-            </div>
+            <form>
+
+                <input type="button" value="volver atrás" name="volver atrás2" onclick="history.go(-1)" />
+
+            </form>
+
+
         </div>
     </div>
 
@@ -224,15 +229,15 @@
         <header class="barTop">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <p id="perfil" href="">Mi Perfil</p>
-                <p id="quienesSomos" href="">Quienes somos</p>
-                <a id="salud" href="">Salud Integral</a>
-                <a id="alimentacion" href="">Alimentacion</a>
-                <a id="actividades" href="">Actividades</a>
-                <a id="noticias" href="">Noticias</a>
-                <a id="preguntasPreguntas" href="">Preguntas frecuentes</a>
-                <a href="">Home</a>
-                <a href="">Cerrar sesión</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
             </div>
             <span class="burger" onclick="openNav()">&#9776;</span>
         </header>
@@ -259,7 +264,164 @@
         </div>
     </div>
 
+    <!-- seccion salud -->
 
+    <div class="container-fluid" id="containerSalud">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+            <span class="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 id="salud">¿salud?</h2>
+                <p>
+                    Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
+                    datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive
+                    con esta intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan
+                    para compartir todos el contenido que encuentren necesario en esta red social 100 % libre de gluten.
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- seccion Alimentacion -->
+
+    <div class="container-fluid" id="containerAlimentacion">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+            <span class="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 id="alimentacion">Alimentos</h2>
+                <p>
+                    Porque grande quiero ser, como bien.
+
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- seccion Actividades -->
+    <div class="container-fluid" id="containerActividades">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+            <span class="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 id="actividades">Acitividades</h2>
+                <p>
+                    Las cosas que podrás hacer
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- seccion noticias -->
+    <div class="container-fluid" id="containerNoticias">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+            <span class="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 id="noticias">Noticias</h2>
+                <p>
+                    InformATE AL INSTANTE
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- seccion Preguntas frecuentes -->
+    <div class="container-fluid" id="containerPreguntasFrecuentes">
+        <header class="barTop">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+                <a href="#">Home</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+            <span class="burger" onclick="openNav()">&#9776;</span>
+        </header>
+
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 id="preguntastitulo">preguntas</h2>
+                <p>
+                    cómo sabes que eres celiaco 
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
 
     <!--Link firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
@@ -284,9 +446,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/data.js"></script>
-
+    <script src="js/login.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/muro.js"></script>
 
 </body>
 
