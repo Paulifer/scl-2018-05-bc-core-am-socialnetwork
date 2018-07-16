@@ -226,3 +226,9 @@ function openQuienesSomos() {
     //id container .style.display="none";
   });
 }
+const btnPreguntas = document.getElementById('preguntas').addEventListener('click', ()=>{
+	containerMuro.classList.remove('divDisplayblock');
+	containerMuro.classList.add('divDisplayNone');
+	containerPreguntas.classList.remove('divDisplayNone');
+	containerPreguntas.classList.add('divDisplayblock');
+});
