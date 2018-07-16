@@ -2,159 +2,159 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CeliBook</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CeliBook</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 
 
 </head>
 
 <body>
-    <!--Seccion Login -->
+  <!--Seccion Login -->
 
-    <div class="container-fluid login" id="login">
-        <div class="row">
-            <div class="col-sm logo">
-                <img src="../img/celiaco3.png" alt="logoCelibook" id="logoCelibook">
-                <h2 id="titleLogin">Celibook</h2>
-            </div>
-        </div>
-
-        <div class="row iniciarsesion">
-            <div class="col-md-6 offset-md-3">
-                <form>
-                    <div class="form-group bars">
-                        <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo electronico"
-                            required="email">
-                        <small id="emailHelp" class="form-text text-muted"></small>
-                    </div>
-                    <div class="form-group bars">
-                        <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Contraseña" required="password">
-                        <a href="" class="emailForgot">Olvidé mi contraseña</a>
-                        <button type="button" id="btnSingIn" class="btn btn-primary">Iniciar sesión</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-1">
-            </div>
-            <div class="col-sm-10 registro">
-                <p>¿Aún no tienes cuenta?
-                    <button type="button" id="buttonRegister" onclick="registry()">REGISTRATE AQUÍ</button>
-                </p>
-            </div>
-            <div class="col-sm-1">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <button type="button" id="facebook" class="btn btn-primary">
-                    <i class="fab fa-facebook-f"></i> Registrarme con Facebook</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <button type="button" id="google" onclick="loginGoogle()" class="btn btn-primary">
-                    <i class="fab fa-google-plus-g"></i> Registrarme con Google+</button>
-            </div>
-        </div>
+  <div class="container-fluid login" id="login">
+    <div class="row">
+      <div class="col-sm logo">
+        <img src="../img/celiaco3.png" alt="logoCelibook" id="logoCelibook">
+        <h2 id="titleLogin">Celibook</h2>
+      </div>
     </div>
 
-    <!-- Seccion craer cuenta - registrarse -->
-    <div class="container-fluid divDisplayNone" id="containerCrearcuenta">
-
-        <div class="row crearCuenta">
-            <div class="col-md-6 offset-md-3 register">
-                <form>
-                    <div class="col-sm">
-                        <img src="../img/celiaco3 verde.png" id="logoRegistro" alt="logoverde">
-                        <h1 id="titleRegister">Celibook</h1>
-                    </div>
-                    <div class="form-group inputRegister">
-                        <label for="validationCustom01"></label>
-                        <input type="text" class="form-control" id="registryName" placeholder="Nombre Completo">
-                        <div class="valid-feedback"></div>
-                    </div>
-                    <div class="form-group inputRegister">
-                        <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="registryEmail" aria-describedby="emailHelp" placeholder="Correo electronico">
-                        <small id="emailHelp" class="form-text text-muted"></small>
-                    </div>
-                    <div class="form-group inputRegister">
-                        <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="registryPassword" placeholder="Nueva contraseña">
-                        <button type="button" id="btnregister" class="btn btn-primary">Registrarme</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <div class="row iniciarsesion">
+      <div class="col-md-6 offset-md-3">
+        <form>
+          <div class="form-group bars">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo electronico"
+              required="email">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group bars">
+            <label for="exampleInputPassword1"></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Contraseña" required="password">
+            <a href="" class="emailForgot">Olvidé mi contraseña</a>
+            <button type="button" id="btnSingIn" class="btn btn-primary">Iniciar sesión</button>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <!-- Seccion Muro -->
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-10 registro">
+        <p>¿Aún no tienes cuenta?
+          <button type="button" id="buttonRegister" onclick="registry()">REGISTRATE AQUÍ</button>
+        </p>
+      </div>
+      <div class="col-sm-1">
+      </div>
+    </div>
 
-    <!-- Barra superior y menú desplegable -->
-    <div class="container-fluid divDisplayNone" id="containerMuro">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <button type="button" id="facebook" class="btn btn-primary">
+          <i class="fab fa-facebook-f"></i> Registrarme con Facebook</button>
+      </div>
+    </div>
 
-        <!-- Titulo y Bienvenida a la red social -->
-        <div class="row titleWelcome">
-            <div class="col-sm">
-                <h1 id="welcome">¡Bienvenida/o a Celibook!</h1>
-                <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
-            </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <button type="button" id="google" onclick="loginGoogle()" class="btn btn-primary">
+          <i class="fab fa-google-plus-g"></i> Registrarme con Google+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion craer cuenta - registrarse -->
+  <div class="container-fluid divDisplayNone" id="containerCrearcuenta">
+
+    <div class="row crearCuenta">
+      <div class="col-md-6 offset-md-3 register">
+        <form>
+          <div class="col-sm">
+            <img src="../img/celiaco3 verde.png" id="logoRegistro" alt="logoverde">
+            <h1 id="titleRegister">Celibook</h1>
+          </div>
+          <div class="form-group inputRegister">
+            <label for="validationCustom01"></label>
+            <input type="text" class="form-control" id="registryName" placeholder="Nombre Completo">
+            <div class="valid-feedback"></div>
+          </div>
+          <div class="form-group inputRegister">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" class="form-control" id="registryEmail" aria-describedby="emailHelp" placeholder="Correo electronico">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group inputRegister">
+            <label for="exampleInputPassword1"></label>
+            <input type="password" class="form-control" id="registryPassword" placeholder="Nueva contraseña">
+            <button type="button" id="btnregister" class="btn btn-primary">Registrarme</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion Muro -->
+
+  <!-- Barra superior y menú desplegable -->
+  <div class="container-fluid divDisplayNone" id="containerMuro">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <!-- Titulo y Bienvenida a la red social -->
+    <div class="row titleWelcome">
+      <div class="col-sm">
+        <h1 id="welcome">¡Bienvenida/o a Celibook!</h1>
+        <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
+      </div>
+    </div>
+    <!-- Carrusel de imagenes -->
+    <div class="row carruselFotos">
+      <div id="carouselExampleIndicators" class="col-sm carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../img/sin-gluten2.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/AAA-740x445.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/maxresdefault.jpg" alt="Third slide">
+          </div>
         </div>
-        <!-- Carrusel de imagenes -->
-        <div class="row carruselFotos">
-            <div id="carouselExampleIndicators" class="col-sm carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="../img/sin-gluten2.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../img/AAA-740x445.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../img/maxresdefault.jpg" alt="Third slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
 
-        <!-- Contenedor de publicaciones -->
+    <!-- Contenedor de publicaciones 
         <div class="container-fluid ">
             <div>
                 <div id="messageContainer">
@@ -164,291 +164,311 @@
                 </div>
 
             </div>
+        </div> -->
+
+    <!-- Contenedor de publicaciones 2 (con iconos) -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <textarea class="txt" id="comment" placeholder="¿Qué deseas compartir?"></textarea>
         </div>
-    </diV>
-
-    </div>
-    <!-- fin de MURO -->
-
-    <!-- Seccion Perfil-->
-
-    <div class="container-fluid" id="containerPerfil">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentación</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
-
-
-        <div class="row">
-            <div class="col-sm fotoUsuario">
-                <img src="../img/perfilpng.png" alt="fotoPerfil" id="fotoperfilUsuario">
-                <h2 id="nameUsers"></h2>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="submit" id="btn">Comentar</button>
         </div>
-
-        <div class="row botonesPerfil">
-            <div class="col-md-6 offset-md-3">
-                <div class="btn-group-vertical">
-                    <button type="button" id="intereses" onclick="" class="btn btn-primary">
-                        <i class="fas fa-heart"></i> Mis Intereses</button>
-                    <button type="button" id="mensaje" onclick="" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Mensaje</button>
-                    <button type="button" id="amigos" onclick="" class="btn btn-primary">
-                        <i class="fas fa-user-friends"></i> Amigos</button>
-                    <button type="button" id="cambiarContraseña" onclick="" class="btn btn-primary">
-                        <i class="fas fa-lock"></i> Cambiar Contraseña</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <form>
-
-                <input type="button" value="volver atrás" name="volver atrás2" onclick="history.go(-1)" />
-
-            </form>
-
-
-        </div>
+      </div>
+      <!-- contenedor comentarios -->
+      <div class="row">
+        <div class="col-12" id="cont"></div>
+      </div>
     </div>
 
-    <!-- Seccion Quienes Somos-->
 
-    <div class="container-fluid" id="containerQuienesSomos">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
+  </div>
 
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="Quienes somos">¿Quienes somos?</h2>
-                <p>
-                    Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
-                    datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive
-                    con esta intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan
-                    para compartir todos el contenido que encuentren necesario en esta red social 100 % libre de gluten.
+  </div>
+  <!-- fin de MURO -->
 
-                </p>
+  <!-- Seccion Perfil-->
 
-            </div>
-        </div>
+  <div class="container-fluid" id="containerPerfil">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentación</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
 
 
-        <div class="row">
-            <div class="col-sm fotoceliacos">
-                <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-sm fotoUsuario">
+        <img src="../img/perfilpng.png" alt="fotoPerfil" id="fotoperfilUsuario">
+        <h2 id="nameUsers"></h2>
+      </div>
     </div>
 
-    <!-- seccion salud -->
-
-    <div class="container-fluid" id="containerSalud">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
-
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="salud">¿salud?</h2>
-                <p>
-                    Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
-                    datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive
-                    con esta intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan
-                    para compartir todos el contenido que encuentren necesario en esta red social 100 % libre de gluten.
-
-                </p>
-
-            </div>
+    <div class="row botonesPerfil">
+      <div class="col-md-6 offset-md-3">
+        <div class="btn-group-vertical">
+          <button type="button" id="intereses" onclick="" class="btn btn-primary">
+            <i class="fas fa-heart"></i> Mis Intereses</button>
+          <button type="button" id="mensaje" onclick="" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Mensaje</button>
+          <button type="button" id="amigos" onclick="" class="btn btn-primary">
+            <i class="fas fa-user-friends"></i> Amigos</button>
+          <button type="button" id="cambiarContraseña" onclick="" class="btn btn-primary">
+            <i class="fas fa-lock"></i> Cambiar Contraseña</button>
         </div>
+      </div>
     </div>
 
-    <!-- seccion Alimentacion -->
+    <div class="row">
+      <form>
 
-    <div class="container-fluid" id="containerAlimentacion">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
+        <input type="button" value="volver atrás" name="volver atrás2" onclick="history.go(-1)" />
 
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="alimentacion">Alimentos</h2>
-                <p>
-                    Porque grande quiero ser, como bien.
-
-                </p>
-
-            </div>
-        </div>
+      </form>
 
 
     </div>
+  </div>
 
-    <!-- seccion Actividades -->
-    <div class="container-fluid" id="containerActividades">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
+  <!-- Seccion Quienes Somos-->
 
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="actividades">Acitividades</h2>
-                <p>
-                    Las cosas que podrás hacer
-                </p>
+  <div class="container-fluid" id="containerQuienesSomos">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
 
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="Quienes somos">¿Quienes somos?</h2>
+        <p>
+          Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
+          datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
+          intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
+          el contenido que encuentren necesario en esta red social 100 % libre de gluten.
 
+        </p>
+
+      </div>
     </div>
 
-    <!-- seccion noticias -->
-    <div class="container-fluid" id="containerNoticias">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
 
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="noticias">Noticias</h2>
-                <p>
-                    InformATE AL INSTANTE
-                </p>
+    <div class="row">
+      <div class="col-sm fotoceliacos">
+        <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
+      </div>
+    </div>
+  </div>
 
-            </div>
-        </div>
+  <!-- seccion salud -->
 
+  <div class="container-fluid" id="containerSalud">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="salud">¿salud?</h2>
+        <p>
+          Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
+          datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
+          intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
+          el contenido que encuentren necesario en esta red social 100 % libre de gluten.
+
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- seccion Alimentacion -->
+
+  <div class="container-fluid" id="containerAlimentacion">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="alimentacion">Alimentos</h2>
+        <p>
+          Porque grande quiero ser, como bien.
+
+        </p>
+
+      </div>
     </div>
 
-    <!-- seccion Preguntas frecuentes -->
-    <div class="container-fluid" id="containerPreguntasFrecuentes">
-        <header class="barTop">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-                <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-                <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-                <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-                <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-                <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-                <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-                <a href="#">Home</a>
-                <a href="#">Cerrar sesión</a>
-            </div>
-            <span class="burger" onclick="openNav()">&#9776;</span>
-        </header>
 
+  </div>
 
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="preguntastitulo">preguntas</h2>
-                <p>
-                    cómo sabes que eres celiaco 
-                </p>
+  <!-- seccion Actividades -->
+  <div class="container-fluid" id="containerActividades">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
 
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="actividades">Acitividades</h2>
+        <p>
+          Las cosas que podrás hacer
+        </p>
 
-
+      </div>
     </div>
 
-    <!--Link firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script>
-        var config = {
-            apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
-            authDomain: "redsocial-78423.firebaseapp.com",
-            databaseURL: "https://redsocial-78423.firebaseio.com",
-            projectId: "redsocial-78423",
-            storageBucket: "redsocial-78423.appspot.com",
-            messagingSenderId: "739042868398"
-        };
-        firebase.initializeApp(config);
-    </script>
+  </div>
+
+  <!-- seccion noticias -->
+  <div class="container-fluid" id="containerNoticias">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="noticias">Noticias</h2>
+        <p>
+          InformATE AL INSTANTE
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- seccion Preguntas frecuentes -->
+  <div class="container-fluid" id="containerPreguntasFrecuentes">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
 
 
-    <!-- Links bootstrap y js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/muro.js"></script>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="preguntastitulo">preguntas</h2>
+        <p>
+          cómo sabes que eres celiaco
+        </p>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!--Link firebase-->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
+      authDomain: "redsocial-78423.firebaseapp.com",
+      databaseURL: "https://redsocial-78423.firebaseio.com",
+      projectId: "redsocial-78423",
+      storageBucket: "redsocial-78423.appspot.com",
+      messagingSenderId: "739042868398"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+  <!-- Links bootstrap y js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/muro.js"></script>
 
 </body>
 

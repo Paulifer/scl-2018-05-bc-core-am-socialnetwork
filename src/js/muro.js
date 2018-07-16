@@ -1,43 +1,85 @@
-//MURO CON COMENTARIOS
 
-firebase.database().ref('messages')
-  .limitToLast(5) //filtro para no obtener todos los mensajes
-  .once('value')
-  .then((messages) => {
-    console.log("Mensajes >" + JSON.stringify(messages));
-  })
-  .catch(() => {
-
-  });
-
-
-//Llamando a los mensajes  para que aparezcan cada vez que recargue la pagina
-firebase.database().ref('messages')
-  .limitToLast(8) //muestra solo los ultimos 8 mensajes como historial al recargar la pagina
-  .on('child_added', (newMessage) => {
-    let date = new Date();
-    messageContainer.innerHTML += `
-              <div style="border:1px solid gray; margin: 7%; border-radius:4px; background-color:white"><p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
-              <p style="margin-left:0.5em;">${newMessage.val().text}</p>
-              <p style="margin-left:0.5em; color:#99CE81; font-size:0.8em;">${date.getDate(newMessage.val())}/${date.getMonth(newMessage.val()) + 1} a las ${date.getHours(newMessage.val())}:${date.getMinutes(newMessage.val())}</p>
-              </div>   
-          `;
-  });
-
-// Guardar los mensajes en database, llamada messages
-function sendMessage() {
-  const currentUser = firebase.auth().currentUser;
-  const messageAreaText = messageArea.value;
-  const displayName = registryName.value;
-
- 
-  const newMessageKey = firebase.database().ref().child('messages').push().key;
+//Me gusta y contador publicacion
+let contadorPublicacion = [];
+const heart = document.querySelector('i');
+heart.addEventListener('click', ()=> {
+  if (heart.classList.toggle('blue')){
+    contadorPublicacion++;
+  }else{
+    contadorPublicacion--;
+  }
+  return contador.innerHTML = contadorPublicacion;
+})  
 
 
-  firebase.database().ref(`messages/${newMessageKey}`).set({
-    creator: currentUser.uid,
-    creatorName: currentUser.displayName || currentUser.email,
-    text: messageAreaText,
-    date : firebase.database.ServerValue.TIMESTAMP,
-  });
-}
+//Crear nuevo comentario, me gusta, eliminar
+const boton = document.getElementById('btn');
+boton.addEventListener('click', () => {
+    let comments = document.getElementById('comment').value;
+    document.getElementById('comment').value = '';
+    const cont = document.getElementById('cont');
+    const newComments = document.createElement('div');
+
+    //Para que aparezca si o si comentario
+    if(comments.length === 0 || comments === null){
+      alert ('Debes ingresar un mensaje');
+      return false;
+    }
+    
+    //corazon
+    const heart = document.createElement('i');
+    const contadorheart = document.createElement('span');
+    heart.appendChild(contadorheart);
+    heart.classList.add('fa', 'fa-heart', 'heart');
+    //evento click corazon
+    let contadorComentario = [];
+    heart.addEventListener('click', ()=> {
+      if (heart.classList.toggle('red')){
+        contadorComentario++;
+      }else{
+        contadorComentario--;
+      }
+      return contadorheart.innerHTML = contadorComentario;
+    })
+
+    //Editar
+    const edit = document.createElement('i');
+    edit.classList.add('fas', 'fa-pencil-alt');
+    //Evento click editar
+    edit.addEventListener('click', ()=> {
+      contenedorElemento.contentEditable = true;
+      contenedorElemento.addEventListener('keydown', (event)=> {
+        if (event.which == 13){
+          let confirmarEditar = confirm('¿Estas seguro que quieres modificar tu comentario?');
+          if (confirmarEditar == true) {
+            contenedorElemento.removeAttribute('contentEditable');
+          } else {
+
+          }
+        }
+      })
+    })
+    
+    //Basura
+    const trash = document.createElement('i');
+    trash.classList.add('fa', 'fa-trash', 'trash');
+    //Evento click basura
+    trash.addEventListener('click', ()=> {
+        let confirmarEliminar = confirm('¿Estas seguro de eliminar?');
+      if (confirmarEliminar == true) {
+        cont.removeChild(newComments);
+      }
+    })
+
+    //Crear p nuevo con comentario
+    const contenedorElemento = document.createElement('p');
+    let textNewComment = document.createTextNode(comments);
+    contenedorElemento.appendChild(textNewComment);
+    newComments.appendChild(contenedorElemento);
+    cont.appendChild(newComments);
+    newComments.appendChild(heart);
+    newComments.appendChild(edit);
+    newComments.appendChild(trash);
+})
+
+
