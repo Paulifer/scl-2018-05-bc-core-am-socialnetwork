@@ -1,18 +1,4 @@
-
-//Me gusta y contador publicacion
-let contadorPublicacion = [];
-const heart = document.querySelector('i');
-heart.addEventListener('click', ()=> {
-  if (heart.classList.toggle('blue')){
-    contadorPublicacion++;
-  }else{
-    contadorPublicacion--;
-  }
-  return contador.innerHTML = contadorPublicacion;
-})  
-
-
-//Crear nuevo comentario, me gusta, eliminar
+// SE INGRESA COMENTARIO AL HACER CLICK
 const boton = document.getElementById('btn');
 boton.addEventListener('click', () => {
     let comments = document.getElementById('comment').value;
@@ -26,12 +12,12 @@ boton.addEventListener('click', () => {
       return false;
     }
     
-    //corazon
+    //ME GUSTA
     const heart = document.createElement('i');
     const contadorheart = document.createElement('span');
     heart.appendChild(contadorheart);
     heart.classList.add('fa', 'fa-heart', 'heart');
-    //evento click corazon
+   
     let contadorComentario = [];
     heart.addEventListener('click', ()=> {
       if (heart.classList.toggle('red')){
@@ -42,15 +28,15 @@ boton.addEventListener('click', () => {
       return contadorheart.innerHTML = contadorComentario;
     })
 
-    //Editar
+    //EDITAR COMENTARIO
     const edit = document.createElement('i');
     edit.classList.add('fas', 'fa-pencil-alt');
-    //Evento click editar
+    
     edit.addEventListener('click', ()=> {
       contenedorElemento.contentEditable = true;
       contenedorElemento.addEventListener('keydown', (event)=> {
         if (event.which == 13){
-          let confirmarEditar = confirm('¿Estas seguro que quieres modificar tu comentario?');
+          let confirmarEditar = confirm('¿Confirmas que deseas guardar la publicación editada?');
           if (confirmarEditar == true) {
             contenedorElemento.removeAttribute('contentEditable');
           } else {
@@ -60,18 +46,18 @@ boton.addEventListener('click', () => {
       })
     })
     
-    //Basura
+    //ELIMINAR COMENTARIO
     const trash = document.createElement('i');
     trash.classList.add('fa', 'fa-trash', 'trash');
-    //Evento click basura
+    
     trash.addEventListener('click', ()=> {
-        let confirmarEliminar = confirm('¿Estas seguro de eliminar?');
+        let confirmarEliminar = confirm('¿Seguro que deseas eliminar esta publicación?');
       if (confirmarEliminar == true) {
         cont.removeChild(newComments);
       }
     })
 
-    //Crear p nuevo con comentario
+    //AQUI SE CREA TODO LO QUE VA DENTRO DEL CONTENEDOR
     const contenedorElemento = document.createElement('p');
     let textNewComment = document.createTextNode(comments);
     contenedorElemento.appendChild(textNewComment);
