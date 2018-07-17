@@ -1,8 +1,25 @@
 
 window.onload = () => {
+  openNav();
+  closeNav();
   openPerfil();
   openQuienesSomos();
+  openSalud();
+  openAlimentacion();
+  openActividades();
+  openNoticias();
+  openPreguntasfrecuentes();
 }
+
+/*Barra lateral */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
 
 function openPerfil() {
   const btnPerfil = document.getElementById('perfil').addEventListener('click', () => {
@@ -109,3 +126,8 @@ function openPreguntasfrecuentes() {
 
 //Al hacer click en voler 
 
+//Seccion Perfil
+
+function goBack() {
+  window.history.back()
+}

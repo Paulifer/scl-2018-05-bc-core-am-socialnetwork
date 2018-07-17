@@ -349,3 +349,36 @@ body {
     display: none;
     width: 100%;
 }
+
+/* SECCION DE PREGUNTAS FRECUENTES */
+
+.questionsCol{
+    height: 15em;
+  }
+  
+  #titleQuestions {
+    text-align: center;
+    color:black;
+    font-size: 2em;
+    margin-top: 3em;
+  }
+  
+  .panel-heading{
+    background-color:#9B369D;
+    margin: 1em;
+    border-radius: 5px;
+  }
+  .panel-body{
+    background-color: white;
+    margin: 1em;  
+  }
+  
+  .titleCollapse{
+    color: black;
+    font-size: 0.7em;
+   margin-left: 1em;
+  }
+  
+  #accordion{
+    margin-top: 2.5em;
+  }
