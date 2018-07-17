@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-
+  
 
 </head>
 
@@ -234,11 +234,11 @@
     </div>
 
     <div class="row">
-      <form>
+      <div class="col-md-6 offset-md-3"> 
 
-        <input type="button" value="volver atrás" name="volver atrás2" onclick="history.go(-1)" />
+        <input type="button" id="atras" value="volver atrás" name="volver atrás2" onclick="closePerfil" />
 
-      </form>
+      </div>
 
 
     </div>
@@ -283,6 +283,7 @@
         <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
       </div>
     </div>
+
   </div>
 
   <!-- seccion salud -->
@@ -391,13 +392,15 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="titleCollapse">
-                  ¿Qué es la Enfermedad celiaca? <i class="fas fa-caret-down"></i> </a>
+                  ¿Qué es la Enfermedad celiaca?
+                  <i class="fas fa-caret-down"></i>
+                </a>
               </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse in">
               <div class="panel-body">
                 <p>Es una enfermedad
-                  <b> crónica autoinmune</b>, caracterizada por la 
+                  <b> crónica autoinmune</b>, caracterizada por la
                   <b>mala absorción de nutrientes </b> (proteínas, grasas, hidratos de carbono, sales minerales y vitaminas)
                   como consecuencia del daño inflamatorio de la mucosa del intestino delgado, que se gatilla al ingerir el
                   gluten de los alimentos, en individuos genéticamente predispuestos. En el caso de la enfermedad celíaca,
@@ -427,7 +430,9 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="titleCollapse">
-                  ¿Qué es la Sensibilidad no celíaca al gluten SNGC? <i class="fas fa-caret-down"></i> </a>
+                  ¿Qué es la Sensibilidad no celíaca al gluten SNGC?
+                  <i class="fas fa-caret-down"></i>
+                </a>
               </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
@@ -449,7 +454,9 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="titleCollapse">
-                  ¿A qué doctor debo recurrir en caso de presentar síntomas? <i class="fas fa-caret-down"></i> </a>
+                  ¿A qué doctor debo recurrir en caso de presentar síntomas?
+                  <i class="fas fa-caret-down"></i>
+                </a>
               </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
@@ -466,13 +473,17 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="titleCollapse">
-                ¿Qué examenes me tendrian que hacer para ver si soy celiaco/sensible al gluten? <i class="fas fa-caret-down"></i> </a>
+                ¿Qué examenes me tendrian que hacer para ver si soy celiaco/sensible al gluten?
+                <i class="fas fa-caret-down"></i>
+              </a>
             </h4>
           </div>
           <div id="collapse4" class="panel-collapse collapse">
             <div class="panel-body">
               <p> Los pasos a seguir según el examen medico, dependen de cada doctor pero existen algunos que son recomendados
                 por los especialistas para ver tu estado de salud </p>
+              <p> Antiendomisio y antitransglutaminasa son los exámenes para investigar la celiaquía, si salen alterados se realiza
+                endoscopía y biopsia al intestino.</p>
             </div>
           </div>
         </div>
