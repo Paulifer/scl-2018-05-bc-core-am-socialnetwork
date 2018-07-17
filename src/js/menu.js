@@ -89,7 +89,6 @@ function openActividades() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
     document.getElementById("containerActividades").style.display = 'block';
-
   });
 }
 

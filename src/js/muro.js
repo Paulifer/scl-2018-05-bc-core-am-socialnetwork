@@ -1,13 +1,13 @@
 // SE INGRESA COMENTARIO AL HACER CLICK
-const boton = document.getElementById('btn');
+const boton = document.getElementById('buttonPost');
 boton.addEventListener('click', () => {
-    let comments = document.getElementById('comment').value;
-    document.getElementById('comment').value = '';
+    let posts = document.getElementById('post').value;
+    document.getElementById('post').value = '';
     const cont = document.getElementById('cont');
-    const newComments = document.createElement('div');
+    const newPosts = document.createElement('div');
 
-    //Para que aparezca si o si comentario
-    if(comments.length === 0 || comments === null){
+    //Debe ingresar un mensaje, no puede ser de largo igual a 0 o vacío.
+    if(post.length === 0 || post === null){
       alert ('Debes ingresar un mensaje');
       return false;
     }
@@ -53,19 +53,19 @@ boton.addEventListener('click', () => {
     trash.addEventListener('click', ()=> {
         let confirmarEliminar = confirm('¿Seguro que deseas eliminar esta publicación?');
       if (confirmarEliminar == true) {
-        cont.removeChild(newComments);
+        cont.removeChild(newPosts);
       }
     })
 
     //AQUI SE CREA TODO LO QUE VA DENTRO DEL CONTENEDOR
     const contenedorElemento = document.createElement('p');
-    let textNewComment = document.createTextNode(comments);
-    contenedorElemento.appendChild(textNewComment);
-    newComments.appendChild(contenedorElemento);
-    cont.appendChild(newComments);
-    newComments.appendChild(heart);
-    newComments.appendChild(edit);
-    newComments.appendChild(trash);
+    let textNewPost = document.createTextNode(posts);
+    contenedorElemento.appendChild(textNewPost);
+    newPosts.appendChild(contenedorElemento);
+    cont.appendChild(newPosts);
+    newPosts.appendChild(heart);
+    newPosts.appendChild(edit);
+    newPosts.appendChild(trash);
 })
 
 
