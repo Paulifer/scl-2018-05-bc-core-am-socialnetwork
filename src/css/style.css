@@ -147,7 +147,7 @@ body {
 
 /* BARRA SUPERIOR */
 
-.barTop, .barTopperfil, barTopquienesSomos {
+.barTop {
     background-color: #99CE81;
     margin: 0;
     padding: 0;
@@ -474,4 +474,15 @@ body {
     margin-left: 70%;
     margin-top: 0.5em;
     cursor: pointer;
+}
+
+#barranoticias {
+    background-color: #9B369D;
+}
+
+#logosuperior {
+    right: 10px;
+    width: 30px;
+    top: 10px;
+    position: absolute;
 }
