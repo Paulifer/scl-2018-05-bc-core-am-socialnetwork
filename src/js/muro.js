@@ -1,4 +1,3 @@
-
 // SE INGRESA COMENTARIO AL HACER CLICK
 const boton = document.getElementById('buttonPost');
 boton.addEventListener('click', () => {
@@ -70,6 +69,3 @@ boton.addEventListener('click', () => {
   newPosts.appendChild(edit);
   newPosts.appendChild(trash);
 })
-
-
-

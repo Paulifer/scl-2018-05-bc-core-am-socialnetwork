@@ -27,30 +27,7 @@ firebase.database().ref('messages')
               </div>
           `;
   });
-
-
-function heartClick() {
-  let contadorComentario = [];
-  const heart = document.getElementsByClassName('iconHeart');
   
-    if (heart.classList.toggle('changeColorHeart')) {
-      contadorComentario++;
-    } else {
-      contadorComentario--;
-    }
-    return contadorheart.innerHTML = contadorComentario;
-  }
-
-
-function editClick() {
- 
-}
-
-function trashClick() {
-
-}
-
-
 
 // Firebase Database
 // Guardar los mensajes en database, llamada messages
