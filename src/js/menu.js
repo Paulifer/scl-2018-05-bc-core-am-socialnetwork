@@ -1,7 +1,22 @@
 
+
 window.onload = () => {
   openPerfil();
   openQuienesSomos();
+  openSalud();
+  openAlimentacion();
+  openActividades();
+  openNoticias();
+  openPreguntasfrecuentes();
+  openNav();
+  closeNav();
+}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
 
 function openPerfil() {
@@ -14,8 +29,10 @@ function openPerfil() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none'
     document.getElementById("containerPerfil").style.display = "block";
+    document.getElementById('mySidenav').style.display = "block";
     //id container .style.display="none";
   });
+  
 }
 
 function openQuienesSomos() {
@@ -30,6 +47,8 @@ function openQuienesSomos() {
     document.getElementById("containerQuienesSomos").style.display = 'block';
     //id container .style.display="none";
   });
+  openNav();
+  closeNav();
 }
 
 function openSalud() {
@@ -44,6 +63,8 @@ function openSalud() {
     document.getElementById("containerSalud").style.display = 'block';
 
   });
+  openNav();
+  closeNav();
 }
 
 
@@ -59,6 +80,8 @@ function openAlimentacion() {
     document.getElementById("containerAlimentacion").style.display = 'block';
 
   });
+  openNav();
+  closeNav();
 
 }
 
@@ -74,6 +97,8 @@ function openActividades() {
     document.getElementById("containerActividades").style.display = 'block';
 
   });
+  openNav();
+  closeNav();
 }
 
 function openNoticias() {
@@ -89,6 +114,8 @@ function openNoticias() {
 
     //id container .style.display="none";
   });
+  openNav();
+  closeNav();
 
 }
 
@@ -104,7 +131,8 @@ function openPreguntasfrecuentes() {
     document.getElementById("containerPreguntasFrecuentes").style.display = 'block';
     //id container .style.display="none";
   });
-
+openNav();
+  closeNav();
 }
 
 //Al hacer click en voler 
