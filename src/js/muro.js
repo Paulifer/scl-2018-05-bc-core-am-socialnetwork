@@ -12,6 +12,7 @@ boton.addEventListener('click', () => {
     alert('Debes ingresar un mensaje');
     return false;
   }
+
   //ME GUSTA
   const heart = document.createElement('i');
   const contadorheart = document.createElement('span');
@@ -27,6 +28,7 @@ boton.addEventListener('click', () => {
     }
     return contadorheart.innerHTML = contadorComentario;
   })
+
 
   //EDITAR COMENTARIO
   const edit = document.createElement('i');

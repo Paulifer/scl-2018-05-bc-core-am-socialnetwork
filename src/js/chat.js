@@ -10,48 +10,15 @@ firebase.database().ref('messages')
 
 });
 
-function heartClick(){
-  const contadorheart = document.createElement('span');
-  heart.appendChild(contadorheart);
-  let contadorComentario = [];
- 
-    if (heart.classList.toggle('changeColorHeart')) {
-      contadorComentario++;
-    } else {
-      contadorComentario--;
-    }
-    return contadorheart.innerHTML = contadorComentario;
-  
-}
-
-function trashClick(){
-    let confirmarEliminar = confirm('¿Seguro que deseas eliminar esta publicación?');
-    if (confirmarEliminar == true) {
-      messageContainer.removeChild(contenedor);
-    }
-  }
-
-  function editClick(){
-    contenedorElemento.contentEditable = true;
-    contenedorElemento.addEventListener('keydown', (event) => {
-      if (event.which == 13) {
-        let confirmarEditar = confirm('¿Confirmas que deseas guardar la publicación editada?');
-        if (confirmarEditar == true) {
-          contenedorElemento.removeAttribute('contentEditable');
-        } else {
-
-        }
-      }
-    })
-  }
-  
 
 //Llamando a los mensajes  para que aparezcan cada vez que recargue la pagina
   firebase.database().ref('messages')
-      .limitToLast(8) //muestra solo los ultimos 8 mensajes como historial al recargar la pagina
-      .on('child_added', (newMessage)=>{
-          contenedor.innerHTML += `
-              <div style="border:1px solid gray; margin: 7%; border-radius:4px; background-color:white">
+      .limitToLast(5) //muestra solo los ultimos 8 mensajes como historial al recargar la pagina
+      .on('child_added', (newMessage)=>{ 
+        const contenedorPost = document.createElement('div')
+        contenedor.appendChild(contenedorPost)
+          contenedorPost.innerHTML += `
+              <div style="margin: 7%; border-radius:8px; background-color:#ECF8E0">
                 <p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
                 <p style="margin-left:0.5em;">${newMessage.val().text}</p>
                 <i class="fa fa-heart heart iconHeart" onclick="heartClick()">Me gusta</i>
