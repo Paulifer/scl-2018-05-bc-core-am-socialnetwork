@@ -457,8 +457,16 @@ body {
     margin-top: 2.5em;
 }
 
-/*Mapa alimentos */
+/*Volver atras */
 
-#map {
-    height: 100%;
+#atrasPerfil, #atrasQuienessomos, #atrasSalud, #atrasAlimentacion, #atrasActividades, #atrasNoticias, #atrasPreguntasFrecuentes {
+    position: right;
+    color: white;
+    background-color: #9B369D;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 70%;
+    margin-top: 0.5em;
+    cursor: pointer;
 }

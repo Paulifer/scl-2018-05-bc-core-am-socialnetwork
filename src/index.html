@@ -362,97 +362,51 @@
     </header>
 
     <div class="row">
-      <table id="tabla" class="table table-striped">
-        <thead>
-          <tr>
-            <th style="width:160px">Nombre</th>
-            <th>Apellido</th>
-            <th style="width:220px">Profesion</th>
-            <th style="width:140px">Sueldo</th>
-          </tr>
-          <tr>
-            <td colspan="4">
-              <input id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar" />
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Juan</td>
-            <td>Perez Patiño</td>
-            <td>Marketing Empresarial</td>
-            <td class="text-right">S/. 9000.00</td>
-          </tr>
-          <tr>
-            <td>Alberto</td>
-            <td>Gonzales Flores</td>
-            <td>Derecho</td>
-            <td class="text-right">S/. 4000.00</td>
-          </tr>
-          <tr>
-            <td>Gustavo</td>
-            <td>Bueno Bravo</td>
-            <td>Derecho</td>
-            <td class="text-right">S/. 7000.00</td>
-          </tr>
-          <tr>
-            <td>Enrique</td>
-            <td>Pacheco Perez</td>
-            <td>Derecho</td>
-            <td class="text-right">S/. 12000.00</td>
-          </tr>
-          <tr>
-            <td>Jaime</td>
-            <td>Andrade Gonzales</td>
-            <td>Economia</td>
-            <td class="text-right">S/. 7500.00</td>
-          </tr>
-          <tr>
-            <td>Andrea</td>
-            <td>Loayza Perez</td>
-            <td>Medicina Humana</td>
-            <td class="text-right">S/. 7500.00</td>
-          </tr>
-          <tr>
-            <td>Elvira</td>
-            <td>Gonzales Perez</td>
-            <td>Ingeniería de Sistema</td>
-            <td class="text-right">S/. 7500.00</td>
-          </tr>
-          <tr>
-            <td>Joseph</td>
-            <td>Rodriguez Pacheco</td>
-            <td>Ingeniería de Software</td>
-            <td class="text-right">S/. 8200.00</td>
-          </tr>
-          <tr>
-            <td>Pedro</td>
-            <td>kuczynski</td>
-            <td>Economista</td>
-            <td class="text-right">S/. 250000.00</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>García Perez</td>
-            <td>Derecho</td>
-            <td class="text-right">S/. 120000.00</td>
-          </tr>
-          <tr>
-            <td>Jose</td>
-            <td>Villanueva Salvador</td>
-            <td>Medicina Humana</td>
-            <td class="text-right">S/. 2900.00</td>
-          </tr>
-          <tr>
-            <td>Alberto</td>
-            <td>Lozano García</td>
-            <td>Medicina Humana</td>
-            <td class="text-right">S/. 2900.00</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- TABLA FINALIZA -->
+      <div class="col-md-6 offset-md-3">
+        <table id="tabla" class="table table-striped">
+          <thead>
+            <tr>
+              <th style="width:160px">Alimento</th>
+              <th style="width:220px">Producto</th>
+              <th style="width:140px">Empresa</th>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <input id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar" />
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nectar</td>
+              <td>Nectar sabor damasco</td>
+              <td class="text-right">Colun</td>
+            </tr>
+            <tr>
+              <td>Nectar</td>
+              <td>Néctar Mimún sabor damasco</td>
+              <td class="text-right">Colun</td>
+            </tr>
+            <tr>
+              <td>Jugo</td>
+              <td>Jugo de Piña-Naranja-Banana (lata 177 ml) </td>
+              <td class="text-right">Dole</td>
+            </tr>
+            <tr>
+              <td>Jugo</td>
+              <td>Jugo Manzana Orgánico</td>
+              <td class="text-right">AMA</td>
+            </tr>
+            <tr>
+              <td>Bebida Energetica</td>
+              <td>Green Energy Drink (bebida energética)</td>
+              <td class="text-right">Go and Fun</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- TABLA FINALIZA -->
 
+      </div>
     </div>
 
 
@@ -682,7 +636,7 @@
       <div class="col-md-6 offset-md-3">
         <h2 id="noticias">Noticias</h2>
         <p>
-          InformATE AL INSTANTE
+         Lee la actualidad internacional y nacional respecto a temas como la celiaquía, intolerancia al gluten, experiencia de usuarios y mucho más. 
         </p>
 
       </div>
@@ -717,7 +671,7 @@
               advierten que 9 de cada 10 celíacos desconocerían tener la enfermedad.</p>
             <small>Revisa la noticia completa
               <a href="http://www.elmostrador.cl/agenda-pais/vida-en-linea/vida-destacados/2018/05/05/dia-internacional-del-celiaco-nutricionista-explica-la-clave-para-controlar-la-enfermedad/">
-              aquí </a>
+                aquí </a>
             </small>
           </a>
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -725,7 +679,8 @@
               <h5 class="mb-1">[VIDEO] Mercado para celíacos va en constante crecimiento en Chile</h5>
               <small class="text-muted">3 days ago</small>
             </div>
-            <p class="mb-1">Según estudios, el 1% de la población mundial es celíaca. En Chile cada vez se detectan más casos, por eso la necesidad de más opciones alimenticias que estén libre de gluten.</p>
+            <p class="mb-1">Según estudios, el 1% de la población mundial es celíaca. En Chile cada vez se detectan más casos, por eso la
+              necesidad de más opciones alimenticias que estén libre de gluten.</p>
             <small>Revisa la noticia completa
               <a href="http://www.t13.cl/videos/nacional/video-mercado-celiacos-va-constante-crecimiento-chile"> aquí </a>
             </small>
@@ -737,7 +692,7 @@
 
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <input type="button" id="atrasNoticias" value="volver atrás" name="volver atrás2" onclick="closeNoticias" />
+        <input type="button" id="atrasNoticias" value="volver atrás"  name="volver atrás2" onclick="closeNoticias" />
       </div>
     </div>
 
