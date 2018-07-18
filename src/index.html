@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  
+
 
 </head>
 
@@ -158,13 +158,13 @@
     <div class="container-fluid ">
       <div>
         <div id="messageContainer">
-            <h1 id="titleWall">Comunidad en línea</h1>
-            <input id="messageArea" type="text" placeholder="  ¿Qué deseas compartir?">
-            <input type="button" id="sendButton" value="Publicar" onclick="sendMessage()">
-            <div id="contenedor"></div>
+          <h1 id="titleWall">Comunidad en línea</h1>
+          <input id="messageArea" type="text" placeholder="  ¿Qué deseas compartir?">
+          <input type="button" id="sendButton" value="Publicar" onclick="sendMessage()">
+          <div id="contenedor"></div>
         </div>
       </div>
-    </div> 
+    </div>
 
     <!-- Contenedor de publicaciones 2 (con iconos)-->
     <div class="container-fluid containerWall">
@@ -185,20 +185,20 @@
           <div class="col-12" id="cont"></div>
         </div>
       </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <button type="submit" id="buttonPost" onclick="sendMessage()">Comentar</button>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-12" id="cont"></div>
-      </div>
-    </div> 
-
-
     </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" id="buttonPost" onclick="sendMessage()">Comentar</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12" id="cont"></div>
+    </div>
+  </div>
+
+
+  </div>
 
   </div>
   <!-- fin de MURO -->
@@ -246,13 +246,9 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 offset-md-3"> 
-
-        <input type="button" id="atras" value="volver atrás" name="volver atrás2" onclick="closePerfil" />
-
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasPerfil" value="volver atrás" name="volver atrás2" onclick="closePerfil" />
       </div>
-
-
     </div>
   </div>
 
@@ -283,9 +279,7 @@
           datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
           intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
           el contenido que encuentren necesario en esta red social 100 % libre de gluten.
-
         </p>
-
       </div>
     </div>
 
@@ -296,8 +290,14 @@
       </div>
     </div>
 
-  </div>
 
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasQuienessomos" value="volver atrás" name="volver atrás2" onclick="closeQuienessomos" />
+      </div>
+    </div>
+
+  </div>
   <!-- seccion salud -->
 
   <div class="container-fluid" id="containerSalud">
@@ -330,6 +330,16 @@
 
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasSalud" value="volver atrás" name="volver atrás2" onclick="closeSalud" />
+      </div>
+    </div>
+
+
+
+
   </div>
 
   <!-- seccion Alimentacion -->
@@ -352,11 +362,114 @@
     </header>
 
     <div class="row">
+      <table id="tabla" class="table table-striped">
+        <thead>
+          <tr>
+            <th style="width:160px">Nombre</th>
+            <th>Apellido</th>
+            <th style="width:220px">Profesion</th>
+            <th style="width:140px">Sueldo</th>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar" />
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan</td>
+            <td>Perez Patiño</td>
+            <td>Marketing Empresarial</td>
+            <td class="text-right">S/. 9000.00</td>
+          </tr>
+          <tr>
+            <td>Alberto</td>
+            <td>Gonzales Flores</td>
+            <td>Derecho</td>
+            <td class="text-right">S/. 4000.00</td>
+          </tr>
+          <tr>
+            <td>Gustavo</td>
+            <td>Bueno Bravo</td>
+            <td>Derecho</td>
+            <td class="text-right">S/. 7000.00</td>
+          </tr>
+          <tr>
+            <td>Enrique</td>
+            <td>Pacheco Perez</td>
+            <td>Derecho</td>
+            <td class="text-right">S/. 12000.00</td>
+          </tr>
+          <tr>
+            <td>Jaime</td>
+            <td>Andrade Gonzales</td>
+            <td>Economia</td>
+            <td class="text-right">S/. 7500.00</td>
+          </tr>
+          <tr>
+            <td>Andrea</td>
+            <td>Loayza Perez</td>
+            <td>Medicina Humana</td>
+            <td class="text-right">S/. 7500.00</td>
+          </tr>
+          <tr>
+            <td>Elvira</td>
+            <td>Gonzales Perez</td>
+            <td>Ingeniería de Sistema</td>
+            <td class="text-right">S/. 7500.00</td>
+          </tr>
+          <tr>
+            <td>Joseph</td>
+            <td>Rodriguez Pacheco</td>
+            <td>Ingeniería de Software</td>
+            <td class="text-right">S/. 8200.00</td>
+          </tr>
+          <tr>
+            <td>Pedro</td>
+            <td>kuczynski</td>
+            <td>Economista</td>
+            <td class="text-right">S/. 250000.00</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>García Perez</td>
+            <td>Derecho</td>
+            <td class="text-right">S/. 120000.00</td>
+          </tr>
+          <tr>
+            <td>Jose</td>
+            <td>Villanueva Salvador</td>
+            <td>Medicina Humana</td>
+            <td class="text-right">S/. 2900.00</td>
+          </tr>
+          <tr>
+            <td>Alberto</td>
+            <td>Lozano García</td>
+            <td>Medicina Humana</td>
+            <td class="text-right">S/. 2900.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- TABLA FINALIZA -->
+
+    </div>
+
+
+
+    <div class="row">
       <div class="col-md-6 offset-md-3">
         <h2 id="alimentacion">Alimentos</h2>
         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OkPPDqPMKQ-9Dbfy33tKNS11pJ7RrQDI" width="640" height="480"></iframe>
 
 
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasAlimentacion" value="volver atrás" name="volver atrás2" onclick="closeAlimentacion" />
       </div>
     </div>
 
@@ -501,6 +614,13 @@
 
     </div>
 
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasPreguntasFrecuentes" value="volver atrás" name="volver atrás2" onclick="closePreguntasFrecuentes"
+        />
+      </div>
+    </div>
+
   </div>
 
   <!-- seccion Actividades -->
@@ -531,6 +651,13 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasActividades" value="volver atrás" name="volver atrás2" onclick="closeActividades" />
+      </div>
+    </div>
+
+
   </div>
 
   <!-- seccion noticias -->
@@ -558,6 +685,59 @@
           InformATE AL INSTANTE
         </p>
 
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3">
+
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Si no soy celiaco, ¿por qué me sienta mal el gluten?</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Silvia F.G. tiene una relación extraña con el gluten: cada vez que toma alimentos con esta proteína, siente molestias
+              intestinales e incluso cansancio, pero el médico ha descartado que sea celiaca, ya que todas las pruebas médicas
+              han resultado negativas. Esta contradicción la convierte en candidata a padecer "sensibilidad al gluten no
+              celiaca", una afección recogida en la última Clasificación Internacional de Enfermedades sobre la que aún planean
+              algunas sombras.</p>
+            <small>Revisa la noticia completa
+              <a href="https://elpais.com/elpais/2018/06/28/buenavida/1530180812_683293.html"> aquí </a>
+            </small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Día Internacional del Celíaco: nutricionista explica la clave para controlar la enfermedad</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Cada año, se conmemora el 5 de mayo como el Día Internacional del Celíaco, enfermedad autoinmune y cuya prevalencia
+              en Chile no se sabe con exactitud, aunque se estima que el 1% de los chilenos la padece. Sin embargo, expertos
+              advierten que 9 de cada 10 celíacos desconocerían tener la enfermedad.</p>
+            <small>Revisa la noticia completa
+              <a href="http://www.elmostrador.cl/agenda-pais/vida-en-linea/vida-destacados/2018/05/05/dia-internacional-del-celiaco-nutricionista-explica-la-clave-para-controlar-la-enfermedad/">
+              aquí </a>
+            </small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">[VIDEO] Mercado para celíacos va en constante crecimiento en Chile</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Según estudios, el 1% de la población mundial es celíaca. En Chile cada vez se detectan más casos, por eso la necesidad de más opciones alimenticias que estén libre de gluten.</p>
+            <small>Revisa la noticia completa
+              <a href="http://www.t13.cl/videos/nacional/video-mercado-celiacos-va-constante-crecimiento-chile"> aquí </a>
+            </small>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasNoticias" value="volver atrás" name="volver atrás2" onclick="closeNoticias" />
       </div>
     </div>
 
@@ -595,6 +775,9 @@
 
   </div>
 
+  <!-- seccion Preguntas frecuentes -->
+
+
   <!--Link firebase-->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
@@ -618,9 +801,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1PiaAenZUqlQ7f8gM7FCfKfLrNaDij4Q&callback=initMap">
-</script>
+
+
+
   <script src="js/login.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/muro.js"></script>
