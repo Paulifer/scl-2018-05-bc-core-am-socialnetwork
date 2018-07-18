@@ -279,11 +279,12 @@ body {
     cursor: pointer;
 }
 
-.containerWall {
+.containerWall{
     border: 1px solid #99CE81;
     width: 80%;
     margin-top: 1em;
 }
+
 
 #post {
     margin-top: 1em;
@@ -301,7 +302,7 @@ body {
     cursor: pointer;
 }
 
-.textPostStyle {
+.textPostStyle{
     border: 1px solid grey;
     width: 80%;
     margin-left: 10%;
@@ -388,6 +389,10 @@ body {
     padding: 0;
     margin: 0;
     display: none;
+    width: 100%;
+}
+
+#mapa{
     width: 100%;
 }
 

@@ -1,4 +1,6 @@
-[{
+{
+	"jugos": [
+{
 	"id": "bebidas y jugos",
 	"tipo": "nectar",
 	"sabor": "damasco",
@@ -129,7 +131,6 @@
 	"tipo": "mayonesa",
 	"sabor": "clasica",
 	"empresa": "buka"	
-},
-
-
-]
+}
+	]
+}

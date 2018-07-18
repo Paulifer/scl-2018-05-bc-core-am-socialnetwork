@@ -71,3 +71,5 @@ boton.addEventListener('click', () => {
   newPosts.appendChild(trash);
 })
 
+
+
