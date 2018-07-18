@@ -277,6 +277,30 @@ body {
     cursor: pointer;
 }
 
+.containerWall{
+    border: 1px solid #99CE81;
+    width: 80%;
+    margin-top: 1em;
+}
+#post{
+    margin-top: 1em;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 4px;
+}
+#buttonPost{
+    color: white;
+    background-color: #9B369D;
+    border-radius: 4px;
+    margin-left: 60%;
+    border: #9B369D;
+}
+#cont{
+    border: 1px solid #99CE81;
+    width:50%;
+
+}
+
 /*Seccion perfil */
 
 #fotoperfilUsuario {
