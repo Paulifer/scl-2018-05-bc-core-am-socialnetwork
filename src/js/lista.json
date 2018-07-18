@@ -1,0 +1,135 @@
+[{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "damasco",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "damasco",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "damasco",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "naranja",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "piña",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "pomelo",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "naranja ligth",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "mango",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "guayaba",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "piña-naranja-banana (lata 177 ml)",
+	"empresa": "dole"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "piña(lata 177 ml)",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana organica",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana ciruela organica",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana pera  organico",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana kiwi",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "bebida energizante",
+	"sabor": "bebida de mate",
+	"empresa": "Club mate"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "refresco de té",
+	"sabor": "té helado de durazno sin azucar",
+	"empresa": "San Banedetto"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "refresco de té",
+	"sabor": "té de limon sin azucar",
+	"empresa": "San Banedetto"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "pasta",
+	"sabor": "aji con nuez",
+	"empresa": "Oda chile"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "pasta",
+	"sabor": "pasta de alcachofa",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "pasta",
+	"sabor": "pasta de roccoto",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "clasica",
+	"empresa": "buka"	
+},
+
+
+]
