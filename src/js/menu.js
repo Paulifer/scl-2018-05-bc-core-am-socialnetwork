@@ -32,15 +32,15 @@ function closeNav() {
 
 function openPerfil() {
   const btnPerfil = document.getElementById('perfil').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = "none";
-    document.getElementById("containerQuienesSomos").style.display = "none";
+    document.getElementById("containerMuro").style.display = 'none';
+    document.getElementById("containerQuienesSomos").style.display = 'none';
     document.getElementById("containerSalud").style.display = 'none';
     document.getElementById("containerAlimentacion").style.display = 'none';
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
-    document.getElementById("containerPerfil").style.display = "block";
+    //document.getElementById("mySidenav").style.display='show';
+    document.getElementById("containerPerfil").style.display = 'block';
     //id container .style.display="none";
   });
 }
@@ -53,7 +53,7 @@ function closePerfil() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
   });
@@ -83,7 +83,7 @@ function closeQuienessomos() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
 
@@ -115,7 +115,7 @@ function closeSalud() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
 
@@ -148,7 +148,7 @@ function closeAlimentacion() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
 
@@ -179,7 +179,7 @@ function closeActividades() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
 
@@ -211,7 +211,7 @@ function closeNoticias() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
 
@@ -244,7 +244,7 @@ function closePreguntasfrecuentes() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display='block';
+    document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
 
@@ -253,28 +253,28 @@ function closePreguntasfrecuentes() {
 }
 
 
-document.querySelector("#buscar").onkeyup = function(){
+document.querySelector("#buscar").onkeyup = function () {
   $TableFilter("#tabla", this.value);
 }
 
-$TableFilter = function(id, value){
+$TableFilter = function (id, value) {
   var rows = document.querySelectorAll(id + ' tbody tr');
-  
-  for(var i = 0; i < rows.length; i++){
-      var showRow = false;
-      
-      var row = rows[i];
-      row.style.display = 'none';
-      
-      for(var x = 0; x < row.childElementCount; x++){
-          if(row.children[x].textContent.toLowerCase().indexOf(value.toLowerCase().trim()) > -1){
-              showRow = true;
-              break;
-          }
+
+  for (var i = 0; i < rows.length; i++) {
+    var showRow = false;
+
+    var row = rows[i];
+    row.style.display = 'none';
+
+    for (var x = 0; x < row.childElementCount; x++) {
+      if (row.children[x].textContent.toLowerCase().indexOf(value.toLowerCase().trim()) > -1) {
+        showRow = true;
+        break;
       }
-      
-      if(showRow){
-          row.style.display = null;
-      }
+    }
+
+    if (showRow) {
+      row.style.display = null;
+    }
   }
 }
