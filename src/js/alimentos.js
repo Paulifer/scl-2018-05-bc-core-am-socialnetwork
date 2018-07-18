@@ -1,12 +1,12 @@
-document.getElementById('jugos').addEventListener('click', cargarjugo);
+document.getElementById('jugos').addEventListener('click', jugoJSON);
 
-function cargarjugo() {
+function jugoJSON() {
 	fetch('lista.json')
 		.then((res)=>{
-			console.log(res);
+			return res.json();
 		})
-		.then((data)=>{
-			console.log(data);
+		.then((respuestaJson)=>{
+			console.log(respuestaJson);
 		})
 }
 		
