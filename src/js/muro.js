@@ -33,8 +33,8 @@ const like = (event) => {
   event.stopPropagation();
   event.target.style.color = 'red';
   const idLike = event.target.getAttribute('data-likePost');
-  firebase.database().ref('messages/' + idLike).once('value', function(post){
-    let result = (post.val().starCount || 0)+1;
+  firebase.database().ref('messages/' + idLike).once('value', function(posting){
+    let result = (posting.val().starCount || 0)+1;
     console.log(result);
     
 

@@ -458,7 +458,9 @@ body {
     margin: 1em;
     border: #9B369D 3px solid;
 }
-
+.preguntas{
+    width: 90%;
+}
 .titleCollapse {
     color: white;
     font-size: 0.7em;
