@@ -1,71 +1,110 @@
-// SE INGRESA COMENTARIO AL HACER CLICK
-const boton = document.getElementById('buttonPost');
-boton.addEventListener('click', () => {
-  let posts = document.getElementById('post').value;
-  document.getElementById('post').value = '';
-  const cont = document.getElementById('cont');
-  const newPosts = document.createElement('div'); //
+//MURO CON COMENTARIOS
 
-  //Para que aparezca si o si comentario
-  if (posts.length === 0 || posts === null) {
-    alert('Debes ingresar un mensaje');
-    return false;
-  }
-
-  //ME GUSTA
-  const heart = document.createElement('i');
-  const contadorheart = document.createElement('span');
-  heart.appendChild(contadorheart);
-  heart.classList.add('fa', 'fa-heart', 'heart', 'iconHeart');
-
-  let contadorComentario = [];
-  heart.addEventListener('click', () => {
-    if (heart.classList.toggle('changeColorHeart')) {
-      contadorComentario++;
-    } else {
-      contadorComentario--;
-    }
-    return contadorheart.innerHTML = contadorComentario;
+firebase.database().ref('messages')
+  .limitToLast(5) //filtro para no obtener todos los mensajes
+  .once('value')
+  .then((messages) => {
+    console.log("Mensajes >" + JSON.stringify(messages));
   })
+  .catch(() => {
+
+  });
 
 
-  //EDITAR COMENTARIO
-  const edit = document.createElement('i');
-  edit.classList.add('fas', 'fa-pencil-alt', 'iconEdit');
+//Llamando a los mensajes  para que aparezcan cada vez que recargue la pagina
+firebase.database().ref('messages')
+  .limitToLast(5) //muestra solo los ultimos 5 mensajes como historial al recargar la pagina
+  .on('child_added', (newMessage) => {
+    contenedor.innerHTML += `
+              <div class="trashPost" style="margin: 7%; border-radius:8px; background-color:#ECF8E0">
+                <p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
+                <p style="margin-left:0.5em;">${newMessage.val().text}</p>
+                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}><span id="likePosts"> ${newMessage.val().starCount}</span></i>
+                <i class="fas fa-pencil-alt iconEdit" onclick="edit(id, message)"></i>
+                <i class="fa fa-trash trash iconTrash" onclick="deletePost(event)" 
+                data-postId="${newMessage.key}"></i>
+              </div>
+          `;
+  });
 
-  edit.addEventListener('click', () => {
-    contenedorElemento.contentEditable = true;
-    contenedorElemento.addEventListener('keydown', (event) => {
-      if (event.which == 13) {
-        let confirmarEditar = confirm('¿Confirmas que deseas guardar la publicación editada?');
-        if (confirmarEditar == true) {
-          contenedorElemento.removeAttribute('contentEditable');
-        } else {
 
-        }
-      }
-    })
-  })
+//Boton me gusta
+const like = (event) => {
+  event.stopPropagation();
+  event.target.style.color = 'red';
+  const idLike = event.target.getAttribute('data-likePost');
+  firebase.database().ref('messages/' + idLike).once('value', function(posting){
+    let result = (posting.starCount || 0) +1;
+    console.log(result);
 
-  //ELIMINAR COMENTARIO
-  const trash = document.createElement('i');
-  trash.classList.add('fa', 'fa-trash', 'trash', 'iconTrash');
+    firebase.database().ref('messages').child(idLike).update({
+      starCount: result,
+    });
+  });
+};
 
-  trash.addEventListener('click', () => {
-    let confirmarEliminar = confirm('¿Seguro que deseas eliminar esta publicación?');
-    if (confirmarEliminar == true) {
-      cont.removeChild(newPosts);
-    }
-  })
+//Boton Eliminar comentario
+const deletePost = (event) => {
+  event.stopPropagation();
+  let confirmar = confirm('¿desea eliminar la publicación?');
+  if(confirmar === true){
+    const idPosts = event.target.getAttribute('data-postId');
+    firebase.database().ref('messages/').child(idPosts).remove();
+    //contenedor.removeChild( ); DEBEMOS ELIMINAR TAMBIEN LO QUE SE IMPRIME EN EL HTML.
+  }else{};
+};
 
-  //AQUI SE CREA TODO LO QUE VA DENTRO DEL CONTENEDOR
-  const contenedorElemento = document.createElement('p');
-  let textNewPost = document.createTextNode(posts);
-  contenedorElemento.appendChild(textNewPost);
-  newPosts.appendChild(contenedorElemento);
-  newPosts.classList.add('class', 'textPostStyle');
-  cont.appendChild(newPosts);
-  newPosts.appendChild(heart);
-  newPosts.appendChild(edit);
-  newPosts.appendChild(trash);
-})
+// Editar documentos (update)
+function edit(id, message) {
+  document.getElementById('messageArea').value = message;
+  let btnPost = document.getElementById('sendButton');
+  btnPost.innerHTML = 'Guardar cambios';
+
+  btnPost.onclick = function() {
+    let editPost = db.collection('users').doc(id);
+
+    let message = document.getElementById('messageArea').value;
+
+    return editPost.update(
+      {
+        textMessage: message
+      })
+      .then(function() {
+        console.log('Document successfully updated!');
+        btnPost.innerHTML = 'Publicar';
+        btnPost.onclick = userPost;
+        document.getElementById('messageArea').value = '';
+      })
+      .catch(function(error) {
+        // The document probably doesn't exist.
+        console.error('Error updating document: ', error);
+      });
+  };
+} 
+
+
+
+// Firebase Database
+// Guardar los mensajes en database, llamada messages
+function sendMessage() {
+  if (messageArea.value.length === 0 || messageArea.value === null) {
+    alert('Debes ingresar un mensaje')
+  } else {
+  const currentUser = firebase.auth().currentUser;
+  const messageAreaText = messageArea.value;
+  const displayNames = registryName.value;
+  
+
+  //Para tener una nueva llave en la colección messages
+  const newMessageKey = firebase.database().ref().child('messages').push().key;
+
+
+  firebase.database().ref(`messages/${newMessageKey}`).set({
+    creator: currentUser.uid,
+    creatorName: currentUser.displayName || currentUser.email,
+    text: messageAreaText,
+    starCount: 0,
+  });
+  messageArea.value = '';
+}    
+}         

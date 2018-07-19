@@ -186,8 +186,6 @@ body {
     color: white;
     display: block;
     transition: 0.3s;
-    font-family: 'Roboto';
-
 }
 
 .sidenav a:hover {
@@ -240,6 +238,8 @@ body {
     margin-top: 2em;
     text-align: center;
     font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-style: 'regular';
 }
 
 #subtitleWelcome {
@@ -318,7 +318,7 @@ body {
 .iconHeart {
     color: grey;
     cursor: pointer;
-    margin-left: 50%;
+    margin-left: 60%;
     font-family: Tahoma;
 }
 

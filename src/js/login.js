@@ -124,6 +124,18 @@ function loginGoogle() {
   });
 }
 
+function logout() {
+  firebase.auth().signOut()
+    .then(()=> {
+      console.log('Cerraste sesión');
+      document.getElementById("containerMuro").style.display = "none";
+      document.getElementById("login").style.display = "block";
+      barra.classList.remove('divDisplayBlock');
+      barra.classList.add('divDisplayNone');
+    })
+    .catch();
+}
+
 
 
 
