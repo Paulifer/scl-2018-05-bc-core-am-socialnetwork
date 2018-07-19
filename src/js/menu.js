@@ -1,4 +1,4 @@
-window.onload = () => {
+function menu() {
   openNav();
   closeNav();
   openPerfil();
@@ -15,6 +15,7 @@ window.onload = () => {
   closeNoticias();
   openPreguntasfrecuentes();
   closePreguntasfrecuentes();
+  
 }
 
 
@@ -40,6 +41,7 @@ function openPerfil() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'block';
   });
+  
 }
 
 function closePerfil() {
@@ -52,7 +54,7 @@ function closePerfil() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
-  });
+});
 }
 
 /* Abrir y cerrar seccion Quienes Somos */
@@ -67,7 +69,9 @@ function openQuienesSomos() {
     document.getElementById('containerNoticias').style.display = 'none';
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerQuienesSomos').style.display = 'block';
-  });
+});
+  openNav();
+  closeNav();
 }
 
 function closeQuienessomos() {
@@ -80,7 +84,7 @@ function closeQuienessomos() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
-  });
+});
 }
 
 /* Abrir y cerrar seccion Salud */
@@ -95,8 +99,9 @@ function openSalud() {
     document.getElementById('containerNoticias').style.display = 'none';
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerSalud').style.display = 'block';
-
   });
+  openNav();
+  closeNav();
 }
 
 function closeSalud() {
@@ -109,8 +114,7 @@ function closeSalud() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
-
-  });
+ });
 }
 
 /* Abrir y cerrar seccion alimentacion */
@@ -125,9 +129,9 @@ function openAlimentacion() {
     document.getElementById('containerNoticias').style.display = 'none';
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerAlimentacion').style.display = 'block';
-
   });
-
+  openNav();
+  closeNav();
 }
 
 function closeAlimentacion() {
@@ -156,6 +160,8 @@ function openActividades() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerActividades').style.display = 'block';
   });
+  openNav();
+  closeNav();
 }
 
 function closeActividades() {
@@ -168,7 +174,6 @@ function closeActividades() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
-
   });
 }
 
@@ -183,9 +188,9 @@ function openNoticias() {
     document.getElementById('containerActividades').style.display = 'none';
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerNoticias').style.display = 'block';
-
-    // id container .style.display="none";
-  });
+ });
+  openNav();
+  closeNav();
 
 }
 function closeNoticias() {
@@ -200,7 +205,7 @@ function closeNoticias() {
     document.getElementById('containerMuro').style.display = 'block';
 
     // id container .style.display="none";
-  });
+ });
 }
 
 /* Abrir y cerrar seccion preguntas frecuentes */
@@ -215,8 +220,9 @@ function openPreguntasfrecuentes() {
     document.getElementById('containerActividades').style.display = 'none';
     document.getElementById('containerNoticias').style.display = 'none';
     document.getElementById('containerPreguntasFrecuentes').style.display = 'block';
-  });
-
+ });
+openNav();
+  closeNav();
 }
 
 function closePreguntasfrecuentes() {
