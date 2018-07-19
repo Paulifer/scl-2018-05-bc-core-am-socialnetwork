@@ -6,7 +6,6 @@ font-family: 'Roboto', sans-serif;
 
 body {
     background-color: white;
-    
 }
 
 .login {
@@ -256,7 +255,6 @@ body {
 #messageContainer {
     border: #99CE81 1px solid;
     margin-top: 2em;
-   
 }
 
 #titleWall {
@@ -286,12 +284,11 @@ body {
     cursor: pointer;
 }
 
-.containerWall{
+.containerWall {
     border: 1px solid #99CE81;
     width: 80%;
     margin-top: 1em;
 }
-
 
 #post {
     margin-top: 1em;
@@ -309,7 +306,7 @@ body {
     cursor: pointer;
 }
 
-.textPostStyle{
+.textPostStyle {
     border: 1px solid grey;
     width: 80%;
     margin-left: 10%;
@@ -399,7 +396,7 @@ body {
     width: 100%;
 }
 
-#mapa{
+#mapa {
     width: 100%;
 }
 
@@ -495,9 +492,11 @@ body {
 }
 
 p {
-    font-family:'Ropa Sans', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
+/*Calendario actividades 
