@@ -2,10 +2,11 @@
 
 /*font-family: 'Ropa Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
+*/
 
 body {
     background-color: white;
-} */
+}
 
 .login {
     background-color: #99CE81;
@@ -490,4 +491,12 @@ body {
     width: 30px;
     top: 10px;
     position: absolute;
+}
+
+p {
+    font-family:'Ropa Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family:'Roboto', sans-serif;
 }

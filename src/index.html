@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Ropa+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -110,15 +112,15 @@
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-      <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-      <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-      <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-      <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-      <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-      <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-      <a href="#">Home</a>
-      <a href="#" onclick="logout()">Cerrar sesión</a>
+      <a id="perfil" href="#" onclick="openPerfil()"> <i class="fas fa-user"></i> Mi Perfil</a>
+      <a id="quienesSomos" href="#" onclick="openQuienesSomos()"> <i class="fab fa-angellist"></i> Quienes somos</a>
+      <a id="salud" href="#" onclick="openSalud()"> <i class="fas fa-heartbeat"></i> Salud Integral</a>
+      <a id="alimentacion" href="#" onclick="openAlimentacion()"> <i class="fas fa-utensils"></i> Alimentacion</a>
+      <a id="actividades" href="#" onclick="openActividades()"> <i class="fas fa-address-book"></i> Actividades</a>
+      <a id="noticias" href="#" onclick="openNoticias()"> <i class="fas fa-newspaper"></i> Noticias</a>
+      <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()"> <i class="fas fa-question-circle"></i> Preguntas frecuentes</a>
+      <a href="#"> <i class="fas fa-home"> </i>Home</a>
+      <a href="#" onclick="logout()"> <i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
     </div>
 
     <span class="burger" onclick="openNav()">&#9776;</span>
@@ -131,7 +133,9 @@
     <!-- Titulo y Bienvenida a la red social -->
     <div class="row titleWelcome">
       <div class="col-sm">
-        <h1 id="welcome"> <b>¡Bienvenida/o a Celibook! </b> </h1>
+        <h1 id="welcome">
+          <b>¡Bienvenida/o a Celibook! </b>
+        </h1>
         <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
       </div>
     </div>
@@ -242,17 +246,20 @@
         <h2 id="Quienes somos">¿Quienes somos?</h2>
         <p>
           Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
-          datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
-          intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
-          el contenido que encuentren necesario en esta red social 100 % libre de gluten.
+          datos, recetas, medicamentos u otros, y de esta forma contribuir al bienestar de la comunidad que vive con esta
+          intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todo
+          el contenido que encuentren necesario en esta red social 100% libre de gluten.
         </p>
       </div>
     </div>
 
 
     <div class="row">
-      <div class="col-sm fotoceliacos">
-        <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
+      <div class="col-3">
+      </div>
+      <div class="col-3">
+      </div>
+      <div class="col-3">
       </div>
     </div>
 
@@ -652,6 +659,7 @@
   <script src="js/login.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/muro.js"></script>
+
 
 </body>
 
