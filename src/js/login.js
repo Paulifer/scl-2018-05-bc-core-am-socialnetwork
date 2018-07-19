@@ -2,15 +2,37 @@ window.onload = () => {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       //si esta logueado
+      containerMuro.classList.add('divDisplayBlock');
+      barra.classList.remove('divDisplayNone');
+      barra.classList.add('divDisplayBlock');
+      login.classList.remove('divDisplayBlock');
+      login.classList.add('divDisplayNone');
       console.log('usuario existente')
       console.log("user >" + JSON.stringify(user));
     } else {
       //no esta logueado
+      login.classList.add('divDisplayBlock');
+      containerMuro.classList.remove('divDisplayBlock');
+      containerMuro.classList.add('divDisplayNone');
+      barra.classList.remove('divDisplayBlock');
+      barra.classList.add('divDisplayNone')
+      console.log(containerMuro);
       console.log('usuario no existente')
     }
   });
-
 }
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+  .then(function() {
+    let email = exampleInputEmail1.value;
+    let password = exampleInputPassword1.value;
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(error);
+  });
 
 
 //ocultar login al apretar boton registrar y mostar registro
@@ -31,14 +53,9 @@ const btnIniciar = document.getElementById('btnregister').addEventListener('clic
   console.log(passwordRegistry);
   firebase.auth().createUserWithEmailAndPassword(emailRegistry, passwordRegistry)
     .then(() => {
-      containerCrearcuenta.classList.remove('divDisplayBlock');
-      containerCrearcuenta.classList.add('divDisplayNone');
-      containerMuro.classList.remove('divDisplayNone');
-      containerMuro.classList.add('divDisplayBlock');
-      barra.classList.remove('divDisplayNone');
-      barra.classList.add('divDisplayBlock');
     })
     .catch((error) => {
+      login.classList.add('divDisplayBlock');
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
@@ -128,12 +145,11 @@ function logout() {
   firebase.auth().signOut()
     .then(()=> {
       console.log('Cerraste sesión');
-      document.getElementById("containerMuro").style.display = "none";
-      document.getElementById("login").style.display = "block";
-      barra.classList.remove('divDisplayBlock');
-      barra.classList.add('divDisplayNone');
     })
-    .catch();
+    .catch((error)=>{
+      console.log(error);
+    });
+
 }
 
 

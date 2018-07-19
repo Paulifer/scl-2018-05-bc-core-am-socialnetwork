@@ -1,6 +1,6 @@
 
 
-window.onload = () => {
+function menu() {
   openNav();
   closeNav();
   openPerfil();
@@ -17,6 +17,7 @@ window.onload = () => {
   closeNoticias();
   openPreguntasfrecuentes();
   closePreguntasfrecuentes();
+  
 }
 
 
@@ -40,14 +41,11 @@ function openPerfil() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-<<<<<<< HEAD
-    document.getElementById("mySidenav").style.display='block';
-    document.getElementById("containerPerfil").style.display = "block";
-    document.getElementById('mySidenav').style.display = "block";
-=======
     //document.getElementById("mySidenav").style.display='show';
     document.getElementById("containerPerfil").style.display = 'block';
->>>>>>> upstream/master
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
+
     //id container .style.display="none";
   });
   
@@ -64,6 +62,8 @@ function closePerfil() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
   });
 }
 
@@ -79,6 +79,8 @@ function openQuienesSomos() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
     document.getElementById("containerQuienesSomos").style.display = 'block';
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
   openNav();
@@ -96,7 +98,8 @@ function closeQuienessomos() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
 }
@@ -113,7 +116,8 @@ function openSalud() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
     document.getElementById("containerSalud").style.display = 'block';
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
   });
   openNav();
   closeNav();
@@ -130,7 +134,8 @@ function closeSalud() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
 }
@@ -147,7 +152,8 @@ function openAlimentacion() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
     document.getElementById("containerAlimentacion").style.display = 'block';
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
   });
   openNav();
   closeNav();
@@ -165,7 +171,8 @@ function closeAlimentacion() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
 }
@@ -182,6 +189,8 @@ function openActividades() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
     document.getElementById("containerActividades").style.display = 'block';
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
   });
   openNav();
   closeNav();
@@ -198,7 +207,8 @@ function closeActividades() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
 }
@@ -214,7 +224,8 @@ function openNoticias() {
     document.getElementById("containerActividades").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
     document.getElementById("containerNoticias").style.display = 'block';
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
   openNav();
@@ -232,7 +243,8 @@ function closeNoticias() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
 }
@@ -250,6 +262,8 @@ function openPreguntasfrecuentes() {
     document.getElementById("containerNoticias").style.display = 'none';
     document.getElementById("containerPreguntasFrecuentes").style.display = 'block';
     //id container .style.display="none";
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
   });
 openNav();
   closeNav();
@@ -266,7 +280,8 @@ function closePreguntasfrecuentes() {
     document.getElementById("mySidenav").style.display = 'block';
     document.getElementById("containerPerfil").style.display = "none";
     document.getElementById("containerMuro").style.display = "block";
-
+    login.classList.remove('divDisplayblock');
+    login.classList.add('divDisplayNone');
     //id container .style.display="none";
   });
 }

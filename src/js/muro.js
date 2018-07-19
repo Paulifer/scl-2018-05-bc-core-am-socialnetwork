@@ -1,5 +1,4 @@
 //MURO CON COMENTARIOS
-
 firebase.database().ref('messages')
   .limitToLast(5) //filtro para no obtener todos los mensajes
   .once('value')
@@ -19,13 +18,15 @@ firebase.database().ref('messages')
               <div class="trashPost" style="margin: 7%; border-radius:8px; background-color:#ECF8E0">
                 <p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
                 <p style="margin-left:0.5em;">${newMessage.val().text}</p>
-                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}><span id="likePosts"> ${newMessage.val().starCount}</span></i>
-                <i class="fas fa-pencil-alt iconEdit" onclick="edit(id, message)"></i>
+                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}"><span id="likePosts"> ${newMessage.val().starCount}</span></i>
+                <i class="fas fa-pencil-alt iconEdit"></i>
                 <i class="fa fa-trash trash iconTrash" onclick="deletePost(event)" 
                 data-postId="${newMessage.key}"></i>
               </div>
           `;
+  
   });
+
 
 
 //Boton me gusta
@@ -46,41 +47,14 @@ const like = (event) => {
 //Boton Eliminar comentario
 const deletePost = (event) => {
   event.stopPropagation();
-  let confirmar = confirm('¿desea eliminar la publicación?');
+  let confirmar = confirm('¿Estás seguro de eliminar la publicación?');
   if(confirmar === true){
     const idPosts = event.target.getAttribute('data-postId');
     firebase.database().ref('messages/').child(idPosts).remove();
-    //contenedor.removeChild( ); DEBEMOS ELIMINAR TAMBIEN LO QUE SE IMPRIME EN EL HTML.
+    newMessage.removeChild(idPosts);
   }else{};
 };
 
-// Editar documentos (update)
-function edit(id, message) {
-  document.getElementById('messageArea').value = message;
-  let btnPost = document.getElementById('sendButton');
-  btnPost.innerHTML = 'Guardar cambios';
-
-  btnPost.onclick = function() {
-    let editPost = db.collection('users').doc(id);
-
-    let message = document.getElementById('messageArea').value;
-
-    return editPost.update(
-      {
-        textMessage: message
-      })
-      .then(function() {
-        console.log('Document successfully updated!');
-        btnPost.innerHTML = 'Publicar';
-        btnPost.onclick = userPost;
-        document.getElementById('messageArea').value = '';
-      })
-      .catch(function(error) {
-        // The document probably doesn't exist.
-        console.error('Error updating document: ', error);
-      });
-  };
-} 
 
 
 
