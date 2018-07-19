@@ -4,12 +4,19 @@ window.onload = () => {
       //si esta logueado
       console.log('usuario existente')
       console.log("user >" + JSON.stringify(user));
+      
     } else {
       //no esta logueado
       console.log('usuario no existente')
     }
   });
+}
 
+function actualizar(){
+  if(user == true && location.reload(true)){
+    login.classList.remove('divDisplayBlock');
+    login.classList.add('divDisplayNone');
+  }
 }
 
 

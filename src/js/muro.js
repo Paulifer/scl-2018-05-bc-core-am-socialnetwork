@@ -33,12 +33,13 @@ const like = (event) => {
   event.stopPropagation();
   event.target.style.color = 'red';
   const idLike = event.target.getAttribute('data-likePost');
-  firebase.database().ref('messages/' + idLike).once('value', function(posting){
-    let result = (posting.starCount || 0) +1;
+  firebase.database().ref('messages/' + idLike).once('value', function(post){
+    let result = (post.val().starCount || 0)+1;
     console.log(result);
+    
 
     firebase.database().ref('messages').child(idLike).update({
-      starCount: result,
+      starCount : result
     });
   });
 };
@@ -50,7 +51,7 @@ const deletePost = (event) => {
   if(confirmar === true){
     const idPosts = event.target.getAttribute('data-postId');
     firebase.database().ref('messages/').child(idPosts).remove();
-    newMessage.removeChild(idPosts);
+    
   }else{};
 };
 
