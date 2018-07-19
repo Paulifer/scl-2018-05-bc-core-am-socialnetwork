@@ -1,4 +1,3 @@
-
 window.onload = () => {
   openNav();
   closeNav();
@@ -28,7 +27,7 @@ function closeNav() {
   document.getElementById('mySidenav').style.width = '0';
 }
 
-/*Abrir y cerrar seccion perfil */
+/* Abrir y cerrar seccion perfil */
 
 function openPerfil() {
   const btnPerfil = document.getElementById('perfil').addEventListener('click', () => {
