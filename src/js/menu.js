@@ -42,6 +42,7 @@ function openPerfil() {
     //document.getElementById("mySidenav").style.display='show';
     document.getElementById("containerPerfil").style.display = 'block';
     //id container .style.display="none";
+    
   });
 }
 
