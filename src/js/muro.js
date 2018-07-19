@@ -19,7 +19,7 @@ firebase.database().ref('messages')
               <div class="trashPost" style="margin: 7%; border-radius:8px; background-color:#ECF8E0">
                 <p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
                 <p style="margin-left:0.5em;">${newMessage.val().text}</p>
-                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}"><span id="likePosts"> ${newMessage.val().starCount}</span></i>
+                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}"><span> ${newMessage.val().starCount}</span></i>
                 <i class="fas fa-pencil-alt iconEdit"></i>
                 <i class="fa fa-trash trash iconTrash" onclick="deletePost(event)" 
                 data-postId="${newMessage.key}"></i>
