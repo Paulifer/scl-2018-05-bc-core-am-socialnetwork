@@ -1,8 +1,11 @@
 /* LOGIN */
 
+/*font-family: 'Ropa Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+
 body {
     background-color: white;
-}
+} */
 
 .login {
     background-color: #99CE81;
@@ -183,6 +186,8 @@ body {
     color: white;
     display: block;
     transition: 0.3s;
+    font-family: 'Roboto';
+
 }
 
 .sidenav a:hover {
