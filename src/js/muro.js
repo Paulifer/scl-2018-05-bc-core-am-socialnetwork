@@ -56,8 +56,6 @@ const deletePost = (event) => {
 };
 
 
-
-
 // Firebase Database
 // Guardar los mensajes en database, llamada messages
 function sendMessage() {
