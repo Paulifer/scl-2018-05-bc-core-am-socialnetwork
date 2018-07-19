@@ -3,15 +3,11 @@ const lista = 'https://raw.githubusercontent.com/Paulifer/scl-2018-05-bc-core-am
 function jugosJSON() {
 	fetch(lista)
 		.then((res)=>{
-			
+			return res.json();
 		})
 		.then( data => {
-			
-			JSON.stringify(data);
 			console.log(data);
 		})
 		 .catch(error => {
-    		console.error("No pude obtener la lista");		
-    		console.error("ERROR > " + error.stack); //error.stack muestra donde falló el codigo, imprime donde esta el error
-  });
+    		console.log(error)  });
 		}

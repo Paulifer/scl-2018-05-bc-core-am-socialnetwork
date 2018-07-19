@@ -35,6 +35,8 @@ const btnIniciar = document.getElementById('btnregister').addEventListener('clic
       containerCrearcuenta.classList.add('divDisplayNone');
       containerMuro.classList.remove('divDisplayNone');
       containerMuro.classList.add('divDisplayBlock');
+      barra.classList.remove('divDisplayNone');
+      barra.classList.add('divDisplayBlock');
     })
     .catch((error) => {
       let errorCode = error.code;
@@ -56,6 +58,8 @@ const btnSingIn = document.getElementById('btnSingIn').addEventListener('click',
         login.classList.add('divDisplayNone');
         containerMuro.classList.remove('divDisplayNone');
         containerMuro.classList.add('divDisplayBlock');
+        barra.classList.remove('divDisplayNone');
+        barra.classList.add('divDisplayBlock');
       })
       .catch(function (error) {
         let errorCode = error.code;
@@ -84,6 +88,8 @@ const btnFacebook = document.getElementById('facebook').addEventListener('click'
       login.classList.add('divDisplayNone');
       containerMuro.classList.remove('divDisplayNone');
       containerMuro.classList.add('divDisplayBlock');
+      barra.classList.remove('divDisplayNone');
+      barra.classList.add('divDisplayBlock');
     })
     .catch((error) => {
       console.log("error de firebase" + error.code);
@@ -116,6 +122,18 @@ function loginGoogle() {
   }).catch((error) => {
 
   });
+}
+
+function logout() {
+  firebase.auth().signOut()
+    .then(()=> {
+      console.log('Cerraste sesión');
+      document.getElementById("containerMuro").style.display = "none";
+      document.getElementById("login").style.display = "block";
+      barra.classList.remove('divDisplayBlock');
+      barra.classList.add('divDisplayNone');
+    })
+    .catch();
 }
 
 
