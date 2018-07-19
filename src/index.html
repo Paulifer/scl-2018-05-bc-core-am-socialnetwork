@@ -10,9 +10,10 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Ropa+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-
+  <link rel="shortcut icon" type="image/x-icon" href="/img/celiaco3 verde icono.png" />
 </head>
 
 <body>
@@ -103,19 +104,28 @@
 
 
   <!-- Barra superior y menú desplegable -->
- <section class="barTop divDisplayNone" id="barra">
+  <section class="barTop divDisplayNone" id="barra">
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-      <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-      <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-      <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-      <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-      <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-      <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-      <a href="#">Home</a>
-      <a href="#" onclick="logout()">Cerrar sesión</a>
+      <a id="perfil" href="#" onclick="openPerfil()">
+        <i class="fas fa-user"></i> Mi Perfil</a>
+      <a id="quienesSomos" href="#" onclick="openQuienesSomos()">
+        <i class="fab fa-angellist"></i> Quienes somos</a>
+      <a id="salud" href="#" onclick="openSalud()">
+        <i class="fas fa-heartbeat"></i> Salud Integral</a>
+      <a id="alimentacion" href="#" onclick="openAlimentacion()">
+        <i class="fas fa-utensils"></i> Alimentacion</a>
+      <a id="actividades" href="#" onclick="openActividades()">
+        <i class="fas fa-address-book"></i> Actividades</a>
+      <a id="noticias" href="#" onclick="openNoticias()">
+        <i class="fas fa-newspaper"></i> Noticias</a>
+      <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">
+        <i class="fas fa-question-circle"></i> Preguntas frecuentes</a>
+      <a id="home" href="#" onclick="openHome()">
+        <i class="fas fa-home"> </i>Home</a>
+      <a href="#" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
     </div>
 
     <span class="burger" onclick="openNav()">&#9776;</span>
@@ -128,7 +138,9 @@
     <!-- Titulo y Bienvenida a la red social -->
     <div class="row titleWelcome">
       <div class="col-sm">
-        <h1 id="welcome">¡Bienvenida/o a Celibook!</h1>
+        <h1 id="welcome">
+          <b>¡Bienvenida/o a Celibook! </b>
+        </h1>
         <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
       </div>
     </div>
@@ -232,7 +244,9 @@
 
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2 id="Quienes somos">¿Quienes somos?</h2>
+        <h2 class="Titles">
+          <strong>¿Quienes somos?</strong>
+        </h2>
         <p>
           Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
           datos, recetas, medicamentos u otros, y de esta forma contribuir al bienestar de la comunidad que vive con esta
@@ -244,8 +258,29 @@
 
 
     <div class="row">
-      <div class="col-sm fotoceliacos">
-        <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="/img/WhatsApp Image 2018-07-19 at 12.55.34.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Pauli Huañaco </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="/img/18835735_10212558735859600_7336085548576826746_n (1).jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Constanza García.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Camila Ramirez.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -263,13 +298,11 @@
 
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2 id="salud">¿salud?</h2>
+        <h2 class="Titles">
+          <strong>Salud</strong>
+        </h2>
         <p>
-          Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
-          datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
-          intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
-          el contenido que encuentren necesario en esta red social 100 % libre de gluten.
-
+          Información sobre especialistas
         </p>
 
       </div>
@@ -290,6 +323,22 @@
 
   <div class="container-fluid" id="containerAlimentacion">
 
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong> Alimentación </strong>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+
+        <strong> En esta tabla podrás encontrar los alimentos certificados por la Fundación Convivir que puedes consumir si eres intolerante
+          al gluten o celiaco. Sigue el recorrido en el mapa y encuentra los locales donde podrás adquirir estos. </strong>
+
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <table id="tabla" class="table table-striped">
@@ -334,9 +383,9 @@
           </tbody>
         </table>
         <!-- TABLA FINALIZA -->
-
       </div>
     </div>
+
 
 
 
@@ -372,7 +421,9 @@
     <div class="row">
 
       <div class="col-md-6 offset-md-3 questionsCol">
-        <h1 id="titleQuestions">Preguntas Frecuentes</h1>
+        <h2 class="Titles">
+          <strong>Preguntas frecuentes</strong>
+        </h2>
 
         <p>Alguna vez te han preguntado ¿cómo sabes qué eres intolerante al gluten o celiaco? o crees que tienes los síntomas
           de la celiaquia pero no sabes a qué medico recurrir. A continuación te presentamos la diferencias entre Enfermedad
@@ -502,16 +553,90 @@
   <div class="container-fluid" id="containerActividades">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2 id="actividades">Actividades</h2>
+        <h2 class="Titles">
+          <strong>Actividades</strong>
+        </h2>
         <p>
-          Las cosas que podrás hacer
+          Información actualizada de las actividades en las que podrás participar.
         </p>
+        <p>
+          <b> Simbología: </b>
+          <ul> Charla</ul>
+          <ul> Seminario </ul>
+          <ul> Taller </ul>
+          <ul>Feria </ul>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="month">
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>
+              Julio
+              <br>
+              <span style="font-size:18px">2017</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="weekdays">
+          <li>Lu</li>
+          <li>Ma</li>
+          <li>Mi</li>
+          <li>Ju</li>
+          <li>Vi</li>
+          <li>Sa</li>
+          <li>Do</li>
+        </ul>
+
+        <ul class="days">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>
+            <span class="active">10</span>
+          </li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
 
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <input type="button" id="atrasActividades" value="Volver" name="volver atrás2" onclick="closeActividades"/>
+        <input type="button" id="atrasActividades" value="Volver" name="volver atrás2" onclick="closeActividades" />
       </div>
     </div>
 
@@ -521,8 +646,10 @@
   <div class="container-fluid" id="containerNoticias">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2 id="noticias">Noticias</h2>
-        <p>
+        <h2 class="Titles">
+          <strong>Noticias</strong>
+        </h2>
+        <p id="noticiasSubtitle">
           Lee la actualidad internacional y nacional respecto a temas como la celiaquía, intolerancia al gluten, experiencia de usuarios
           y mucho más.
         </p>
@@ -535,7 +662,7 @@
       <div class="col-md-6 offset-md-3">
 
         <div class="list-group" id="barranoticias">
-          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Si no soy celiaco, ¿por qué me sienta mal el gluten?</h5>
               <small>3 days ago</small>
@@ -545,8 +672,10 @@
               han resultado negativas. Esta contradicción la convierte en candidata a padecer "sensibilidad al gluten no
               celiaca", una afección recogida en la última Clasificación Internacional de Enfermedades sobre la que aún planean
               algunas sombras.</p>
-            <small>Revisa la noticia completa
-              <a href="https://elpais.com/elpais/2018/06/28/buenavida/1530180812_683293.html"> aquí </a>
+            <small>
+              <a class="news" href="https://elpais.com/elpais/2018/06/28/buenavida/1530180812_683293.html">Revisa la noticia completa
+                <strong> aquí.</strong>
+              </a>
             </small>
           </a>
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -557,9 +686,11 @@
             <p class="mb-1">Cada año, se conmemora el 5 de mayo como el Día Internacional del Celíaco, enfermedad autoinmune y cuya prevalencia
               en Chile no se sabe con exactitud, aunque se estima que el 1% de los chilenos la padece. Sin embargo, expertos
               advierten que 9 de cada 10 celíacos desconocerían tener la enfermedad.</p>
-            <small>Revisa la noticia completa
-              <a href="http://www.elmostrador.cl/agenda-pais/vida-en-linea/vida-destacados/2018/05/05/dia-internacional-del-celiaco-nutricionista-explica-la-clave-para-controlar-la-enfermedad/">
-                aquí </a>
+            <small>
+              <a class="news" href="http://www.elmostrador.cl/agenda-pais/vida-en-linea/vida-destacados/2018/05/05/dia-internacional-del-celiaco-nutricionista-explica-la-clave-para-controlar-la-enfermedad/">
+                Revisa la noticia completa
+                <strong> aquí.</strong>
+              </a>
             </small>
           </a>
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -569,8 +700,10 @@
             </div>
             <p class="mb-1">Según estudios, el 1% de la población mundial es celíaca. En Chile cada vez se detectan más casos, por eso la
               necesidad de más opciones alimenticias que estén libre de gluten.</p>
-            <small>Revisa la noticia completa
-              <a href="http://www.t13.cl/videos/nacional/video-mercado-celiacos-va-constante-crecimiento-chile"> aquí </a>
+            <small>
+              <a class="news" href="http://www.t13.cl/videos/nacional/video-mercado-celiacos-va-constante-crecimiento-chile"> Revisa la noticia completa
+                <strong> aquí.</strong>
+              </a>
             </small>
           </a>
         </div>
@@ -588,71 +721,20 @@
 
   </div>
 
-  <!-- seccion Preguntas frecuentes -->
-  <div class="container-fluid" id="containerPreguntasFrecuentes">
-    <header class="barTop">
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
-        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
-        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
-        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
-        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
-        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
-        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
-        <a href="#">Home</a>
-        <a href="#">Cerrar sesión</a>
-      </div>
-      <span class="burger" onclick="openNav()">&#9776;</span>
-    </header>
+  <!--Link firebase-->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
+      authDomain: "redsocial-78423.firebaseapp.com",
+      databaseURL: "https://redsocial-78423.firebaseio.com",
+      projectId: "redsocial-78423",
+      storageBucket: "redsocial-78423.appspot.com",
+      messagingSenderId: "739042868398"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-        <div class="row">
-            <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 id="Preguntas frecuentes">Preguntas frecuentes</h2>
-                <div class="row botonesPregutas">
-                    <div class="col-md-6 offset-md-3">
-                        <div class="btn-group-vertical">
-                            <button type="button" id="comoSaber" onclick="" class="btn btn-primary">
-                                ¿Como saber si soy intolerante al gluten?</button>
-                            <button type="button" id="medicamentos" onclick="" class="btn btn-primary">
-                               Medicamentos</button>
-                            <button type="button" id="especialistas" onclick="" class="btn btn-primary">
-                                Especialistas</button>
-                            <button type="button" id="organizaciones" onclick="" class="btn btn-primary">
-                                Organizaciones</button>
-                         </div>
-                    </div>
-                  </div>
-                </div>
-        </div>
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h2 id="preguntastitulo">Preguntas</h2>
-        <p>
-          ¿Cómo sabes si eres Celiaco?
-        </p>
-
-      </div>
-    </div>
-
-
-  </div>
-</div>   
-
-    <!--Link firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script>
-        var config = {
-            apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
-            authDomain: "redsocial-78423.firebaseapp.com",
-            databaseURL: "https://redsocial-78423.firebaseio.com",
-            projectId: "redsocial-78423",
-            storageBucket: "redsocial-78423.appspot.com",
-            messagingSenderId: "739042868398"
-        };
-        firebase.initializeApp(config);
-    </script>
 
   <!-- Links bootstrap y js -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -668,6 +750,7 @@
   <script src="js/menu.js"></script>
   <script src="js/muro.js"></script>
   <script src="js/alimentos.js"></script>
+
 </body>
 
 </html>

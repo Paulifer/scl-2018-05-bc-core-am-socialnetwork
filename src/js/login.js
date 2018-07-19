@@ -9,7 +9,7 @@ window.onload = () => {
       login.classList.add('divDisplayNone');
       console.log('usuario existente')
       console.log("user >" + JSON.stringify(user));
-    } else {
+      } else {
       //no esta logueado
       login.classList.add('divDisplayBlock');
       containerMuro.classList.remove('divDisplayBlock');
@@ -21,6 +21,7 @@ window.onload = () => {
     }
   });
 }
+
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
   .then(function() {
     let email = exampleInputEmail1.value;

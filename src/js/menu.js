@@ -1,5 +1,3 @@
-
-
 function menu() {
   openNav();
   closeNav();
@@ -21,103 +19,86 @@ function menu() {
 }
 
 
-/*Barra lateral */
+/* Barra lateral */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById('mySidenav').style.width = '250px';
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById('mySidenav').style.width = '0';
 }
 
-/*Abrir y cerrar seccion perfil */
+/* Abrir y cerrar seccion perfil */
 
 function openPerfil() {
   const btnPerfil = document.getElementById('perfil').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    //document.getElementById("mySidenav").style.display='show';
-    document.getElementById("containerPerfil").style.display = 'block';
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-
-    //id container .style.display="none";
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'block';
   });
   
 }
 
 function closePerfil() {
   const btnAtras = document.getElementById('atrasPerfil').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-  });
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
+});
 }
 
-/*Abrir y cerrar seccion Quienes Somos */
+/* Abrir y cerrar seccion Quienes Somos */
 
 function openQuienesSomos() {
   const btnQuienesSomos = document.getElementById('quienesSomos').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerPerfil").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'block';
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
-  });
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'block';
+});
   openNav();
   closeNav();
 }
 
 function closeQuienessomos() {
   const btnAtrasQuienessomos = document.getElementById('atrasQuienessomos').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
-  });
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
+});
 }
 
-/*Abrir y cerrar seccion Salud */
+/* Abrir y cerrar seccion Salud */
 
 function openSalud() {
   const btnSalud = document.getElementById('salud').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerPerfil").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'block';
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'block';
   });
   openNav();
   closeNav();
@@ -125,72 +106,59 @@ function openSalud() {
 
 function closeSalud() {
   const btnAtraSalud = document.getElementById('atrasSalud').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
-  });
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
+ });
 }
 
-/*Abrir y cerrar seccion alimentacion */
+/* Abrir y cerrar seccion alimentacion */
 
 function openAlimentacion() {
   const btnAlimentacion = document.getElementById('alimentacion').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerPerfil").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'block';
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'block';
   });
   openNav();
   closeNav();
-
 }
 
 function closeAlimentacion() {
   const btnAtrasAlimentacion = document.getElementById('atrasAlimentacion').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
   });
 }
 
-/*Abrir y cerrar seccion actividades */
+/* Abrir y cerrar seccion actividades */
 
 function openActividades() {
   const btnNoticias = document.getElementById('actividades').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerPerfil").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'block';
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'block';
   });
   openNav();
   closeNav();
@@ -198,97 +166,98 @@ function openActividades() {
 
 function closeActividades() {
   const btnAtrasActividades = document.getElementById('atrasActividades').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
   });
 }
 
-/*Abrir y cerrar seccion Noticias */
+/* Abrir y cerrar seccion Noticias */
 function openNoticias() {
   const btnNoticias = document.getElementById('noticias').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerPerfil").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'block';
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
-  });
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'block';
+ });
   openNav();
   closeNav();
 
 }
 function closeNoticias() {
   const btnAtrasNoticias = document.getElementById('atrasNoticias').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
-  });
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
+
+    // id container .style.display="none";
+ });
 }
 
-/*Abrir y cerrar seccion preguntas frecuentes */
+/* Abrir y cerrar seccion preguntas frecuentes */
 
 function openPreguntasfrecuentes() {
   const btnPreguntasfrecuentes = document.getElementById('preguntasFrecuentes').addEventListener('click', () => {
-    document.getElementById("containerMuro").style.display = 'none';
-    document.getElementById("containerPerfil").style.display = 'none';
-    document.getElementById("containerQuienesSomos").style.display = 'none';
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'block';
-    //id container .style.display="none";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-  });
+    document.getElementById('containerMuro').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'block';
+ });
 openNav();
   closeNav();
 }
 
 function closePreguntasfrecuentes() {
   const btnAtrasPreguntasfrecuentes = document.getElementById('atrasPreguntasFrecuentes').addEventListener('click', () => {
-    document.getElementById("containerQuienesSomos").style.display = "none";
-    document.getElementById("containerSalud").style.display = 'none';
-    document.getElementById("containerAlimentacion").style.display = 'none';
-    document.getElementById("containerActividades").style.display = 'none';
-    document.getElementById("containerNoticias").style.display = 'none';
-    document.getElementById("containerPreguntasFrecuentes").style.display = 'none';
-    document.getElementById("mySidenav").style.display = 'block';
-    document.getElementById("containerPerfil").style.display = "none";
-    document.getElementById("containerMuro").style.display = "block";
-    login.classList.remove('divDisplayblock');
-    login.classList.add('divDisplayNone');
-    //id container .style.display="none";
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
   });
 }
 
 
-document.querySelector("#buscar").onkeyup = function () {
-  $TableFilter("#tabla", this.value);
+// abrir muro
+
+function openHome() {
+  const btnHome = document.getElementById('home').addEventListener('click', () => {
+    document.getElementById('containerPerfil').style.display = 'none';
+    document.getElementById('containerQuienesSomos').style.display = 'none';
+    document.getElementById('containerSalud').style.display = 'none';
+    document.getElementById('containerAlimentacion').style.display = 'none';
+    document.getElementById('containerActividades').style.display = 'none';
+    document.getElementById('containerNoticias').style.display = 'none';
+    document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
+    document.getElementById('containerMuro').style.display = 'block';
+  });
+
+}
+
+
+document.querySelector('#buscar').onkeyup = function () {
+  $TableFilter('#tabla', this.value);
 }
 
 $TableFilter = function (id, value) {
