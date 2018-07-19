@@ -485,6 +485,27 @@ body {
 
 #barranoticias {
     background-color: #9B369D;
+    text-align: center;
+}
+.Titles{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+#noticiasSubtitle{
+    margin: 5%;
+    text-align: center;
+}
+.news{
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.news:hover{
+    text-align: center;
+    color: #99CE81;
+    cursor: pointer;
 }
 
 #logosuperior {
