@@ -1,4 +1,4 @@
-window.onload = () => {
+window.onload = ()=> {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       //si esta logueado
@@ -9,6 +9,24 @@ window.onload = () => {
       login.classList.add('divDisplayNone');
       console.log('usuario existente')
       console.log("user >" + JSON.stringify(user));
+      //estas funciones son del js menu, lo colocamos aqui porque es la unaca manera que funcionen junto con lo de login
+      openNav();
+      closeNav();
+      openPerfil();
+      closePerfil();
+      openQuienesSomos();
+      closeQuienessomos();
+      openSalud();
+      closeSalud();
+      openAlimentacion();
+      closeAlimentacion();
+      openActividades();
+      closeActividades();
+      openNoticias();
+      closeNoticias();
+      openPreguntasfrecuentes();
+      closePreguntasfrecuentes();
+
       } else {
       //no esta logueado
       login.classList.add('divDisplayBlock');
@@ -73,11 +91,6 @@ const btnSingIn = document.getElementById('btnSingIn').addEventListener('click',
     firebase.auth().signInWithEmailAndPassword(validarMail, valiarPassword)
       .then(() => {
         console.log("usuarioExistente");
-        login.classList.add('divDisplayNone');
-        containerMuro.classList.remove('divDisplayNone');
-        containerMuro.classList.add('divDisplayBlock');
-        barra.classList.remove('divDisplayNone');
-        barra.classList.add('divDisplayBlock');
       })
       .catch(function (error) {
         let errorCode = error.code;
@@ -103,11 +116,6 @@ const btnFacebook = document.getElementById('facebook').addEventListener('click'
   firebase.auth().signInWithPopup(provider)
     .then(() => {
       console.log("login con facebook");
-      login.classList.add('divDisplayNone');
-      containerMuro.classList.remove('divDisplayNone');
-      containerMuro.classList.add('divDisplayBlock');
-      barra.classList.remove('divDisplayNone');
-      barra.classList.add('divDisplayBlock');
     })
     .catch((error) => {
       console.log("error de firebase" + error.code);

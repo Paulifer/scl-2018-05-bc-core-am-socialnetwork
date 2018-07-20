@@ -1,22 +1,3 @@
-window.onload = () => {
-  openNav();
-  closeNav();
-  openPerfil();
-  closePerfil();
-  openQuienesSomos();
-  closeQuienessomos();
-  openSalud();
-  closeSalud();
-  openAlimentacion();
-  closeAlimentacion();
-  openActividades();
-  closeActividades();
-  openNoticias();
-  closeNoticias();
-  openPreguntasfrecuentes();
-  closePreguntasfrecuentes();
-}
-
 
 /* Barra lateral */
 function openNav() {
