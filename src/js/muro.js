@@ -1,5 +1,4 @@
 //MURO CON COMENTARIOS
-
 firebase.database().ref('messages')
   .limitToLast(5) //filtro para no obtener todos los mensajes
   .once('value')
@@ -25,7 +24,9 @@ firebase.database().ref('messages')
                 data-postId="${newMessage.key}"></i>
               </div>
           `;
+  
   });
+
 
 
 //Boton me gusta
