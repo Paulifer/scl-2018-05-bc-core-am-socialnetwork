@@ -41,7 +41,8 @@ function openPerfil() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'block';
   });
-  
+  openNav();
+  closeNav();
 }
 
 function closePerfil() {
@@ -55,6 +56,8 @@ function closePerfil() {
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
 });
+  openNav();
+  closeNav();
 }
 
 /* Abrir y cerrar seccion Quienes Somos */
@@ -85,6 +88,8 @@ function closeQuienessomos() {
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
 });
+  openNav();
+  closeNav();
 }
 
 /* Abrir y cerrar seccion Salud */
@@ -115,6 +120,8 @@ function closeSalud() {
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
  });
+  openNav();
+  closeNav();
 }
 
 /* Abrir y cerrar seccion alimentacion */
@@ -145,6 +152,8 @@ function closeAlimentacion() {
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
   });
+  openNav();
+  closeNav();
 }
 
 /* Abrir y cerrar seccion actividades */
@@ -175,6 +184,8 @@ function closeActividades() {
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
   });
+  openNav();
+  closeNav();
 }
 
 /* Abrir y cerrar seccion Noticias */
@@ -203,7 +214,8 @@ function closeNoticias() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
-
+    openNav();
+  closeNav();
     // id container .style.display="none";
  });
 }
@@ -236,6 +248,8 @@ function closePreguntasfrecuentes() {
     document.getElementById('containerPerfil').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
   });
+  openNav();
+  closeNav();
 }
 
 
@@ -252,7 +266,8 @@ function openHome() {
     document.getElementById('containerPreguntasFrecuentes').style.display = 'none';
     document.getElementById('containerMuro').style.display = 'block';
   });
-
+openNav();
+  closeNav();
 }
 
 
