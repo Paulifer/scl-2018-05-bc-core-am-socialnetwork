@@ -1,0 +1,235 @@
+{
+	"jugos": [
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "damasco",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "damasco",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "damasco",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "naranja",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "piña",
+	"empresa": "colun"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "pomelo",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "naranja ligth",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "mango",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "nectar",
+	"sabor": "guayaba",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "piña-naranja-banana (lata 177 ml)",
+	"empresa": "dole"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "piña(lata 177 ml)",
+	"empresa": "Frutika"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana organica",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana ciruela organica",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana pera  organico",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "jugo",
+	"sabor": "manzana kiwi",
+	"empresa": "AMA"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "bebida energizante",
+	"sabor": "bebida de mate",
+	"empresa": "Club mate"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "refresco de té",
+	"sabor": "té helado de durazno sin azucar",
+	"empresa": "San Banedetto"	
+},
+{
+	"id": "bebidas y jugos",
+	"tipo": "refresco de té",
+	"sabor": "té de limon sin azucar",
+	"empresa": "San Banedetto"	
+}
+
+]
+	"salsas :" [
+
+{
+	"id": "salsas y aliños",
+	"tipo": "pasta",
+	"sabor": "aji con nuez",
+	"empresa": "Oda chile"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "pasta",
+	"sabor": "pasta de alcachofa",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "pasta",
+	"sabor": "pasta de roccoto",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "clasica",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "merken light",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "aceituna morada",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "DELI 700 grs.",
+	"empresa": " Hellmann's unilever"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "light 95 gr, 380 gr, 670 gr,",
+	"empresa": "Hellmann's unilever"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "libre colesterol 950 grs," ,
+	"empresa": "Hellmann's unilever"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "salsa untable",
+	"sabor": " yogurt ciboulette",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "Salsa untable",
+	"sabor": "ajo tostado",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "Salsa untable",
+	"sabor": "queso cheddar",
+	"empresa": "buka"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "salsa",
+	"sabor": "a la Huancaína",
+	"empresa": "Perfect Choice"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "Salsa",
+	"sabor": "pesto",
+	"empresa": "Meditalia"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "Salsa",
+	"sabor": "aceitunas",
+	"empresa": "Meditalia"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "salsa de soya",
+	"sabor": "soya Premium",
+	"empresa": "Sakura"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "Salsa de soya",
+	"sabor": "soya Tradicional",
+	"empresa": "Sakura"	
+},
+{
+	"id": "salsas y aliños",
+	"tipo": "mayonesa",
+	"sabor": "light 95 gr, 380 gr, 670 gr,",
+	"empresa": "Hellmann's unilever"	
+},
+
+	]
+	
+}
+	Salsas Dip untable yogurt sabor ciboulette Buka
+Salsas Dip untable sabor ajo tostado Buka
+Salsas Dip untable sabor queso cheddar Buka
+Salsas Dip Untable Yogurt Sabor Ciboulette Buka
+Salsas Salsa a la Huancaína Perfect Choice
+Salsas Salsa con pesto Meditalia
+Salsas Salsa con aceitunas Meditalia
+Salsa de soya Salsa de soya Premium Sakura
+Salsa de soya Salsa de soya Tradicional S

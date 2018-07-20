@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CeliBook</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Ropa+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/celiaco3verde.png" />
+</head>
+
+<body>
+  <!--Seccion Login -->
+
+  <div class="container-fluid login" id="login">
+    <div class="row">
+      <div class="col-sm logo">
+        <img src="../img/celiaco3.png" alt="logoCelibook" id="logoCelibook">
+        <h2 id="titleLogin">Celibook</h2>
+      </div>
+    </div>
+
+    <div class="row iniciarsesion">
+      <div class="col-md-6 offset-md-3">
+        <form>
+          <div class="form-group bars">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo electronico"
+              required="email">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group bars">
+            <label for="exampleInputPassword1"></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Contraseña" required="password">
+            <a href="" class="emailForgot">Olvidé mi contraseña</a>
+            <button type="button" id="btnSingIn" class="btn btn-primary">Iniciar sesión</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-10 registro">
+        <p>¿Aún no tienes cuenta?
+          <button type="button" id="buttonRegister" onclick="registry()">REGISTRATE AQUÍ</button>
+        </p>
+      </div>
+      <div class="col-sm-1">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <button type="button" id="facebook" class="btn btn-primary">
+          <i class="fab fa-facebook-f"></i> Registrarme con Facebook</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <button type="button" id="google" onclick="loginGoogle()" class="btn btn-primary">
+          <i class="fab fa-google-plus-g"></i> Registrarme con Google+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion craer cuenta - registrarse -->
+  <div class="container-fluid divDisplayNone" id="containerCrearcuenta">
+
+    <div class="row crearCuenta">
+      <div class="col-md-6 offset-md-3 register">
+        <form>
+          <div class="col-sm">
+            <img src="../img/celiaco3verde.png" id="logoRegistro" alt="logoverde">
+            <h1 id="titleRegister">Celibook</h1>
+          </div>
+          <div class="form-group inputRegister">
+            <label for="validationCustom01"></label>
+            <input type="text" class="form-control" id="registryName" placeholder="Nombre Completo">
+            <div class="valid-feedback"></div>
+          </div>
+          <div class="form-group inputRegister">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" class="form-control" id="registryEmail" aria-describedby="emailHelp" placeholder="Correo electronico">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group inputRegister">
+            <label for="exampleInputPassword1"></label>
+            <input type="password" class="form-control" id="registryPassword" placeholder="Nueva contraseña">
+            <button type="button" id="btnregister" class="btn btn-primary">Registrarme</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Barra superior y menú desplegable -->
+  <section class="barTop divDisplayNone" id="barra">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a id="perfil" href="#" onclick="openPerfil()">
+        <i class="fas fa-user"></i> Mi Perfil</a>
+      <a id="quienesSomos" href="#" onclick="openQuienesSomos()">
+        <i class="fab fa-angellist"></i> Quienes somos</a>
+      <a id="salud" href="#" onclick="openSalud()">
+        <i class="fas fa-heartbeat"></i> Salud Integral</a>
+      <a id="alimentacion" href="#" onclick="openAlimentacion()">
+        <i class="fas fa-utensils"></i> Alimentacion</a>
+      <a id="actividades" href="#" onclick="openActividades()">
+        <i class="fas fa-address-book"></i> Actividades</a>
+      <a id="noticias" href="#" onclick="openNoticias()">
+        <i class="fas fa-newspaper"></i> Noticias</a>
+      <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">
+        <i class="fas fa-question-circle"></i> Preguntas frecuentes</a>
+      <a id="home" href="#" onclick="openHome()">
+        <i class="fas fa-home"> </i>Home</a>
+      <a href="#" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+    </div>
+
+    <span class="burger" onclick="openNav()">&#9776;</span>
+    <img src="/img/celiaco3.png" alt="" id="logosuperior">
+
+  </section>
+<div id=" contieneTodo"> 
+  <!-- Seccion Muro -->
+  <div class="container-fluid divDisplayNone" id="containerMuro">
+    <!-- Titulo y Bienvenida a la red social -->
+    <div class="row titleWelcome">
+      <div class="col-sm">
+        <h1 id="welcome">
+          <b>¡Bienvenida/o a Celibook! </b>
+        </h1>
+        <h2 id="subtitleWelcome">Ya eres parte de esta maravillosa comunidad</h2>
+      </div>
+    </div>
+    <!-- Carrusel de imagenes -->
+    <div class="row carruselFotos">
+      <div id="carouselExampleIndicators" class="col-sm carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../img/sin-gluten2.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/AAA-740x445.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/maxresdefault.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contenedor de publicaciones -->
+    <div class="container-fluid ">
+      <div>
+        <div id="messageContainer">
+          <h1 id="titleWall">Comunidad en línea</h1>
+          <input id="messageArea" type="text" placeholder="  ¿Qué deseas compartir?">
+          <input type="button" id="sendButton" value="Publicar" onclick="sendMessage()">
+          <div id="contenedor"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- fin de MURO -->
+
+  <!-- Seccion Perfil-->
+
+  <div class="container-fluid" id="containerPerfil">
+
+    <div class="row">
+      <div class="col-sm fotoUsuario">
+        <img src="../img/perfilpng.png" alt="fotoPerfil" id="fotoperfilUsuario">
+        <h2 id="nameUsers"></h2>
+      </div>
+    </div>
+
+    <div class="row botonesPerfil">
+      <div class="col-md-6 offset-md-3">
+        <div class="btn-group-vertical">
+          <button type="button" id="intereses" onclick="" class="btn btn-primary">
+            <i class="fas fa-heart"></i> Mis Intereses</button>
+          <button type="button" id="mensaje" onclick="" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Mensaje</button>
+          <button type="button" id="amigos" onclick="" class="btn btn-primary">
+            <i class="fas fa-user-friends"></i> Amigos</button>
+          <button type="button" id="cambiarContraseña" onclick="" class="btn btn-primary">
+            <i class="fas fa-lock"></i> Cambiar Contraseña</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasPerfil" value="Volver" name="volver atrás2" onclick="closePerfil" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion Quienes Somos-->
+
+  <div class="container-fluid" id="containerQuienesSomos">
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong>¿Quienes somos?</strong>
+        </h2>
+        <p>
+          Somos una red social para personas, familiares o cercanos con intolerancia al gluten. Queremos generar comunidad para compartir
+          datos, recetas, medicamentos u otros, y de esta forma contribuir al bienestar de la comunidad que vive con esta
+          enfermdedad. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todo
+          el contenido que encuentren necesario en esta red social 100% libre de gluten.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p> Este es un proyecto creado por: </p>
+      </div>
+    </div>
+
+
+
+    <div class="row Fotoscreadoras">
+      <div class="col-sm PerfilFoto">
+        <img src="/img/pauli.jpeg" alt="turist1" id="foto1">
+        <p class="nameCreator">Paulina Huañaco</p>
+      </div>
+
+      <div class="col-sm PerfilFoto">
+        <img src="/img/18835735_10212558735859600_7336085548576826746_n (1).jpg" alt="turist1" id="foto2">
+        <p class="nameCreator">Constanza García</p>
+      </div>
+
+      <div class="col-sm PerfilFoto">
+        <img src="/img/20180318_155540.jpg" alt="turist1" id="foto3">
+        <p class="nameCreator">Camila Ramírez</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p> Este es un proyecto patrocinado por:</p>
+        <p>
+          <img src="/img/Logo Laboratoria.png" id="logolab" alt=""> </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasQuienessomos" value="Volver" name="volver atrás2" onclick="closeQuienessomos" />
+      </div>
+    </div>
+
+  </div>
+  <!-- seccion salud -->
+
+  <div class="container-fluid" id="containerSalud">
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong>Salud</strong>
+        </h2>
+        <p>
+          Existe evidencia científica acerca de la relación entre Enfermedad Celíaca, enfermedades autoinmunes y el tiempo ingiriendo
+          gluten. Se ha visto que a mayor tiempo ingiriendo gluten, mayor es la probabilidad de desarrollar problemas de
+          autoinmunidad. A la inversa, se piensa que el diagnóstico temprano junto a un buen tratamiento con dieta libre
+          de gluten protege del desarrollo de las complicaciones de la enfermedad. Por esto, la vital importancia del Diagnóstico
+          Precoz.
+        </p>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2>Policlínico para celíacos</h2>
+        <p>Información sobre horarios de atención </p>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Información </button>
+        <div id="demo" class="collapse">
+          <b> Horarios:</b> Los días lunes y miércoles por la tarde de 14 a 16 horas, atención médica y martes de 9 a 13 horas
+          solo atención nutricional. Se realiza atención médica los días lunes y miércoles, con la
+          <b> Dra. Magdalena Araya</b>, pediatra gastroenteróloga, experta en Enfermedad Celíaca. Sin embargo, debido a la alta
+          demanda por atención médica de población adulta, acepta sus consultas y da orientación médica a mayores de 15 años
+          que lo soliciten. Los días lunes y miércoles de 14.30 a 16.30 horas se puede consultar a la Nta. Catalina Vespa,
+          Magister en Nutrición Clínica del INTA. Desde 2011 se dedica a la atención de pacientes celiacos adultos y niños,
+          se incorpora a COACEL en 2014. Los martes de 9 a 13 horas se puede consultar a la Nta. Yanett Pérez Barrientos,
+          Nutricionista de la Universidad de Chile, especialista en Enfermedades Crónicas No Transmisibles de Origen Nutricional
+          otorgado por INTA. Desde 2004 se dedica a la atención de pacientes celiacos adultos y niños, se incorpora a COACEL
+          en esta misma fecha. La puedes encontrar además en el Centro Médico Clínica Santa María La Dehesa.
+          <b> El Policlínico es administrado por el Cedinta, las horas se solicitan al teléfono fijo: 29 78 14 67.</b>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong>Foro de especialistas</strong>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="media p-3">
+          <img src="/img/doctor.jpg" alt="Juan Inostroza" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+          <div class="media-body">
+            <h4>Dr. Juan Inostroza
+              <small>
+                <i>Escrito el 18 de Julio, 2018</i>
+              </small>
+            </h4>
+            <p>A diario recibo en mi consulta a pacientes que sospechan que son intolerantes al gluten pero no se han realizado
+              ningun examen al respecto. </p>
+            <p>Los sintomas frecuentes varian según cada persona pero algunos especialistas suelen confudir ser celiaco con
+              tener ataques de colon. Comenta tus sintomas y conversemos al respecto. ¡Estoy para ayudarte!.</p>
+            <div class="media p-3">
+              <div class="media-body">
+                <h4>Ana Salinas
+                  <small>
+                    <i>Escrito el 19 de Julio, 2018</i>
+                  </small>
+                </h4>
+                <p>Doctor, sufro de constantes dolores estomacales, permanezco día hinchada y con indigestión .</p>
+                <p>He ido en reiteradas ocasiones al gastroenterologo pero solo me dice que es el colon y mi malestar sigue.
+                  Ahora estoy realizando mis examenes para ver si soy celiaca, ¿me recomienda usted comenzar a sacar el gluten
+                  de mi dieta?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form>
+          <div class="form-group">
+            <label for="comment">Comenta:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasSalud" value="Volver" name="volver atrás2" onclick="closeSalud" />
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <!-- seccion Alimentacion -->
+
+  <div class="container-fluid" id="containerAlimentacion">
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong> Alimentación </strong>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+
+        <p> En esta tabla podrás encontrar los alimentos certificados por la Fundación Convivir que puedes consumir si eres intolerante
+          al gluten o celiaco. Sigue el recorrido en el mapa y encuentra los locales donde podrás adquirir estos. </p>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Alimento</th>
+              <th>Producto</th>
+              <th>Empresa</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr>
+              <td>Nectar</td>
+              <td>Néctar sabor damasco</td>
+              <td>Colun</td>
+            </tr>
+            <tr>
+              <td>Harina de arroz</td>
+              <td>Harina de arroz</td>
+              <td>El Pueblo</td>
+            </tr>
+            <tr>
+              <td>Pan de molde</td>
+              <td>Pan de molde
+              </td>
+              <td>Noglut</td>
+            </tr>
+            <tr>
+              <td>Pulpa de fruta</td>
+              <td>Sabor pera</td>
+              <td>AMA</td>
+            </tr>
+            <tr>
+              <td>Pastas</td>
+              <td>Pasta de aceitunas verdes</td>
+              <td>Buka</td>
+            </tr>
+            <tr>
+              <td>Arroz</td>
+              <td>Arroz en caja</td>
+              <td>Tucapel</td>
+            </tr>
+            <tr>
+              <td>Salsa</td>
+              <td>salsa 200 grs.</td>
+              <td>Malloa</td>
+            </tr>
+            <tr>
+              <td>Mayonesa</td>
+              <td>Mayonesa receta clásica lLight</td>
+              <td>Buka</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- TABLA FINALIZA -->
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="alimentacion">Alimentos</h2>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OkPPDqPMKQ-9Dbfy33tKNS11pJ7RrQDI" width="640" height="480" id="mapa"></iframe>
+
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasAlimentacion" value="Volver" name="volver atrás2" onclick="closeAlimentacion" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- seccion Preguntas frecuentes -->
+  <div class="container-fluid" id="containerPreguntasFrecuentes">
+
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3 questionsCol">
+        <h2 class="Titles">
+          <strong>Preguntas frecuentes</strong>
+        </h2>
+
+        <p>Alguna vez te han preguntado ¿cómo sabes qué eres intolerante al gluten o celiaco? o crees que tienes los síntomas
+          de la celiaquia pero no sabes a qué medico recurrir. A continuación te presentamos la diferencias entre Enfermedad
+          Celíaca, Sensibilidad no Celíaca al gluten y Alergia a las proteínas del trigo.</p>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+      <!-- preguntas frecuentes -->
+      <div class="col-md-6 offset-md-3">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="titleCollapse">
+                  ¿Qué es la Enfermedad celiaca?
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <p>Es una enfermedad
+                  <b> crónica autoinmune</b>, caracterizada por la
+                  <b>mala absorción de nutrientes </b> (proteínas, grasas, hidratos de carbono, sales minerales y vitaminas)
+                  como consecuencia del daño inflamatorio de la mucosa del intestino delgado, que se gatilla al ingerir el
+                  gluten de los alimentos, en individuos genéticamente predispuestos. En el caso de la enfermedad celíaca,
+                  la autoinmunidad se produce por anticuerpos del tipo inmunoglobulina A e inmunoglobulina G (IgA, IgG) Se
+                  presenta en el 1% de la población mundial y puede presentarse en cualquier etapa de la vida, desde que
+                  se inicia la exposición al gluten. El único tratamiento es una Dieta Libre de Gluten, de forma estricta
+                  y para toda la vida. El celíaco soporta el consumo de pequeñas trazas de gluten medidas en partes por millón
+                  (miligramos por kilogramo de producto). Por esto debe poner especial cuidado con el llamado “Gluten Oculto”
+                  en los alimentos procesados, y la “Contaminación Cruzada”, ya sea industrial o doméstica. Cada país normalmente
+                  maneja un listado de alimentos y medicamentos seguros para el consumo de las personas celíacas. En las
+                  enfermedades autoinmunes, el cuerpo genera anticuerpos atacando sus propios órganos. Así, en el caso de
+                  la diabetes tipo 1 el cuerpo ataca al páncreas, en la tiroiditis a la tiroides y en la enfermedad celíaca
+                  al intestino delgado. Los celíacos sin diagnóstico y/o que no realizan el tratamiento con la dieta libre
+                  de gluten tienen mayor riesgo de presentar otras enfermedades autoinmunes asociadas.</p>
+
+                <p>
+                  <strong>Sintomas para la celiaquía</strong>
+                </p>
+                <p>Es una nueva enfermedad de la que aún se sabe muy poco. Sus síntomas son parecidos a los de la enfermedad
+                  celíaca y comparte algunos con la alergia al trigo. Se trata de personas que presentan síntomas ante la
+                  ingestión de gluten, en los cuales los exámenes para documentar la enfermedad celíaca son negativos. En
+                  su aparición, no intervienen mecanismos inmunológicos como en el caso de EC o alergia al trigo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="titleCollapse">
+                  ¿Qué es la Sensibilidad no celíaca al gluten SNGC?
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>Es una nueva enfermedad de la que aún se sabe muy poco. Sus síntomas son parecidos a los de la enfermedad
+                  celíaca y comparte algunos con la alergia al trigo. Se trata de personas que presentan síntomas ante la
+                  ingestión de gluten, en los cuales los exámenes para documentar la enfermedad celíaca son negativos. En
+                  su aparición, no intervienen mecanismos inmunológicos como en el caso de EC o alergia al trigo.</p>
+
+                <strong>Sintomas para la Sensibilidad no celiaca</strong>
+                <p>Es una nueva enfermedad de la que aún se sabe muy poco. Sus síntomas son parecidos a los de la enfermedad
+                  celíaca y comparte algunos con la alergia al trigo. Se trata de personas que presentan síntomas ante la
+                  ingestión de gluten, en los cuales los exámenes para documentar la enfermedad celíaca son negativos. En
+                  su aparición, no intervienen mecanismos inmunológicos como en el caso de EC o alergia al trigo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="titleCollapse">
+                  ¿A qué doctor debo recurrir en caso de presentar síntomas?
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>
+                  <p> Existen doctores especialistas en celiaquía.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="titleCollapse">
+                ¿Qué examenes me tendrian que hacer para ver si soy celiaco/sensible al gluten?
+                <i class="fas fa-caret-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p> Los pasos a seguir según el examen medico, dependen de cada doctor pero existen algunos que son recomendados
+                por los especialistas para ver tu estado de salud </p>
+              <p> Antiendomisio y antitransglutaminasa son los exámenes para investigar la celiaquía, si salen alterados se realiza
+                endoscopía y biopsia al intestino.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasPreguntasFrecuentes" value="Volver" name="volver atrás2" onclick="closePreguntasFrecuentes"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- seccion Actividades -->
+  <div class="container-fluid" id="containerActividades">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong>Actividades</strong>
+        </h2>
+        <p>
+          Información actualizada de las actividades en las que podrás participar.
+        </p>
+        <p>
+          <b> Simbología: </b>
+          <ul> Charla:
+            <i class="fas fa-circle" id="rojo"></i>
+          </ul>
+          <ul> Seminario:
+            <i class="fas fa-circle" id="verde"></i>
+          </ul>
+          <ul> Taller:
+            <i class="fas fa-circle" id="azul"></i>
+          </ul>
+          <ul>Feria:
+            <i class="fas fa-circle" id="amarillo"></i>
+          </ul>
+
+        </p>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3">
+        <div class="month">
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>
+              Julio
+              <br>
+              <span style="font-size:18px">2017</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="weekdays">
+          <li>Lu</li>
+          <li>Ma</li>
+          <li>Mi</li>
+          <li>Ju</li>
+          <li>Vi</li>
+          <li>Sa</li>
+          <li>Do</li>
+        </ul>
+
+        <ul class="days">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4
+            <i class="fas fa-circle" id="verde"></i>
+          </li>
+          <li>5</li>
+          <li>6</li>
+          <li>7 </li>
+          <li>8</li>
+          <li>9</li>
+          <li>
+            <span class="active">10</span>
+          </li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18
+            <i class="fas fa-circle" id="azul"></i>
+          </li>
+          <li>19</li>
+          <li>20
+            <i class="fas fa-circle" id="amarillo"></i>
+          </li>
+          <li>21
+            <i class="fas fa-circle" id="amarillo"></i>
+          </li>
+          <li>22</li>
+          <li>23</li>
+          <li>24
+            <i class="fas fa-circle" id="azul"></i>
+          </li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28
+            <i class="fas fa-circle" id="verde"></i>
+          </li>
+          <li>29
+            <i class="fas fa-circle" id="verde"></i>
+          </li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasActividades" value="Volver" name="volver atrás2" onclick="closeActividades" />
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- seccion noticias -->
+  <div class="container-fluid" id="containerNoticias">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Titles">
+          <strong>Noticias</strong>
+        </h2>
+        <p id="noticiasSubtitle">
+          Lee la actualidad internacional y nacional respecto a temas como la celiaquía, intolerancia al gluten, experiencia de usuarios
+          y mucho más.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3">
+
+        <div class="list-group" id="barranoticias">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Si no soy celiaco, ¿por qué me sienta mal el gluten?</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Silvia F.G. tiene una relación extraña con el gluten: cada vez que toma alimentos con esta proteína, siente molestias
+              intestinales e incluso cansancio, pero el médico ha descartado que sea celiaca, ya que todas las pruebas médicas
+              han resultado negativas. Esta contradicción la convierte en candidata a padecer "sensibilidad al gluten no
+              celiaca", una afección recogida en la última Clasificación Internacional de Enfermedades sobre la que aún planean
+              algunas sombras.</p>
+            <small>
+              <a class="news" href="https://elpais.com/elpais/2018/06/28/buenavida/1530180812_683293.html">Revisa la noticia completa
+                <strong> aquí.</strong>
+              </a>
+            </small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Día Internacional del Celíaco: nutricionista explica la clave para controlar la enfermedad</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Cada año, se conmemora el 5 de mayo como el Día Internacional del Celíaco, enfermedad autoinmune y cuya prevalencia
+              en Chile no se sabe con exactitud, aunque se estima que el 1% de los chilenos la padece. Sin embargo, expertos
+              advierten que 9 de cada 10 celíacos desconocerían tener la enfermedad.</p>
+            <small>
+              <a class="news" href="http://www.elmostrador.cl/agenda-pais/vida-en-linea/vida-destacados/2018/05/05/dia-internacional-del-celiaco-nutricionista-explica-la-clave-para-controlar-la-enfermedad/">
+                Revisa la noticia completa
+                <strong> aquí.</strong>
+              </a>
+            </small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">[VIDEO] Mercado para celíacos va en constante crecimiento en Chile</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Según estudios, el 1% de la población mundial es celíaca. En Chile cada vez se detectan más casos, por eso la
+              necesidad de más opciones alimenticias que estén libre de gluten.</p>
+            <small>
+              <a class="news" href="http://www.t13.cl/videos/nacional/video-mercado-celiacos-va-constante-crecimiento-chile"> Revisa la noticia completa
+                <strong> aquí.</strong>
+              </a>
+            </small>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+
+        <input type="button" id="atrasNoticias" value="Volver" name="volver atrás2" onclick="closeNoticias" />
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  <!--Link firebase-->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyCg7hHQY9fRP9EJTE4R3-HPUMi4wFA0WaI",
+      authDomain: "redsocial-78423.firebaseapp.com",
+      databaseURL: "https://redsocial-78423.firebaseio.com",
+      projectId: "redsocial-78423",
+      storageBucket: "redsocial-78423.appspot.com",
+      messagingSenderId: "739042868398"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+  <!-- Links bootstrap y js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
+
+
+  <script src="js/login.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/muro.js"></script>
+
+
+</body>
+
+</html>
