@@ -1,11 +1,7 @@
 // declarar la funcion del test
-window.login = (title) =>{
-    const newTaskKey = firebase.database().ref().child('todo').push().key;
-    return firebase.database().ref('todo/'+newTaskKey).set({
-        title : title
-    });
-};
+const assert = require('chai').assert;
+global.window = global;
+global.firebase = require('firebase');
+require('../src/js/login');
+require('.../data.spec.js');
 
-window.muro = () =>{
-    return firebase.database().ref('todo').once('value');
-}
