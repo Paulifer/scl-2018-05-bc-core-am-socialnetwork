@@ -9,7 +9,7 @@ window.onload = ()=> {
       login.classList.add('divDisplayNone');
       console.log('usuario existente')
       console.log("user >" + JSON.stringify(user));
-      //estas funciones son del js menu, lo colocamos aqui porque es la unaca manera que funcionen junto con lo de login
+      //estas funciones son del js menu, lo colocamos aqui porque es la unaca manera que funcionen junto con el observador
       openNav();
       closeNav();
       openPerfil();
@@ -154,6 +154,7 @@ function logout() {
   firebase.auth().signOut()
     .then(()=> {
       console.log('Cerraste sesión');
+      contieneTodo.classList.add('divDisplayNone');
     })
     .catch((error)=>{
       console.log(error);
