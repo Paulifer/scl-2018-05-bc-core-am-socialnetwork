@@ -372,6 +372,10 @@ body {
     text-align: justify;
     background-repeat: no-repeat;
 }
+
+#logolab {
+    width: 100%;
+}
 .PerfilFoto{
     margin-top: 2em;
     border: thistle 1px solid;
@@ -478,11 +482,12 @@ body {
     text-align: justify;
 }
 
+
 /* SECCION DE PREGUNTAS FRECUENTES */
 
 .questionsCol {
     height: 15em;
-    text-align: center;
+    text-align: justify;
 }
 
 #titleQuestions {
@@ -575,6 +580,16 @@ h1, h2, h3 {
 
 /*Calendario actividades */
 
+#containerActividades {
+    background-color: white;
+    background-image: url(/img/fondo.png);
+    padding: 5%;
+    margin: 0;
+    display: none;
+    width: 100%;
+    text-align: justify;
+}
+
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
 
@@ -663,4 +678,20 @@ ul {list-style-type: none;}
     .weekdays li, .days li {
         width: 12.2%;
     }
+}
+
+#rojo {
+    color: red;
+}
+
+#verde {
+    color: green;
+}
+
+#amarillo {
+    color: yellow;
+}
+
+#azul {
+    color: blue;
 }
