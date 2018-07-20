@@ -373,6 +373,44 @@ body {
     background-repeat: no-repeat;
 }
 
+#logolab {
+    width: 100%;
+}
+.PerfilFoto{
+    margin-top: 2em;
+    border: thistle 1px solid;
+    font-size: 0.5em;
+    width: 100%;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    position: center;
+  }
+  .nameCreator{
+    font-size: 3em;
+    text-align: center;
+  }
+  .Fotoscreadoras{
+    padding: 0;
+    margin: 0;
+  }
+  .tituloFotos{
+    padding: 0;
+    margin: 0;
+  }
+  
+  #foto1{
+    width: 100%;;
+  }
+  
+  #foto2{
+    width: 100%;;
+  }
+  
+  
+  #foto3{
+    width: 100%;;
+  }
+
 #fotoCeliacos {
     margin-top: 3em;
     width: 35%;
@@ -444,11 +482,12 @@ body {
     text-align: justify;
 }
 
+
 /* SECCION DE PREGUNTAS FRECUENTES */
 
 .questionsCol {
     height: 15em;
-    text-align: center;
+    text-align: justify;
 }
 
 #titleQuestions {
@@ -469,7 +508,9 @@ body {
     margin: 1em;
     border: #9B369D 3px solid;
 }
-
+.preguntas{
+    width: 90%;
+}
 .titleCollapse {
     color: white;
     font-size: 0.7em;
@@ -538,6 +579,16 @@ h1, h2, h3 {
 }
 
 /*Calendario actividades */
+
+#containerActividades {
+    background-color: white;
+    background-image: url(/img/fondo.png);
+    padding: 5%;
+    margin: 0;
+    display: none;
+    width: 100%;
+    text-align: justify;
+}
 
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
@@ -627,4 +678,20 @@ ul {list-style-type: none;}
     .weekdays li, .days li {
         width: 12.2%;
     }
+}
+
+#rojo {
+    color: red;
+}
+
+#verde {
+    color: green;
+}
+
+#amarillo {
+    color: yellow;
+}
+
+#azul {
+    color: blue;
 }

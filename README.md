@@ -1,6 +1,6 @@
 ## PROYECTO N° 3: RED SOCIAL
 
-![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-05-bc-core-am-socialnetwork/master/img/celiaco3%20verde%20icono.png)
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-05-bc-core-am-socialnetwork/master/img/celiaco3verdeicono.png)
 
 
 
