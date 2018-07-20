@@ -1,5 +1,4 @@
 //MURO CON COMENTARIOS
-
 firebase.database().ref('messages')
   .limitToLast(5) //filtro para no obtener todos los mensajes
   .once('value')
@@ -19,13 +18,15 @@ firebase.database().ref('messages')
               <div class="trashPost" style="margin: 7%; border-radius:8px; background-color:#ECF8E0">
                 <p style="margin-left:0.5em; color:#9B369D;">${newMessage.val().creatorName} ha comentado:</p>
                 <p style="margin-left:0.5em;">${newMessage.val().text}</p>
-                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}"><span id="likePosts"> ${newMessage.val().starCount}</span></i>
+                <i class="fa fa-heart heart iconHeart" onclick="like(event)" data-likePost="${newMessage.key}"><span> ${newMessage.val().starCount}</span></i>
                 <i class="fas fa-pencil-alt iconEdit"></i>
                 <i class="fa fa-trash trash iconTrash" onclick="deletePost(event)" 
                 data-postId="${newMessage.key}"></i>
               </div>
           `;
+  
   });
+
 
 
 //Boton me gusta
@@ -33,8 +34,8 @@ const like = (event) => {
   event.stopPropagation();
   event.target.style.color = 'red';
   const idLike = event.target.getAttribute('data-likePost');
-  firebase.database().ref('messages/' + idLike).once('value', function(post){
-    let result = (post.val().starCount || 0)+1;
+  firebase.database().ref('messages/' + idLike).once('value', function(posting){
+    let result = (posting.val().starCount || 0)+1;
     console.log(result);
     
 
